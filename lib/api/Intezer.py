@@ -80,15 +80,18 @@ class Intezer:
 
                 data = response.json()
 
-                for entry in data["result"]:
-                    if "ttps" in entry:
-                        all_ttps.extend(entry["ttps"])    
 
-                ttps_dict = {}
-                ttps_dict = {f"ttp_{i}": entry for i, entry in enumerate(all_ttps)}
-                ttps_dict["sha256"] = f"{sha256_value}"
+                # for entry in data["result"]:
+                #     if "ttps" in entry:
+                #         all_ttps.extend(entry["ttps"])    
 
-                return ttps_dict
+                # ttps_dict = {}
+                # ttps_dict = {f"ttp_{i}": entry for i, entry in enumerate(all_ttps)}
+                # ttps_dict["sha256"] = f"{sha256_value}"
+
+                # return ttps_dict
+                return data
+
             else:
                 return {"error": f"Request failed with status code: {response.status_code}"}
 
@@ -98,7 +101,7 @@ class Intezer:
 
 
         
-api_key = "78f86730-b371-4f02-a0dd-846d20c24dc3"
+# api_key = "78f86730-b371-4f02-a0dd-846d20c24dc3"
 
 
 # intezer = Intezer(api_key)
