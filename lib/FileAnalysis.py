@@ -3,7 +3,7 @@ import time
 import hashlib
 import mimetypes
 import magic
-import datetime
+import humanize
 
 class FileAnalysis:
     def __init__(self, filePath):
@@ -31,7 +31,7 @@ class FileAnalysis:
     def get_size(self):
         try:
             size = os.path.getsize(self.file_path)
-            return size
+            return humanize.naturalsize(size)
         except OSError:
             return None
 

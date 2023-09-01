@@ -1,6 +1,8 @@
 import requests
 import json
 import time
+from lib.Database import Database
+from bson import ObjectId 
 
 
 class Intezer:
@@ -13,6 +15,33 @@ class Intezer:
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         }
+        self.db_manager = Database(database_name='mydatabase')
+
+
+    def get_desired_data(self , hash):
+
+        query = {'sha256': {'$eq': hash}}
+        data = self.db_manager.find_documents('intezer', query)
+        
+
+        result_dict = {}
+
+        if data:
+            for item in data:
+                result_dict.update(item)
+            
+        else:
+            result_dict = self.search_sha256(hash)
+            
+            if "error" in result_dict:
+                pass
+            else:
+                inserted_id = self.db_manager.insert_document('intezer', result_dict)
+                
+        if '_id' in result_dict and isinstance(result_dict['_id'], ObjectId):
+            del result_dict['_id']
+
+        return result_dict
 
     def get_jwt(self):
 
@@ -67,7 +96,6 @@ class Intezer:
         
 
     def get_ttps(self,result_url , sha256_value):
-        all_ttps = []
 
         url = f'{self.base_url}{result_url}/dynamic-ttps'
         self.headers['Authorization'] = 'Bearer ' + self.Auth_token
@@ -79,17 +107,7 @@ class Intezer:
             if response.status_code == 200 or 201 or 202:
 
                 data = response.json()
-
-
-                # for entry in data["result"]:
-                #     if "ttps" in entry:
-                #         all_ttps.extend(entry["ttps"])    
-
-                # ttps_dict = {}
-                # ttps_dict = {f"ttp_{i}": entry for i, entry in enumerate(all_ttps)}
-                # ttps_dict["sha256"] = f"{sha256_value}"
-
-                # return ttps_dict
+                data["sha256"] = f"{sha256_value}"
                 return data
 
             else:

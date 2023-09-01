@@ -7,9 +7,7 @@ from lib.api.Hybrid import Hybrid
 from lib.api.OTX import OTX
 from lib.api.Intezer import Intezer
 from lib.Database import Database
-import json
-from bson import ObjectId  
-from pandas import json_normalize
+from bson import ObjectId 
 
 load_dotenv()
 
@@ -54,12 +52,12 @@ def file_info():
         if data:
             for item in data:
                 if '_id' in item and isinstance(item['_id'], ObjectId):
-                    item['_id'] = str(item['_id'])
+                    del item['_id']
         else:
             data = file_analysis.extract_all_data()
             inserted_id = db_manager.insert_document('fileinfo', data)
             if '_id' in data and isinstance(data['_id'], ObjectId):
-                data['_id'] = str(data['_id'])
+                del data['_id']
 
     else:
         data = {"status": "file_not_found"}
@@ -75,20 +73,10 @@ def virustotal():
     file_sha256 = request.form.get('hash')
     virustotal = Virustotal(api_key)
 
-    query = {'sha256': {'$eq': file_sha256}}
-    data = db_manager.find_documents('virustotal', query)
-
-    if data:
-        for item in data:
-            if '_id' in item and isinstance(item['_id'], ObjectId):
-                item['_id'] = str(item['_id'])
-
+    if file_sha256 is not None and file_sha256 != '' :
+        data = virustotal.get_desired_data(file_sha256)
     else:
-        data = virustotal.search_sha256(file_sha256)
-        inserted_id = db_manager.insert_document('virustotal', data)
-        if '_id' in data and isinstance(data['_id'], ObjectId):
-            data['_id'] = str(data['_id'])
-
+        data = {"error": "No parameters"}
 
     return jsonify(data)
 
@@ -99,20 +87,10 @@ def hybrid():
     file_sha256 = request.form.get('hash')
     hybrid = Hybrid(api_key)
 
-
-    query = {'sha256': {'$eq': file_sha256}}
-    data = db_manager.find_documents('hybrid', query)
-
-    if data:
-        for item in data:
-            if '_id' in item and isinstance(item['_id'], ObjectId):
-                item['_id'] = str(item['_id'])
-
+    if file_sha256 is not None and file_sha256 != '' :
+        data = hybrid.get_desired_data(file_sha256)
     else:
-        data = hybrid.search_sha256(file_sha256)
-        inserted_id = db_manager.insert_document('hybrid', data)
-        if '_id' in data and isinstance(data['_id'], ObjectId):
-            data['_id'] = str(data['_id'])
+        data = {"error": "No parameters"}
 
 
     return jsonify(data)
@@ -123,21 +101,13 @@ def hybrid():
 def otx():
     api_key = os.environ.get("OTX_API_TOKEN")
     file_sha256 = request.form.get('hash')
+    page = int(request.args.get('page', default=1))
     otx = OTX(api_key)
 
-    query = {'indicators.indicator': {'$eq': file_sha256}}
-    data = db_manager.find_documents('otx', query)
-
-    if data:
-        for item in data:
-            if '_id' in item and isinstance(item['_id'], ObjectId):
-                item['_id'] = str(item['_id'])
-
+    if file_sha256 is not None and file_sha256 != '':
+        data = otx.get_desired_data(file_sha256 , page)
     else:
-        data = otx.search_sha256(file_sha256)
-        inserted_id = db_manager.insert_document('otx', data)
-        if '_id' in data and isinstance(data['_id'], ObjectId):
-            data['_id'] = str(data['_id'])
+        data = {"error": "No parameters"}
 
 
     return jsonify(data)
@@ -149,19 +119,10 @@ def intezer():
     file_sha256 = request.form.get('hash')
     intezer = Intezer(api_key)
 
-    query = {'sha256': {'$eq': file_sha256}}
-    data = db_manager.find_documents('intezer', query)
-
-    if data:
-        for item in data:
-            if '_id' in item and isinstance(item['_id'], ObjectId):
-                item['_id'] = str(item['_id'])
-
+    if file_sha256 is not None and file_sha256 != '':
+        data = intezer.get_desired_data(file_sha256)
     else:
-        data = intezer.search_sha256(file_sha256)
-        inserted_id = db_manager.insert_document('intezer', data)
-        if '_id' in data and isinstance(data['_id'], ObjectId):
-            data['_id'] = str(data['_id'])
+        data = {"error": "No parameters"}
 
     return jsonify(data)
 

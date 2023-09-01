@@ -1,0 +1,1172 @@
+{
+    "data": {
+        "attributes": {
+            "type_description": "Win32 DLL",
+            "tlsh": "T165154AB7E1830C52CE464DB689B3BD71526F2C32BE7D578A12003A157BB33D25726AD2",
+            "vhash": "195086655d15555757755088z61hz19z67z80",
+            "type_tags": [
+                "executable",
+                "windows",
+                "win32",
+                "pe",
+                "pedll"
+            ],
+            "creation_date": 1416863879,
+            "names": [
+                "uplay_r164.dll",
+                "uplay*",
+                "UPLAY_R164.DLL",
+                "36887.bin",
+                "uplay_r164.DLL"
+            ],
+            "signature_info": {
+                "product": "UPlay",
+                "description": "UPlay",
+                "copyright": "*!ReLOADeD!*",
+                "original name": "uplay*",
+                "file version": "2,2,0,0",
+                "internal name": "uplay*"
+            },
+            "last_modification_date": 1693566750,
+            "type_tag": "pedll",
+            "times_submitted": 310,
+            "total_votes": {
+                "harmless": 2,
+                "malicious": 0
+            },
+            "size": 901124,
+            "popular_threat_classification": {
+                "suggested_threat_label": "hacktool.crack/gamehack",
+                "popular_threat_category": [
+                    {
+                        "count": 8,
+                        "value": "hacktool"
+                    },
+                    {
+                        "count": 5,
+                        "value": "trojan"
+                    }
+                ],
+                "popular_threat_name": [
+                    {
+                        "count": 5,
+                        "value": "crack"
+                    },
+                    {
+                        "count": 3,
+                        "value": "gamehack"
+                    }
+                ]
+            },
+            "authentihash": "ffcc81dab09a7d4ff959c2c9e3069196f3f26a4bc2a7ef95a67e343898a4877e",
+            "detectiteasy": {
+                "filetype": "PE64",
+                "values": [
+                    {
+                        "version": "2.XX-3.XX",
+                        "type": "Protector",
+                        "name": "VMProtect"
+                    },
+                    {
+                        "version": "2013",
+                        "type": "Compiler",
+                        "name": "Microsoft Visual C/C++"
+                    },
+                    {
+                        "info": "C++",
+                        "version": "18.00.30723",
+                        "type": "Compiler",
+                        "name": "Microsoft Visual C/C++"
+                    },
+                    {
+                        "version": "12.00.30723",
+                        "type": "Linker",
+                        "name": "Microsoft Linker"
+                    },
+                    {
+                        "version": "2013",
+                        "type": "Tool",
+                        "name": "Visual Studio"
+                    }
+                ]
+            },
+            "last_submission_date": 1693559456,
+            "meaningful_name": "uplay*",
+            "trid": [
+                {
+                    "file_type": "Win64 Executable (generic)",
+                    "probability": 44.4
+                },
+                {
+                    "file_type": "Win16 NE executable (generic)",
+                    "probability": 21.3
+                },
+                {
+                    "file_type": "Windows Icons Library (generic)",
+                    "probability": 8.7
+                },
+                {
+                    "file_type": "OS/2 Executable (generic)",
+                    "probability": 8.5
+                },
+                {
+                    "file_type": "Generic Win/DOS Executable",
+                    "probability": 8.4
+                }
+            ],
+            "sandbox_verdicts": {
+                "Zenbox": {
+                    "category": "harmless",
+                    "confidence": 3,
+                    "sandbox_name": "Zenbox",
+                    "malware_classification": [
+                        "CLEAN"
+                    ]
+                },
+                "DAS-Security Orcas": {
+                    "category": "harmless",
+                    "sandbox_name": "DAS-Security Orcas",
+                    "malware_classification": [
+                        "CLEAN"
+                    ]
+                }
+            },
+            "sha256": "1a1c5cfc2a24ba5eaa67035d1ca2b5d954597de7dda0154eaef8f66d537672b0",
+            "type_extension": "dll",
+            "tags": [
+                "assembly",
+                "overlay",
+                "detect-debug-environment",
+                "idle",
+                "long-sleeps",
+                "64bits",
+                "pedll"
+            ],
+            "last_analysis_date": 1693559225,
+            "unique_sources": 234,
+            "first_submission_date": 1426034186,
+            "sha1": "8f2a520bebc21f38a5488b828f141061de5f7a2c",
+            "ssdeep": "12288:jfWW9MVx/EEEvccsAAS3rkN55ib1dSfFy4Bdv2FhZrdkn4wzDWimi:jfWWgGUcsAAS3rPdK9v2FhZdsLzDWimi",
+            "md5": "50947fe39cffb3b03f5109e26fae1aa8",
+            "pe_info": {
+                "exports": [
+                    "??0OrbitClient@orbitclient@mg@@QEAA@XZ",
+                    "??0SavegameInfo@orbitclient@mg@@AEAA@XZ",
+                    "??0SavegameReader@orbitclient@mg@@AEAA@XZ",
+                    "??0SavegameWriter@orbitclient@mg@@AEAA@XZ",
+                    "??1OrbitClient@orbitclient@mg@@QEAA@XZ",
+                    "??1SavegameInfo@orbitclient@mg@@AEAA@XZ",
+                    "??1SavegameReader@orbitclient@mg@@AEAA@XZ",
+                    "??1SavegameWriter@orbitclient@mg@@AEAA@XZ",
+                    "?CheckUpdate@OrbitClient@orbitclient@mg@@QEAAHXZ",
+                    "?Close@SavegameReader@orbitclient@mg@@QEAAXXZ",
+                    "?Close@SavegameWriter@orbitclient@mg@@QEAAX_N@Z",
+                    "?GetInstallationErrorNum@OrbitClient@orbitclient@mg@@QEAAIXZ",
+                    "?GetInstallationErrorString@OrbitClient@orbitclient@mg@@QEAAPEAGPEBD@Z",
+                    "?GetLocText@OrbitClient@orbitclient@mg@@QEAAPEBGPEBGPEBD@Z",
+                    "?GetLoginDetails@OrbitClient@orbitclient@mg@@QEAAXIPEAVIGetLoginDetailsListener@23@@Z",
+                    "?GetName@SavegameInfo@orbitclient@mg@@QEAAPEBGXZ",
+                    "?GetNetworkTraffic@OrbitClient@orbitclient@mg@@QEAAXIPEAVIGetNetworkTrafficListener@23@@Z",
+                    "?GetOrbitServer@OrbitClient@orbitclient@mg@@QEAAXIPEAVIGetOrbitServerListener@23@II@Z",
+                    "?GetProductId@SavegameInfo@orbitclient@mg@@QEAAIXZ",
+                    "?GetRequestUniqueId@OrbitClient@orbitclient@mg@@QEAAIXZ",
+                    "?GetSavegameId@SavegameInfo@orbitclient@mg@@QEAAIXZ",
+                    "?GetSavegameList@OrbitClient@orbitclient@mg@@QEAAXIPEAVIGetSavegameListListener@23@I@Z",
+                    "?GetSavegameReader@OrbitClient@orbitclient@mg@@QEAAXIPEAVIGetSavegameReaderListener@23@II@Z",
+                    "?GetSavegameWriter@OrbitClient@orbitclient@mg@@QEAAXIPEAVIGetSavegameWriterListener@23@II_N@Z",
+                    "?GetSize@SavegameInfo@orbitclient@mg@@QEAAIXZ",
+                    "?Read@SavegameReader@orbitclient@mg@@QEAAXIPEAVISavegameReadListener@23@IPEAXI@Z",
+                    "?RemoveSavegame@OrbitClient@orbitclient@mg@@QEAAXIPEAVIRemoveSavegameListener@23@II@Z",
+                    "?SetName@SavegameWriter@orbitclient@mg@@QEAA_NPEAG@Z",
+                    "?StartLauncher@OrbitClient@orbitclient@mg@@QEAA_NIIPEBD0@Z",
+                    "?StartProcess@OrbitClient@orbitclient@mg@@QEAAXPEAG00@Z",
+                    "?UPLAY_WIN_ActionTaken@@YAHPEAUUPLAY_WIN_Action_t@@PEAUUPLAY_Overlapped_t@@@Z",
+                    "?Update@OrbitClient@orbitclient@mg@@QEAAXXZ",
+                    "?Write@SavegameWriter@orbitclient@mg@@QEAAXIPEAVISavegameWriteListener@23@PEAXI@Z",
+                    "SuperSecretAPIWithTagDontCopyThisOne",
+                    "UPLAY_ACH_EarnAchievement",
+                    "UPLAY_ACH_GetAchievementImage",
+                    "UPLAY_ACH_GetAchievements",
+                    "UPLAY_ACH_Write",
+                    "UPLAY_AVATAR_Get",
+                    "UPLAY_AVATAR_GetAvatarIdForCurrentUser",
+                    "UPLAY_AVATAR_GetBitmap",
+                    "UPLAY_ClearGameSession",
+                    "UPLAY_FRIENDS_AddToBlackList",
+                    "UPLAY_FRIENDS_DisableFriendMenuItem",
+                    "UPLAY_FRIENDS_EnableFriendMenuItem",
+                    "UPLAY_FRIENDS_GetFriendList",
+                    "UPLAY_FRIENDS_Init",
+                    "UPLAY_FRIENDS_InviteToGame",
+                    "UPLAY_FRIENDS_IsBlackListed",
+                    "UPLAY_FRIENDS_IsFriend",
+                    "UPLAY_FRIENDS_RequestFriendship",
+                    "UPLAY_FRIENDS_ShowFriendSelectionUI",
+                    "UPLAY_GetInstallationError",
+                    "UPLAY_GetLastError",
+                    "UPLAY_GetNextEvent",
+                    "UPLAY_GetOverlappedOperationResult",
+                    "UPLAY_HasOverlappedOperationCompleted",
+                    "UPLAY_INSTALLER_AreChunksInstalled",
+                    "UPLAY_INSTALLER_GetChunkIdsFromTag",
+                    "UPLAY_INSTALLER_GetLanguageUtf8",
+                    "UPLAY_INSTALLER_Init",
+                    "UPLAY_INSTALLER_ReleaseChunkIdList",
+                    "UPLAY_INSTALLER_UpdateInstallOrder",
+                    "UPLAY_Init",
+                    "UPLAY_METADATA_ClearContinuousTag",
+                    "UPLAY_METADATA_SetContinuousTag",
+                    "UPLAY_METADATA_SetSingleEventTag",
+                    "UPLAY_OVERLAY_SetShopUrl",
+                    "UPLAY_OVERLAY_Show",
+                    "UPLAY_OVERLAY_ShowFacebookAuthentication",
+                    "UPLAY_OVERLAY_ShowShopUrl",
+                    "UPLAY_PARTY_DisablePartyMemberMenuItem",
+                    "UPLAY_PARTY_EnablePartyMemberMenuItem",
+                    "UPLAY_PARTY_GetFullMemberList",
+                    "UPLAY_PARTY_GetId",
+                    "UPLAY_PARTY_GetInGameMemberList",
+                    "UPLAY_PARTY_Init",
+                    "UPLAY_PARTY_InvitePartyToGame",
+                    "UPLAY_PARTY_InviteToParty",
+                    "UPLAY_PARTY_IsInParty",
+                    "UPLAY_PARTY_IsPartyLeader",
+                    "UPLAY_PARTY_PromoteToLeader",
+                    "UPLAY_PARTY_RespondToGameInvite",
+                    "UPLAY_PARTY_SetGuest",
+                    "UPLAY_PARTY_SetUserData",
+                    "UPLAY_PARTY_ShowGameInviteOverlayUI",
+                    "UPLAY_PRESENCE_SetRichPresenceLine",
+                    "UPLAY_PRESENCE_SetRichPresencePropertyInt32",
+                    "UPLAY_PRESENCE_SetRichPresencePropertyString",
+                    "UPLAY_PeekNextEvent",
+                    "UPLAY_Quit",
+                    "UPLAY_Release",
+                    "UPLAY_SAVE_Close",
+                    "UPLAY_SAVE_GetSavegames",
+                    "UPLAY_SAVE_Open",
+                    "UPLAY_SAVE_Read",
+                    "UPLAY_SAVE_Remove",
+                    "UPLAY_SAVE_SetName",
+                    "UPLAY_SAVE_Write",
+                    "UPLAY_SetGameSession",
+                    "UPLAY_SetLocale",
+                    "UPLAY_StartPlatform",
+                    "UPLAY_Startup",
+                    "UPLAY_USER_ClearGameSession",
+                    "UPLAY_USER_ConsumeItem",
+                    "UPLAY_USER_GetAccountId",
+                    "UPLAY_USER_GetAccountIdUtf8",
+                    "UPLAY_USER_GetCdKeyUtf8",
+                    "UPLAY_USER_GetCdKeys",
+                    "UPLAY_USER_GetConsumableItems",
+                    "UPLAY_USER_GetCredentials",
+                    "UPLAY_USER_GetEmail",
+                    "UPLAY_USER_GetEmailUtf8",
+                    "UPLAY_USER_GetNameUtf8",
+                    "UPLAY_USER_GetPassword",
+                    "UPLAY_USER_GetPasswordUtf8",
+                    "UPLAY_USER_GetTicketUtf8",
+                    "UPLAY_USER_GetUsername",
+                    "UPLAY_USER_GetUsernameUtf8",
+                    "UPLAY_USER_IsConnected",
+                    "UPLAY_USER_IsInOfflineMode",
+                    "UPLAY_USER_IsOwned",
+                    "UPLAY_USER_ReleaseConsumeItemResult",
+                    "UPLAY_USER_SetGameSession",
+                    "UPLAY_Update",
+                    "UPLAY_WIN_GetActions",
+                    "UPLAY_WIN_GetRewards",
+                    "UPLAY_WIN_RefreshActions"
+                ],
+                "resource_details": [
+                    {
+                        "lang": "ENGLISH US",
+                        "entropy": 5.1059465408325195,
+                        "chi2": 9434148.0,
+                        "filetype": "unknown",
+                        "sha256": "534285057c6f8f925d58d8cc49865aec0e64a1640c9943860966c44f09ccc37a",
+                        "type": "WAVE"
+                    },
+                    {
+                        "lang": "ENGLISH US",
+                        "entropy": 3.3229212760925293,
+                        "chi2": 53798.95,
+                        "filetype": "unknown",
+                        "sha256": "3834c5980192345b3a5128f582337756d91d8019a4e119d61444f85b4352af77",
+                        "type": "RT_VERSION"
+                    }
+                ],
+                "rich_pe_header_hash": "303fb7d545204e8aade393cdf6eebbf4",
+                "imphash": "17d8dde91374bccfc7c067f79edfa9f0",
+                "overlay": {
+                    "entropy": 7.866822719573975,
+                    "offset": 899072,
+                    "chi2": 372.27,
+                    "filetype": "unknown",
+                    "size": 2052,
+                    "md5": "404e70159a7ccef879fc4f154fb021c7"
+                },
+                "compiler_product_versions": [
+                    "id: 225, version: 20806 count=38",
+                    "id: 224, version: 20806 count=99",
+                    "id: 223, version: 20806 count=10",
+                    "id: 228, version: 30723 count=24",
+                    "id: 203, version: 65501 count=9",
+                    "[---] Unmarked objects count=137",
+                    "[C++] VS2013 UPD3 build 30723 count=20",
+                    "[EXP] VS2013 UPD3 build 30723 count=1",
+                    "[RES] VS2013 build 21005 count=1",
+                    "id: 151, version: 0 count=1",
+                    "[LNK] VS2013 UPD3 build 30723 count=1"
+                ],
+                "resource_langs": {
+                    "ENGLISH US": 2
+                },
+                "machine_type": 34404,
+                "timestamp": 1416863879,
+                "resource_types": {
+                    "RT_VERSION": 1,
+                    "WAVE": 1
+                },
+                "sections": [
+                    {
+                        "name": ".text",
+                        "chi2": 517853.0,
+                        "virtual_address": 4096,
+                        "entropy": 6.61,
+                        "raw_size": 95744,
+                        "flags": "rx",
+                        "virtual_size": 95371,
+                        "md5": "b89ab1a97c501f6c62bf554a99226aae"
+                    },
+                    {
+                        "name": ".rdata",
+                        "chi2": 2044182.5,
+                        "virtual_address": 102400,
+                        "entropy": 4.77,
+                        "raw_size": 41472,
+                        "flags": "r",
+                        "virtual_size": 41304,
+                        "md5": "b58fbbde47f493681dc9e1962412f45c"
+                    },
+                    {
+                        "name": ".data",
+                        "chi2": 658756.44,
+                        "virtual_address": 147456,
+                        "entropy": 3.86,
+                        "raw_size": 7168,
+                        "flags": "rw",
+                        "virtual_size": 43320,
+                        "md5": "96a649473cd5741597b13db946dff5ab"
+                    },
+                    {
+                        "name": ".pdata",
+                        "chi2": 258593.95,
+                        "virtual_address": 192512,
+                        "entropy": 5.04,
+                        "raw_size": 6144,
+                        "flags": "r",
+                        "virtual_size": 5952,
+                        "md5": "78e587976ee6065b54430a68964849a6"
+                    },
+                    {
+                        "name": ".rsrc",
+                        "chi2": 9546158.0,
+                        "virtual_address": 200704,
+                        "entropy": 5.1,
+                        "raw_size": 318976,
+                        "flags": "r",
+                        "virtual_size": 318488,
+                        "md5": "eaf49bdbb700225eadbbceaf33581d9a"
+                    },
+                    {
+                        "name": ".RLD0",
+                        "chi2": 58702.0,
+                        "virtual_address": 520192,
+                        "entropy": 5.39,
+                        "raw_size": 2048,
+                        "flags": "rx",
+                        "virtual_size": 1564,
+                        "md5": "eabe736339289e4ca26b2ad241d7e753"
+                    },
+                    {
+                        "name": ".RLD1",
+                        "chi2": 566484.0,
+                        "virtual_address": 524288,
+                        "entropy": 7.63,
+                        "raw_size": 423936,
+                        "flags": "rx",
+                        "virtual_size": 423827,
+                        "md5": "a30141a604e25ec985557cc6cf179572"
+                    },
+                    {
+                        "name": ".reloc",
+                        "chi2": 36588.0,
+                        "virtual_address": 950272,
+                        "entropy": 5.41,
+                        "raw_size": 2560,
+                        "flags": "r",
+                        "virtual_size": 2320,
+                        "md5": "b37d55e74d28fd5756d9cb68cd8f8058"
+                    }
+                ],
+                "import_list": [
+                    {
+                        "library_name": "ADVAPI32.dll",
+                        "imported_functions": [
+                            "CryptAcquireContextA",
+                            "CryptCreateHash",
+                            "CryptDestroyHash",
+                            "CryptDestroyKey",
+                            "CryptHashData",
+                            "CryptImportKey",
+                            "CryptReleaseContext",
+                            "CryptVerifySignatureA"
+                        ]
+                    },
+                    {
+                        "library_name": "SHELL32.dll",
+                        "imported_functions": [
+                            "SHGetSpecialFolderPathA"
+                        ]
+                    },
+                    {
+                        "library_name": "KERNEL32.dll",
+                        "imported_functions": [
+                            "CloseHandle",
+                            "CreateDirectoryA",
+                            "CreateEventA",
+                            "CreateFileA",
+                            "CreateFileW",
+                            "CreateThread",
+                            "DecodePointer",
+                            "DeleteCriticalSection",
+                            "DeleteFileA",
+                            "EncodePointer",
+                            "EnterCriticalSection",
+                            "ExitProcess",
+                            "FileTimeToSystemTime",
+                            "FindClose",
+                            "FindFirstFileA",
+                            "FindNextFileA",
+                            "FindResourceA",
+                            "FlushFileBuffers",
+                            "FreeEnvironmentStringsW",
+                            "GetACP",
+                            "GetCommandLineA",
+                            "GetConsoleCP",
+                            "GetConsoleMode",
+                            "GetCPInfo",
+                            "GetCurrentProcess",
+                            "GetCurrentProcessId",
+                            "GetCurrentThreadId",
+                            "GetEnvironmentStringsW",
+                            "GetFileAttributesA",
+                            "GetFileSizeEx",
+                            "GetFileType",
+                            "GetLastError",
+                            "GetLocalTime",
+                            "GetModuleFileNameA",
+                            "GetModuleFileNameW",
+                            "GetModuleHandleA",
+                            "GetModuleHandleExW",
+                            "GetModuleHandleW",
+                            "GetOEMCP",
+                            "GetPrivateProfileStringA",
+                            "GetProcAddress",
+                            "GetProcessHeap",
+                            "GetStartupInfoW",
+                            "GetStdHandle",
+                            "GetStringTypeW",
+                            "GetSystemInfo",
+                            "GetSystemTimeAsFileTime",
+                            "HeapAlloc",
+                            "HeapCreate",
+                            "HeapDestroy",
+                            "HeapFree",
+                            "HeapReAlloc",
+                            "HeapSize",
+                            "InitializeCriticalSection",
+                            "InitializeCriticalSectionAndSpinCount",
+                            "IsDebuggerPresent",
+                            "IsProcessorFeaturePresent",
+                            "IsValidCodePage",
+                            "LCMapStringW",
+                            "LeaveCriticalSection",
+                            "LoadLibraryA",
+                            "LoadLibraryExW",
+                            "LoadResource",
+                            "LockResource",
+                            "MultiByteToWideChar",
+                            "OutputDebugStringW",
+                            "QueryPerformanceCounter",
+                            "RaiseException",
+                            "ReadFile",
+                            "RtlCaptureContext",
+                            "RtlLookupFunctionEntry",
+                            "RtlPcToFileHeader",
+                            "RtlUnwindEx",
+                            "RtlVirtualUnwind",
+                            "SetEvent",
+                            "SetFilePointerEx",
+                            "SetLastError",
+                            "SetStdHandle",
+                            "SetUnhandledExceptionFilter",
+                            "SizeofResource",
+                            "Sleep",
+                            "SystemTimeToFileTime",
+                            "TerminateProcess",
+                            "TlsAlloc",
+                            "TlsFree",
+                            "TlsGetValue",
+                            "TlsSetValue",
+                            "UnhandledExceptionFilter",
+                            "VirtualAlloc",
+                            "VirtualFree",
+                            "VirtualProtect",
+                            "VirtualQuery",
+                            "WaitForMultipleObjects",
+                            "WideCharToMultiByte",
+                            "WriteConsoleW",
+                            "WriteFile",
+                            "WritePrivateProfileStringA"
+                        ]
+                    },
+                    {
+                        "library_name": "WINMM.dll",
+                        "imported_functions": [
+                            "waveOutClose",
+                            "waveOutOpen",
+                            "waveOutPrepareHeader",
+                            "waveOutReset",
+                            "waveOutUnprepareHeader",
+                            "waveOutWrite"
+                        ]
+                    }
+                ],
+                "entry_point": 48684
+            },
+            "magic": "PE32+ executable (DLL) (GUI) x86-64, for MS Windows",
+            "last_analysis_stats": {
+                "harmless": 0,
+                "type-unsupported": 4,
+                "suspicious": 0,
+                "confirmed-timeout": 0,
+                "timeout": 1,
+                "failure": 2,
+                "malicious": 21,
+                "undetected": 47
+            },
+            "last_analysis_results": {
+                "Bkav": {
+                    "category": "malicious",
+                    "engine_name": "Bkav",
+                    "engine_version": "2.0.0.1",
+                    "result": "W32.AIDetectMalware.64",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Lionic": {
+                    "category": "undetected",
+                    "engine_name": "Lionic",
+                    "engine_version": "7.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Elastic": {
+                    "category": "malicious",
+                    "engine_name": "Elastic",
+                    "engine_version": "4.0.105",
+                    "result": "malicious (moderate confidence)",
+                    "method": "blacklist",
+                    "engine_update": "20230830"
+                },
+                "Cynet": {
+                    "category": "undetected",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "CMC": {
+                    "category": "undetected",
+                    "engine_name": "CMC",
+                    "engine_version": "2.4.2022.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230822"
+                },
+                "CAT-QuickHeal": {
+                    "category": "malicious",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "22.00",
+                    "result": "Hacktool.Gamehack",
+                    "method": "blacklist",
+                    "engine_update": "20230831"
+                },
+                "McAfee": {
+                    "category": "failure",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "ALYac": {
+                    "category": "undetected",
+                    "engine_name": "ALYac",
+                    "engine_version": "1.1.3.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Malwarebytes": {
+                    "category": "malicious",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.5.5.54",
+                    "result": "CrackTool.Agent",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Zillya": {
+                    "category": "malicious",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.4947",
+                    "result": "Tool.Crack.Win64.388",
+                    "method": "blacklist",
+                    "engine_update": "20230830"
+                },
+                "Sangfor": {
+                    "category": "malicious",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.23.0.0",
+                    "result": "Hacktool.Win32.Crack.Valt",
+                    "method": "blacklist",
+                    "engine_update": "20230818"
+                },
+                "K7AntiVirus": {
+                    "category": "malicious",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.111.49454",
+                    "result": "Trojan ( 7000001d1 )",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Alibaba": {
+                    "category": "undetected",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190527"
+                },
+                "K7GW": {
+                    "category": "malicious",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.111.49454",
+                    "result": "Trojan ( 7000001d1 )",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "CrowdStrike": {
+                    "category": "malicious",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "result": "win/malicious_confidence_100% (W)",
+                    "method": "blacklist",
+                    "engine_update": "20220812"
+                },
+                "Baidu": {
+                    "category": "undetected",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190318"
+                },
+                "VirIT": {
+                    "category": "undetected",
+                    "engine_name": "VirIT",
+                    "engine_version": "9.5.525",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230831"
+                },
+                "Cyren": {
+                    "category": "undetected",
+                    "engine_name": "Cyren",
+                    "engine_version": "6.5.1.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "SymantecMobileInsight": {
+                    "category": "type-unsupported",
+                    "engine_name": "SymantecMobileInsight",
+                    "engine_version": "2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230119"
+                },
+                "Symantec": {
+                    "category": "undetected",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.20.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "tehtris": {
+                    "category": "undetected",
+                    "engine_name": "tehtris",
+                    "engine_version": "v0.1.4",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "ESET-NOD32": {
+                    "category": "malicious",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "27835",
+                    "result": "a variant of Win64/HackTool.Crack.CJ potentially unsafe",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "APEX": {
+                    "category": "undetected",
+                    "engine_name": "APEX",
+                    "engine_version": "6.449",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230831"
+                },
+                "Paloalto": {
+                    "category": "undetected",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "ClamAV": {
+                    "category": "undetected",
+                    "engine_name": "ClamAV",
+                    "engine_version": "1.2.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Kaspersky": {
+                    "category": "undetected",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "22.0.1.28",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "BitDefender": {
+                    "category": "undetected",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "NANO-Antivirus": {
+                    "category": "undetected",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25796",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "SUPERAntiSpyware": {
+                    "category": "undetected",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230830"
+                },
+                "MicroWorld-eScan": {
+                    "category": "undetected",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Avast": {
+                    "category": "undetected",
+                    "engine_name": "Avast",
+                    "engine_version": "23.8.8378.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Tencent": {
+                    "category": "undetected",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Trustlook": {
+                    "category": "type-unsupported",
+                    "engine_name": "Trustlook",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "TACHYON": {
+                    "category": "undetected",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2023-09-01.02",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Sophos": {
+                    "category": "malicious",
+                    "engine_name": "Sophos",
+                    "engine_version": "2.3.1.0",
+                    "result": "Generic Reputation PUA (PUA)",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "F-Secure": {
+                    "category": "undetected",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.1137.128",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "DrWeb": {
+                    "category": "undetected",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.61.8090",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "VIPRE": {
+                    "category": "undetected",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230831"
+                },
+                "TrendMicro": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "McAfee-GW-Edition": {
+                    "category": "malicious",
+                    "engine_name": "McAfee-GW-Edition",
+                    "engine_version": "v2021.2.0+4045",
+                    "result": "BehavesLike.Win64.Dropper.ch",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Trapmine": {
+                    "category": "undetected",
+                    "engine_name": "Trapmine",
+                    "engine_version": "4.0.14.90",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230718"
+                },
+                "FireEye": {
+                    "category": "undetected",
+                    "engine_name": "FireEye",
+                    "engine_version": "35.24.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Emsisoft": {
+                    "category": "undetected",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2022.6.0.32461",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "SentinelOne": {
+                    "category": "undetected",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "23.3.0.3",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230705"
+                },
+                "GData": {
+                    "category": "undetected",
+                    "engine_name": "GData",
+                    "engine_version": "A:25.36436B:27.32983",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Jiangmin": {
+                    "category": "undetected",
+                    "engine_name": "Jiangmin",
+                    "engine_version": "16.0.100",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230831"
+                },
+                "Webroot": {
+                    "category": "undetected",
+                    "engine_name": "Webroot",
+                    "engine_version": "1.0.0.403",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Avira": {
+                    "category": "undetected",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.16",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Antiy-AVL": {
+                    "category": "malicious",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "result": "HackTool/Win64.Crack",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Gridinsoft": {
+                    "category": "malicious",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.136.174",
+                    "result": "Trojan.Win64.Agent.ns",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Xcitium": {
+                    "category": "undetected",
+                    "engine_name": "Xcitium",
+                    "engine_version": "35964",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230831"
+                },
+                "Arcabit": {
+                    "category": "undetected",
+                    "engine_name": "Arcabit",
+                    "engine_version": "2022.0.0.18",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "ViRobot": {
+                    "category": "undetected",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "ZoneAlarm": {
+                    "category": "undetected",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Avast-Mobile": {
+                    "category": "type-unsupported",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "230901-00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Microsoft": {
+                    "category": "malicious",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.23080.2005",
+                    "result": "HackTool:Win32/GameHack",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Google": {
+                    "category": "undetected",
+                    "engine_name": "Google",
+                    "engine_version": "1693555235",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "BitDefenderFalx": {
+                    "category": "type-unsupported",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230829"
+                },
+                "AhnLab-V3": {
+                    "category": "undetected",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.24.0.10447",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Acronis": {
+                    "category": "undetected",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.121",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230828"
+                },
+                "BitDefenderTheta": {
+                    "category": "undetected",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230828"
+                },
+                "MAX": {
+                    "category": "undetected",
+                    "engine_name": "MAX",
+                    "engine_version": "2023.1.4.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "VBA32": {
+                    "category": "undetected",
+                    "engine_name": "VBA32",
+                    "engine_version": "5.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230831"
+                },
+                "Cylance": {
+                    "category": "malicious",
+                    "engine_name": "Cylance",
+                    "engine_version": "2.0.0.0",
+                    "result": "unsafe",
+                    "method": "blacklist",
+                    "engine_update": "20230830"
+                },
+                "Panda": {
+                    "category": "undetected",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230831"
+                },
+                "Zoner": {
+                    "category": "undetected",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "TrendMicro-HouseCall": {
+                    "category": "malicious",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "result": "TROJ_GEN.R002H0CG521",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Rising": {
+                    "category": "malicious",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "result": "HackTool.GameHack!8.59E (CLOUD)",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Yandex": {
+                    "category": "failure",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Ikarus": {
+                    "category": "malicious",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.1.14.0",
+                    "result": "PUA.HackTool.Crack",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "MaxSecure": {
+                    "category": "malicious",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "result": "Trojan.Malware.111408821.susgen",
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Fortinet": {
+                    "category": "undetected",
+                    "engine_name": "Fortinet",
+                    "engine_version": "None",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230830"
+                },
+                "AVG": {
+                    "category": "undetected",
+                    "engine_name": "AVG",
+                    "engine_version": "23.8.8378.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230901"
+                },
+                "Cybereason": {
+                    "category": "timeout",
+                    "engine_name": "Cybereason",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20210330"
+                },
+                "DeepInstinct": {
+                    "category": "malicious",
+                    "engine_name": "DeepInstinct",
+                    "engine_version": "3.1.0.15",
+                    "result": "MALICIOUS",
+                    "method": "blacklist",
+                    "engine_update": "20230831"
+                }
+            },
+            "reputation": 33,
+            "first_seen_itw_date": 1416867479
+        },
+        "type": "file",
+        "id": "1a1c5cfc2a24ba5eaa67035d1ca2b5d954597de7dda0154eaef8f66d537672b0",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/1a1c5cfc2a24ba5eaa67035d1ca2b5d954597de7dda0154eaef8f66d537672b0"
+        }
+    }
+}
