@@ -33,9 +33,6 @@ def file_info():
     filename = os.path.join(os.environ.get("UPLOAD_FOLDER"), file.filename)
     file.save(filename)
 
-    return jsonify({"status": "ok"})
-
-    filename = request.form.get('filename')
     file_analysis = FileAnalysis(filename)
 
     if file_analysis.file_exists():
