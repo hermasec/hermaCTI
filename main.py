@@ -125,7 +125,5 @@ def recent():
     return jsonify(objs)
 
 
-db_manager.close_connection()
-
 if __name__ == '__main__':
     app.run(debug=True)

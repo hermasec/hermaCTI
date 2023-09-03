@@ -11,7 +11,7 @@ function virusTotal(hash) {
             processData: false, // Prevent jQuery from processing the data
             contentType: false, // Let the browser set the content type
             success: function (response) {
-                resolve(response[0]);
+                resolve(response);
             },
             error: function (xhr, status, error) {
                 console.error('Error:', error);
@@ -34,7 +34,7 @@ function hybrid(hash) {
             processData: false, // Prevent jQuery from processing the data
             contentType: false, // Let the browser set the content type
             success: function (response) {
-                resolve(response[0]);
+                resolve(response);
             },
             error: function (xhr, status, error) {
                 console.error('Error:', error);
@@ -57,7 +57,7 @@ function otx(hash) {
             processData: false, // Prevent jQuery from processing the data
             contentType: false, // Let the browser set the content type
             success: function (response) {
-                resolve(response[0]);
+                resolve(response);
             },
             error: function (xhr, status, error) {
                 console.error('Error:', error);
@@ -79,7 +79,7 @@ function intezer(hash) {
             processData: false, // Prevent jQuery from processing the data
             contentType: false, // Let the browser set the content type
             success: function (response) {
-                resolve(response[0]);
+                resolve(response);
             },
             error: function (xhr, status, error) {
                 console.error('Error:', error);
@@ -146,12 +146,12 @@ $(document).ready(function () {
                     $(".progress-bar").width("20%");
                     $("#progressLabel").text("درحال دریافت اطلاعات از Virustotal...");
 
-                    virusTotal(response[0]["hash"])
+                    virusTotal(response["hash"])
                         .then(function (result) {
                             $(".progress-bar").width("40%");
                             $("#progressLabel").text("درحال دریافت اطلاعات از Hybrid...");
 
-                            hybrid(response[0]["hash"])
+                            hybrid(response["hash"])
                                 .then(function (result) {
                                     $(".progress-bar").width("60%");
                                     $("#progressLabel").text("درحال دریافت اطلاعات از OTX...");

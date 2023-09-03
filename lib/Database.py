@@ -21,7 +21,5 @@ class Database:
         cursor = collection.find().sort("_id", pymongo.DESCENDING).limit(limit)
         return list(cursor)
 
-    def close_connection(self):
+    def __del__(self):
         self.client.close()
-
-    
