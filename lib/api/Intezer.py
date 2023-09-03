@@ -69,6 +69,7 @@ class Intezer:
         self.get_jwt()
 
         url = f'{self.base_url}/analyze-by-hash'
+        print(url)
 
         data = {
             "hash": sha256_value,
@@ -86,7 +87,9 @@ class Intezer:
 
             if response.status_code == 200 or 201:
                 result_url = response.json()['result_url']
-                time.sleep(6)
+                # print(response.json())
+                # print(result_url)
+                time.sleep(10)
                 return self.get_ttps(result_url , sha256_value)
             else:
                 return {"error": f"Request failed with status code: {response.status_code}"}
