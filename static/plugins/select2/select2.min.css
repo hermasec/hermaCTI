@@ -58,7 +58,7 @@ span.select2.select2-container.select2-container--default.select2-container--ope
   color: #3b3f5c !important;
   font-size: 15px;
   padding: 8px 10px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   background-color: #fff;
   height: calc(1.4em + 1.4rem + 2px);
   padding: .75rem 1.25rem;
@@ -237,7 +237,7 @@ span.select2.select2-container.select2-container--default.select2-container--ope
   color: #3b3f5c;
   font-size: 15px;
   padding: 8px 16px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   font-weight: 700;
   background: #f1f2f3; }
   .select2-container--default .select2-selection--multiple .select2-selection__rendered {
@@ -311,7 +311,7 @@ span.select2.select2-container.select2-container--default.select2-container--ope
   color: #3b3f5c;
   font-size: 15px;
   padding: 12px 16px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   font-weight: 700;
   border-radius: 4px; }
 

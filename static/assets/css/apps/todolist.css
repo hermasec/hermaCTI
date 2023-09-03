@@ -102,7 +102,7 @@
     position: relative;
     font-size: 18px;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 0px;
     color: #bfc9d4; }
   .tab-title #addTask {
     position: absolute;
@@ -407,7 +407,7 @@
   text-align: right;
   margin-top: 6px;
   font-size: 12px;
-  letter-spacing: 1px; }
+  letter-spacing: 0px; }
 
 #addTaskModal .modal-footer {
   border-top: none;

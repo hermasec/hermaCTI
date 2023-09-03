@@ -95,12 +95,12 @@
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 20px;
-    letter-spacing: 1px; }
+    letter-spacing: 0px; }
   .pricing-plan p {
     margin: 0;
     color: #888ea8;
     font-size: 14px;
-    letter-spacing: 1px; }
+    letter-spacing: 0px; }
 
 .billed-yearly-label {
   display: none; }
@@ -132,7 +132,7 @@
   margin-bottom: 5px;
   line-height: 24px;
   display: inline-block;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   font-size: 15px; }
 
 .pricing-plan-features ul {
@@ -145,7 +145,7 @@
     line-height: 24px;
     color: #888ea8;
     font-size: 13px;
-    letter-spacing: 1px; }
+    letter-spacing: 0px; }
 
 .pricing-plan .button {
   border: none;
@@ -177,7 +177,7 @@
   visibility: visible; }
 
 .billed-yearly-radio span.txt-monthly, .billed-yearly-radio span.txt-yearly {
-  letter-spacing: 1px; }
+  letter-spacing: 0px; }
 
 .pricing-plan.recommended {
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.09);
@@ -196,7 +196,7 @@
   border-radius: 4px 4px 0 0;
   font-weight: 600;
   line-height: 59px;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   font-size: 16px; }
 
 .recommended .pricing-plan-label {
@@ -338,7 +338,7 @@
 
 .pricing--norbu .pricing__feature-list {
   font-size: 1.15em;
-  letter-spacing: 0;
+  letter-spacing: 0px;
   padding: 2em 0;
   list-style: none; }
 
@@ -436,7 +436,7 @@
 
 .pricing--norbu .pricing__feature-list {
   font-size: 1.15em;
-  letter-spacing: 0;
+  letter-spacing: 0px;
   padding: 2em 0;
   list-style: none; }
 

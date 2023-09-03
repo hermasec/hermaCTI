@@ -44,7 +44,7 @@
         font-size: 14px;
         color: #888ea8;
         font-weight: 600;
-        letter-spacing: 1px;
+        letter-spacing: 0px;
         align-self: center; }
       .faq .faq-layouting .fq-tab-section .accordion .card .card-header div[aria-expanded="true"] .faq-q-title {
         color: #4361ee; }
@@ -80,7 +80,7 @@
       .faq .faq-layouting .fq-tab-section .accordion .card .card-body p {
         font-size: 13px;
         line-height: 23px;
-        letter-spacing: 1px; }
+        letter-spacing: 0px; }
 
 /*
     Media Query

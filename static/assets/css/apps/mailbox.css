@@ -154,7 +154,7 @@
     padding: 7px 9px;
     font-size: 14px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     color: #fff !important;
     width: 40px;
     margin: 0 auto;
@@ -208,7 +208,7 @@
     stroke-width: 1.7; }
   .tab-title .nav-pills a.nav-link span.nav-names {
     display: block;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     padding: 0; }
   .tab-title .nav-pills a.nav-link .mail-badge {
     background: #2196f3;
@@ -228,7 +228,7 @@
   font-size: 15px;
   display: inline-block;
   color: #bfc9d4;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   margin-top: 22px;
   margin-bottom: 13px;
   display: flex;
@@ -244,7 +244,7 @@
 .tab-title .nav-pills.group-list .nav-item a {
   position: relative;
   padding: 6px 34px 6px 40px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   font-size: 12px;
   font-weight: 700;
   color: #888ea8;
@@ -361,7 +361,7 @@
         font-weight: 600;
         padding: 10px 43px 10px 23px;
         color: #3b3f5c;
-        letter-spacing: 1px; }
+        letter-spacing: 0px; }
         .mailbox-inbox .action-center .dropdown-menu.d-icon-menu a[class*="g-dot-"]:before {
           right: 19px; }
         .mailbox-inbox .action-center .dropdown-menu.d-icon-menu a.dropdown-item.active, .mailbox-inbox .action-center .dropdown-menu.d-icon-menu a.dropdown-item:active {
@@ -719,7 +719,7 @@
     text-align: right;
     margin-top: 6px;
     font-size: 12px;
-    letter-spacing: 1px; }
+    letter-spacing: 0px; }
   .compose-box .compose-content form .mail-form p {
     font-weight: 700;
     color: #3b3f5c;

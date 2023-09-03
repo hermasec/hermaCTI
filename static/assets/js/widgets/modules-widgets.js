@@ -862,7 +862,7 @@ var d_2options2 = {
 if (Cookies.getCookie('dark_mode') != "") {
 var options1 = {
   chart: {
-    fontFamily: 'Quicksand, sans-serif',
+    fontFamily: 'iransans, sans-serif',
     height: 365,
     type: 'area',
     zoom: {
@@ -989,7 +989,7 @@ var options1 = {
       offsetY: 5,
       style: {
           fontSize: '12px',
-          fontFamily: 'Quicksand, sans-serif',
+          fontFamily: 'iransans, sans-serif',
           cssClass: 'apexcharts-xaxis-title',
       },
     }
@@ -1002,7 +1002,7 @@ var options1 = {
       offsetX: -25,
       style: {
           fontSize: '12px',
-          fontFamily: 'Quicksand, sans-serif',
+          fontFamily: 'iransans, sans-serif',
           cssClass: 'apexcharts-yaxis-title',
       },
     }
@@ -1026,7 +1026,7 @@ var options1 = {
     horizontalAlign: 'right',
     offsetY: -50,
     fontSize: '16px',
-    fontFamily: 'Quicksand, sans-serif',
+    fontFamily: 'iransans, sans-serif',
     markers: {
       width: 10,
       height: 10,
@@ -1075,7 +1075,7 @@ var options1 = {
 } else {
 var options1 = {
   chart: {
-    fontFamily: 'Quicksand, sans-serif',
+    fontFamily: 'iransans, sans-serif',
     height: 365,
     type: 'area',
     zoom: {
@@ -1202,7 +1202,7 @@ var options1 = {
       offsetY: 5,
       style: {
           fontSize: '12px',
-          fontFamily: 'Quicksand, sans-serif',
+          fontFamily: 'iransans, sans-serif',
           cssClass: 'apexcharts-xaxis-title',
       },
     }
@@ -1215,7 +1215,7 @@ var options1 = {
       offsetX: -25,
       style: {
           fontSize: '12px',
-          fontFamily: 'Quicksand, sans-serif',
+          fontFamily: 'iransans, sans-serif',
           cssClass: 'apexcharts-yaxis-title',
       },
     }
@@ -1239,7 +1239,7 @@ var options1 = {
     horizontalAlign: 'right',
     offsetY: -50,
     fontSize: '16px',
-    fontFamily: 'Quicksand, sans-serif',
+    fontFamily: 'iransans, sans-serif',
     markers: {
       width: 10,
       height: 10,
@@ -1326,14 +1326,14 @@ var options = {
           name: {
             show: true,
             fontSize: '29px',
-            fontFamily: 'Quicksand, sans-serif',
+            fontFamily: 'iransans, sans-serif',
             color: undefined,
             offsetY: -10
           },
           value: {
             show: true,
             fontSize: '26px',
-            fontFamily: 'Quicksand, sans-serif',
+            fontFamily: 'iransans, sans-serif',
             color: '#bfc9d4',
             offsetY: 16,
             formatter: function (val) {
@@ -1426,14 +1426,14 @@ var options = {
               name: {
                 show: true,
                 fontSize: '29px',
-                fontFamily: 'Quicksand, sans-serif',
+                fontFamily: 'iransans, sans-serif',
                 color: undefined,
                 offsetY: -10
               },
               value: {
                 show: true,
                 fontSize: '26px',
-                fontFamily: 'Quicksand, sans-serif',
+                fontFamily: 'iransans, sans-serif',
                 color: '20',
                 offsetY: 16,
                 formatter: function (val) {

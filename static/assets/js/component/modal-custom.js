@@ -1,30 +1,8 @@
-var infofile = `
-<div class="row">
-    <div class="col col-6">
-        <div>
-            <b>نام فایل:</b>
-            <span>name</span>
-        </div>
-        <div>
-            <b>سایز فایل:</b>
-            <span>size</span>
-        </div>
-    </div>
-    <div class="col col-6">
-        <div>
-            <b>نوع فایل:</b>
-            <span>type</span>
-        </div>
-        <div>
-            <b>مایم فایل:</b>
-            <span>mime</span>
-        </div>
-    </div>
-    <div class="col col-12">
-        <div>
-            <b>هش فایل ارسال شده:</b>
-            <span>hash</span>
-        </div>
-    </div>
+function addProgressBar (){
+    return `
+<p id="progressLabel" class="font-italic text-black-50">درحال آپلود فایل...</p>
+<div class="progress br-30 mt-5">
+    <div class="progress-bar bg-primary" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-`
+`;
+}

@@ -40,7 +40,7 @@ nav .navbar-brand {
   .fq-header-wrapper button {
     border-radius: 30px;
     padding: 10px 25px;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     font-weight: 600;
     font-size: 16px;
     background: transparent;
@@ -185,7 +185,7 @@ nav .navbar-brand {
       font-size: 20px;
       margin-bottom: 21px; }
     .faq .faq-layouting .fq-article-section .card .card-body p.card-text {
-      letter-spacing: 1px;
+      letter-spacing: 0px;
       color: #888ea8; }
     .faq .faq-layouting .fq-article-section .card .card-body p.meta-text {
       font-size: 13px;

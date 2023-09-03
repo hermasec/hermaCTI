@@ -138,7 +138,7 @@
       border-radius: 1rem;
       box-shadow: 0 2px 4px rgba(0, 69, 255, 0.15), 0 8px 16px rgba(0, 69, 255, 0.2);
       font-size: 12px;
-      letter-spacing: 1px;
+      letter-spacing: 0px;
       font-weight: 100; }
     .skills .widget-content-area .progress .progress-title {
       display: flex;
