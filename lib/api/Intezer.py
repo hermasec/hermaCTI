@@ -107,7 +107,7 @@ class Intezer:
             response = requests.get(url, headers=self.headers)
             response.raise_for_status()
 
-            if response.status_code == 200 or 201 or 202:
+            if response.status_code == 200 or 201:
 
                 data = response.json()
                 data["sha256"] = f"{sha256_value}"
