@@ -87,8 +87,6 @@ class Intezer:
 
             if response.status_code == 200 or 201:
                 result_url = response.json()['result_url']
-                # print(response.json())
-                # print(result_url)
                 time.sleep(10)
                 return self.get_ttps(result_url , sha256_value)
             else:
