@@ -1,4 +1,97 @@
+/* Functions */
+function virusTotal(hash) {
+    return new Promise(function (resolve, reject) {
+        var formData = new FormData();
+        formData.append('hash', hash);
+
+        $.ajax({
+            url: '/api/file/virustotal/',
+            type: 'POST',
+            data: formData,
+            processData: false, // Prevent jQuery from processing the data
+            contentType: false, // Let the browser set the content type
+            success: function (response) {
+                resolve(response[0]);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                reject(error);
+            }
+        });
+    });
+}
+
+
+function hybrid(hash) {
+    return new Promise(function (resolve, reject) {
+        var formData = new FormData();
+        formData.append('hash', hash);
+
+        $.ajax({
+            url: '/api/file/hybrid/',
+            type: 'POST',
+            data: formData,
+            processData: false, // Prevent jQuery from processing the data
+            contentType: false, // Let the browser set the content type
+            success: function (response) {
+                resolve(response[0]);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                reject(error);
+            }
+        });
+    });
+}
+
+
+function otx(hash) {
+    return new Promise(function (resolve, reject) {
+        var formData = new FormData();
+        formData.append('hash', hash);
+
+        $.ajax({
+            url: '/api/file/otx/',
+            type: 'POST',
+            data: formData,
+            processData: false, // Prevent jQuery from processing the data
+            contentType: false, // Let the browser set the content type
+            success: function (response) {
+                resolve(response[0]);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                reject(error);
+            }
+        });
+    });
+}
+
+function intezer(hash) {
+    return new Promise(function (resolve, reject) {
+        var formData = new FormData();
+        formData.append('hash', hash);
+
+        $.ajax({
+            url: '/api/file/intezer/',
+            type: 'POST',
+            data: formData,
+            processData: false, // Prevent jQuery from processing the data
+            contentType: false, // Let the browser set the content type
+            success: function (response) {
+                resolve(response[0]);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                reject(error);
+            }
+        });
+    });
+}
+
 $(document).ready(function () {
+
+    /* Events */
     $('.custom-file-container__custom-file__custom-file-input').on('change', function () {
         // Get the selected file name
         var fileName = $(this).val().split('\\').pop(); // Extract the file name from the input's value
@@ -13,10 +106,7 @@ $(document).ready(function () {
             $('#btn-scan').attr('disabled', 'disabled'); // Disable the button
         }
     });
-});
 
-
-$(document).ready(function () {
     $('#btn-scan').on('click', function () {
         var fileInput = $('#uploader')[0].files[0];
 
@@ -24,21 +114,8 @@ $(document).ready(function () {
             var formData = new FormData();
             formData.append('file', fileInput);
 
-            $(".modal-content").block({
-                message: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-loader spin"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg>',
-                overlayCSS: {
-                    backgroundColor: '#fff',
-                    opacity: 1,
-                    cursor: 'wait'
-                },
-                css: {
-                    border: 0,
-                    color: '#4361ee',
-                    padding: 0,
-                    backgroundColor: 'transparent'
-                }
-            });
 
+            $(".contact-name").html(addProgressBar());
 
             $.ajax({
                 url: '/api/file/info/', // Replace with your server endpoint
@@ -46,15 +123,63 @@ $(document).ready(function () {
                 data: formData,
                 contentType: false,
                 processData: false,
-                success: function (response)
-                {
-                    location.reload();
+                xhr: function () {
+                    var xhr = new window.XMLHttpRequest();
+                    // Listen to the progress event
+                    xhr.upload.addEventListener("progress", function (evt) {
+                        if (evt.lengthComputable) {
+                            var percentComplete = ((evt.loaded / evt.total) * 100) / 5;
+                            if (percentComplete < 20) {
+                                // Update the progress bar (assuming you have an element with class "progress-bar")
+                                $(".progress-bar").width(percentComplete + "%");
+                            } else if (percentComplete === 20) {
+                                $("#progressLabel").text("فایل آپلود شد.");
+                                $(".progress-bar").width(percentComplete + "%");
+                            }
+                        }
+                    }, false);
+
+                    return xhr;
+                },
+                success: function (response) {
+                    /* Virustotal */
+                    setTimeout(function () {
+                        $(".progress-bar").width("20%");
+                        $("#progressLabel").text("درحال دریافت اطلاعات از Virustotal...");
+
+                        virusTotal(response[0]["hash"])
+                            .then(function (result) {
+                                $(".progress-bar").width("40%");
+                                $("#progressLabel").text("درحال دریافت اطلاعات از Hybrid...");
+
+                                hybrid(response[0]["hash"])
+                                    .then(function (result) {
+                                        $(".progress-bar").width("60%");
+                                        $("#progressLabel").text("درحال دریافت اطلاعات از OTX...");
+
+                                        otx(response[0]["hash"])
+                                            .then(function (result) {
+                                                $(".progress-bar").width("80%");
+                                                $("#progressLabel").text("درحال دریافت اطلاعات از OTX...");
+
+                                                intezer(response[0]["hash"])
+                                                    .then(function (result) {
+                                                        $(".progress-bar").width("100%");
+                                                        $("#progressLabel").text("درحال دریافت اطلاعات از Intezer...");
+                                                    });
+                                            });
+                                    });
+                            });
+
+                    }, 1000); // Initial delay (can be adjusted)
+
+
                 },
                 error: function (xhr, status, error) {
-                    $(".modal-content").unblock()
                     console.error('Error uploading file:', error);
                 }
             });
+
         } else {
             console.log('No file selected.');
         }

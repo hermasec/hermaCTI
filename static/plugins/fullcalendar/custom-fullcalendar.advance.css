@@ -45,14 +45,14 @@
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   font-size: 14px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   font-weight: 400; }
 
 .popover-primary .popover-body {
   color: #3b3f5c;
   min-height: 90px;
   font-size: 13px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   padding: 11px 18px; }
 
 .flatpickr-calendar.open {
@@ -108,7 +108,7 @@
 
 button.fc-month-button, button.fc-agendaWeek-button, button.fc-agendaDay-button {
   padding: 6px 10px;
-  letter-spacing: 1px; }
+  letter-spacing: 0px; }
 
 button.fc-prev-button, button.fc-next-button {
   padding: 6px 10px; }
@@ -199,7 +199,7 @@ a.bg-primary:hover, a.bg-success:hover, a.bg-warning:hover, a.bg-danger:hover {
 #calendar .form-control {
   margin-bottom: 20px;
   color: #3b3f5c;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   font-weight: 600; }
 
 input[readonly] {

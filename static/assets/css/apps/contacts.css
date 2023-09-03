@@ -151,7 +151,7 @@
     text-align: right;
     margin-top: 6px;
     font-size: 12px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
 
 .searchable-container .add-contact-box .add-contact-content .contact-name svg, .searchable-container .add-contact-box .add-contact-content .contact-email svg, .searchable-container .add-contact-box .add-contact-content .contact-occupation svg, .searchable-container .add-contact-box .add-contact-content .contact-phone svg, .searchable-container .add-contact-box .add-contact-content .contact-location svg {

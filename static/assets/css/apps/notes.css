@@ -35,7 +35,7 @@
   font-weight: 600;
   font-size: 15px;
   color: #3b3f5c;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   margin-top: 25px;
   margin-bottom: 13px;
   padding: 9px 20px; }
@@ -110,7 +110,7 @@
   font-weight: 600;
   padding: 9px 50px 9px 15px;
   color: #3b3f5c;
-  letter-spacing: 1px; }
+  letter-spacing: 0px; }
   .tab-title .nav-pills.group-list .nav-item a[class*="g-dot-"]:before {
     position: absolute;
     padding: 4px;

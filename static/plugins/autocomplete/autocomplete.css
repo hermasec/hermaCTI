@@ -30,7 +30,7 @@
   white-space: nowrap;
   overflow: hidden;
   color: #888ea8;
-  letter-spacing: 1px; }
+  letter-spacing: 0px; }
 
 .autocomplete-no-suggestion {
   padding: 5px 19px; }

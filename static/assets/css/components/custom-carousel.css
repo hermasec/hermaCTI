@@ -36,7 +36,7 @@
   .style-custom-1 .carousel-caption .badge {
     padding: 6px 16px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     background-color: #4dcf8f;
     color: #fff;
     font-size: 13px;
@@ -45,7 +45,7 @@
     font-weight: 600;
     color: #fff;
     font-size: 28px;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     margin-bottom: 36px; }
   .style-custom-1 .carousel-caption .media img {
     width: 49px;

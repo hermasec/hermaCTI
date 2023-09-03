@@ -8,6 +8,14 @@
 			@Import	Mixins
 	===============================
 */
+
+@font-face
+{
+    font-family: "iransans";
+    src: url("/static/assets/fonts/IRANSansWeb.woff");
+}
+
+
 html {
   min-height: 100%;
   direction: rtl; }
@@ -20,8 +28,8 @@ body {
   background: #fafafa;
   overflow-x: hidden;
   overflow-y: auto;
-  letter-spacing: 0.0312rem;
-  font-family: 'Quicksand', sans-serif;
+  leter-spacing: 0.0312rem;
+  font-family: 'iransans', sans-serif;
   margin: 0 auto; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -141,7 +149,7 @@ code {
     padding: 5px 8px;
     font-size: 15px;
     border-radius: 4px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     display: inline-block;
     background: rgba(0, 150, 136, 0.26);
     color: #009688;
@@ -267,7 +275,7 @@ code {
     border-radius: 6px; }
   .navbar .nav-logo a.navbar-brand .navbar-brand-name {
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     color: #060818;
     font-size: 26px;
     vertical-align: middle;
@@ -555,7 +563,7 @@ code {
         font-weight: 700;
         color: #888ea8;
         margin-bottom: 0;
-        letter-spacing: 0; }
+        letter-spacing: 0px; }
 
 .navbar .navbar-item .nav-item.dropdown.notification-dropdown {
   margin-right: 16px; }
@@ -651,7 +659,7 @@ code {
 
 .navbar .navbar-item .nav-item form.form-inline input.search-form-control::-webkit-input-placeholder, .navbar .navbar-item .nav-item form.form-inline input.search-form-control::-ms-input-placeholder, .navbar .navbar-item .nav-item form.form-inline input.search-form-control::-moz-placeholder {
   color: #888ea8;
-  letter-spacing: 1px; }
+  letter-spacing: 0px; }
 
 .navbar .navbar-item .nav-item .form-inline.search {
   opacity: 0;
@@ -902,7 +910,7 @@ code {
     font-size: 26px;
     color: #3b3f5c;
     font-weight: 600;
-    letter-spacing: 0; }
+    letter-spacing: 0px; }
 
 .page-header {
   display: flex;
@@ -1071,7 +1079,7 @@ code {
   font-size: 13px;
   line-height: 17px;
   background-color: #fff;
-  letter-spacing: normal;
+  letter-spacing: 0px;
   min-width: 115px;
   text-align: inherit;
   color: #3b3f5c;
@@ -1150,11 +1158,11 @@ code {
     margin-bottom: 0;
     color: #888ea8;
     font-size: 13px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     margin-bottom: 0;
     color: #888ea8;
     font-size: 13px;
-    letter-spacing: 1px; }
+    letter-spacing: 0px; }
     .footer-wrapper .footer-section p a {
       color: #888ea8; }
   .footer-wrapper .footer-section svg {
@@ -1414,7 +1422,7 @@ code {
             align-items: center;
             transition: all 0.2s ease-in-out;
             line-height: 27px;
-            letter-spacing: 0;
+            letter-spacing: 0px;
             padding: 4px 24px;
             font-size: 13px;
             font-weight: 600;
@@ -1469,7 +1477,7 @@ code {
     align-items: center;
     transition: all 0.2s ease-in-out;
     line-height: 27px;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     padding: 4px 24px;
     font-size: 13px;
     font-weight: 600;
@@ -1673,7 +1681,7 @@ code {
         font-weight: 600;
         transition: .600s;
         border-radius: 6px;
-        letter-spacing: 0; }
+        letter-spacing: 0px; }
       .topbar-nav.header nav#topbar ul.menu-categories li.menu a > div svg:not(.feather-chevron-down) {
         color: #888ea8;
         margin-left: 18px;

@@ -166,12 +166,12 @@ body {
       width: 100%;
       padding: 11px 14px;
       font-size: 16px;
-      letter-spacing: 2px; }
+      letter-spacing: 0px; }
     .form-form .form-form-wrap form .field-wrapper a.forgot-pass-link {
       font-weight: 600;
       color: #888ea8;
       display: block;
-      letter-spacing: 1px;
+      letter-spacing: 0px;
       font-size: 12px;
       margin-bottom: 8px; }
     .form-form .form-form-wrap form .field-wrapper .n-chk .new-control-indicator {

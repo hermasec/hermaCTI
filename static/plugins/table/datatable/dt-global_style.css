@@ -96,7 +96,7 @@ table.dataTable {
   color: #515365;
   font-weight: 600;
   font-size: 14px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   white-space: nowrap; }
 
 .dataTable.table-striped.table > thead > tr > th {
@@ -119,7 +119,7 @@ table.dataTable {
   padding: 0;
   padding: 10px 21px 10px 21px;
   color: #515365;
-  letter-spacing: normal;
+  letter-spacing: 0px;
   white-space: nowrap; }
 
 .table-striped tbody tr:nth-of-type(odd) {

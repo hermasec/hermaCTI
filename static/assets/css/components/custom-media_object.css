@@ -29,12 +29,12 @@
       font-weight: 700;
       margin-bottom: 10px;
       font-size: 17px;
-      letter-spacing: 1px; }
+      letter-spacing: 0px; }
     .media .media-body .media-text {
       color: #515365;
       margin-bottom: 0;
       font-size: 14px;
-      letter-spacing: 0; }
+      letter-spacing: 0px; }
 
 /*      Right Aligned   */
 .media-right-aligned .media img {

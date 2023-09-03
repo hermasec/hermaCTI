@@ -6182,7 +6182,7 @@ a.close.disabled {
   text-decoration: none;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: normal;
+  letter-spacing: 0px;
   word-break: normal;
   word-spacing: normal;
   white-space: normal;
@@ -6295,7 +6295,7 @@ a.close.disabled {
   text-decoration: none;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: normal;
+  letter-spacing: 0px;
   word-break: normal;
   word-spacing: normal;
   white-space: normal;

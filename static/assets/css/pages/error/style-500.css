@@ -54,6 +54,6 @@ body.error500 {
   font-size: 17px;
   background-image: linear-gradient(135deg, #4361ee 0%, #805dca 100%);
   border: none;
-  letter-spacing: 2px; }
+  letter-spacing: 0px; }
   .error500 a.btn:hover, .error500 a.btn:not(:disabled):not(.disabled):active {
     background-image: linear-gradient(to left, #4361ee 0%, #805dca 100%); }

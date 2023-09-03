@@ -19,7 +19,7 @@ body {
   background: #f1f2f3;
   overflow-x: hidden;
   overflow-y: auto;
-  letter-spacing: 0.0312rem;
+  letter-spacing: 0px;
   font-family: 'Nunito', sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -163,7 +163,7 @@ blockquote.media-object .media .usr-img img {
     font-size: 14px;
     font-weight: 600;
     color: #515365;
-    letter-spacing: 1px; }
+    letter-spacing: 0px; }
 
 a {
   color: #515365;
@@ -199,7 +199,7 @@ span.red {
 .form-group label, label {
   font-size: 15px;
   color: #888ea8;
-  letter-spacing: 1px; }
+  letter-spacing: 0px; }
 
 /*  Disable forms     */
 .custom-control-input:disabled ~ .custom-control-label {
@@ -212,7 +212,7 @@ span.red {
   color: #3b3f5c;
   font-size: 15px;
   padding: 8px 10px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   height: calc(1.4em + 1.4rem + 2px);
   padding: .75rem 1.25rem;
   border-radius: 6px; }
@@ -255,7 +255,7 @@ span.red {
   color: #3b3f5c;
   font-size: 15px;
   padding: 8px 10px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   background-color: #f1f2f3; }
   .custom-select.custom-select-lg {
     font-size: 18px;
@@ -273,7 +273,7 @@ span.red {
   width: 100%;
   color: #805dca; }
   .form-control-file::-webkit-file-upload-button {
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     padding: 9px 20px;
     text-shadow: none;
     font-size: 12px;
@@ -293,7 +293,7 @@ span.red {
     border: transparent;
     outline: none; }
   .form-control-file::-ms-file-upload-button {
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     padding: 9px 20px;
     text-shadow: none;
     font-size: 14px;
@@ -342,7 +342,7 @@ select.form-control.form-custom {
   color: #3b3f5c;
   font-size: 15px;
   padding: 8px 10px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   background-color: #f1f2f3; }
   .custom-file-label::after {
     height: auto;
@@ -414,13 +414,13 @@ select.form-control.form-custom {
   color: #e7515a;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 1px; }
+  letter-spacing: 0px; }
 
 .valid-feedback {
   color: #1abc9c;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 1px; }
+  letter-spacing: 0px; }
 
 .valid-tooltip {
   background-color: #1abc9c; }
@@ -2012,13 +2012,13 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
   vertical-align: middle;
   color: #515365;
   font-size: 13px;
-  letter-spacing: 1px; }
+  letter-spacing: 0px; }
 
 .table > thead > tr > th {
   color: #4361ee;
   font-weight: 700;
   font-size: 13px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   text-transform: uppercase; }
 
 .table > tbody > tr > td .usr-img-frame {
@@ -2274,7 +2274,7 @@ table .badge-success, table .badge-primary, table .badge-warning, table .badge-d
     font-weight: 700;
     box-shadow: 0 2px 4px rgba(0, 69, 255, 0.15), 0 8px 16px rgba(0, 69, 255, 0.2);
     font-size: 12px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     font-weight: 100; }
   .progress:not(.progress-bar-stack) .progress-bar {
     border-radius: 16px; }

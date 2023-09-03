@@ -154,7 +154,7 @@
 .widget-one .w-numeric-value .w-numeric-title {
     font-size: 13px;
     color: #515365;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     font-weight: 600;
 }
 .widget-one .apexcharts-canvas svg {
@@ -391,7 +391,7 @@
     display: inline-block;
     font-size: 14px;
     font-weight: 600;
-    letter-spacing: 1px;   
+    letter-spacing: 0px;
 }
 .widget-table-one .transactions-list .t-item .t-icon .avatar .avatar-title {
     border-radius: 12px;
@@ -458,7 +458,7 @@
 .widget-table-one .transactions-list .t-item .t-rate p {
     margin-bottom: 0;
     font-size: 14px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     font-weight: 500;
 }
 .widget-table-one .transactions-list .t-item .t-rate svg {
@@ -602,7 +602,7 @@
 .widget-activity-four .timeline-line .item-timeline .t-text p {
     margin: 0;
     font-size: 13px;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     font-weight: 600;
     margin-bottom: 0;
 }
@@ -617,7 +617,7 @@
     left: -1px;
     padding: 2px 4px;
     font-size: 10px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     opacity: 0;
     font-weight: 600;
     transform: none;
@@ -668,7 +668,7 @@
     font-size: 13px;
     font-weight: 600; 
     color: #e3e4eb;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
 .widget-activity-four .tm-action-btn {
     text-align: center;
@@ -680,7 +680,7 @@
     padding: 0;
     color: #030305;
     font-weight: 800;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     border: none;
     font-size: 14px;
 }
@@ -721,7 +721,7 @@
 .widget-account-invoice-one .invoice-box h5 {
     text-align: center;
     font-size: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     margin-bottom: 10px;
     color: #4361ee;
 }
@@ -809,7 +809,7 @@
     border-radius: 21px;
     position: relative;
     font-size: 13px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     cursor: pointer;
 }
 .widget-account-invoice-three .widget-heading .add {
@@ -907,7 +907,7 @@
     border-radius: 21px;
     position: relative;
     font-size: 12px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     background-color: #1b2e4b;
 }
 .widget-account-invoice-three .widget-content .bills-stats span:before {
@@ -954,7 +954,7 @@
     font-size: 13px;
     padding: 6px 11px;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
 .widget-account-invoice-three .invoice-list .inv-action a.view-details {
     color: #805dca!important;
@@ -1018,7 +1018,7 @@
     color: #515365;
     font-weight: 600;
     font-size: 14px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
 .widget-table-two .table > thead > tr > th:first-child .th-content {
     margin-right: 10px;
@@ -1046,7 +1046,7 @@
 .widget-table-two .table > tbody > tr > td .td-content {
     cursor: pointer;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     color: #888ea8;
 }
 .widget-table-two .table > tbody > tr:hover > td .td-content {
@@ -1074,7 +1074,7 @@
     display: flex;
 }
 .widget-table-two .table .td-content.product-brand {
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
 .widget-table-two .table .td-content img {
     width: 35px;
@@ -1170,7 +1170,7 @@
     color: #515365;
     font-weight: 600;
     font-size: 14px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
 .widget-table-three .table > thead > tr > th:nth-last-child(2) .th-content {}
 .widget-table-three .table > tbody > tr > td {
@@ -1188,7 +1188,7 @@
 .widget-table-three .table > tbody > tr > td .td-content {
     cursor: pointer;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     color: #515365;
 }
 .widget-table-three .table > tbody > tr:hover > td .td-content {
@@ -1222,7 +1222,7 @@
 }
 .widget-table-three .table .td-content.product-name {
     color: #515365;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     display: flex;
 }
 .widget-table-three .table .td-content.product-name .prd-name {
@@ -1258,7 +1258,7 @@
     background: transparent;
     transform: none;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     padding: 2px 5px;
     border-radius: 6px;
 }
@@ -1283,7 +1283,7 @@
     font-size: 13px;
     background: transparent;
     transform: none;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
 .widget-table-three .table .td-content a svg.feather-chevrons-right {
     width: 15px;

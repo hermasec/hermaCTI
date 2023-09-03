@@ -18,7 +18,7 @@
   font-size: 13px;
   line-height: 17px;
   background-color: #fff;
-  letter-spacing: normal;
+  letter-spacing: 0px;
   text-align: inherit;
   color: #1b2e4b;
   box-shadow: none;
@@ -389,7 +389,7 @@
       font-size: 13px;
       line-height: 17px;
       background-color: #fff;
-      letter-spacing: normal;
+      letter-spacing: 0px;
       text-align: inherit;
       color: #1b2e4b;
       box-shadow: none;
@@ -419,7 +419,7 @@
       font-size: 13px;
       line-height: 17px;
       background-color: #fff;
-      letter-spacing: normal;
+      letter-spacing: 0px;
       text-align: inherit;
       color: #1b2e4b;
       box-shadow: none;
