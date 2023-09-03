@@ -15,41 +15,49 @@ class OTX:
         self.db_manager = Database(database_name='mydatabase')
 
 
-    def get_desired_data(self , hash , page):
+    def get_desired_data(self , hash):
 
         query = {'sha256': {'$eq': hash}}
         data = self.db_manager.find_documents('otx', query)
-        
 
         result_dict = {}
         for item in data:
             result_dict.update(item)
 
         if data:
-            indicators = result_dict["pulse_0"]["indicators"]
-            page_indicators = self.get_data_by_page(indicators , page)
+            result_list = []
+            for pulse in result_dict["pulses"]:
+                attack_name = pulse["name"]
+                indicators = pulse["indicators"]
+                dic = {
+                        "attack_name" : attack_name,
+                        "page_ioc" : indicators
+                }
+                result_list.append(dic)
+
             
         else:
             data = self.search_sha256(hash)
             
             if "error" in data:
-                pass
+                result_list = data
             else:
 
                 inserted_id = self.db_manager.insert_document('otx', data)
-                indicators = data["pulse_0"]["indicators"]
-                page_indicators = self.get_data_by_page(indicators , page)
+                result_list = []
+                for pulse in data["pulses"]:
+                    attack_name = pulse["name"]
+                    indicators = pulse["indicators"]
+                    dic = {
+                        "attack_name" : attack_name,
+                        "page_ioc" : indicators
+                    }
+                    result_list.append(dic)
 
                 
-        return page_indicators
+        return result_list
     
-    def get_data_by_page(self , indicators , page):
-        start_index = (page - 1) * 10
-        end_index = page * 10
 
-        page_indicators = indicators[start_index:end_index]
-
-        return page_indicators
 
         
     def search_sha256(self,hash):
@@ -84,7 +92,7 @@ class OTX:
                 result_list.append(response.json())
 
                 result_dict = {}
-                result_dict = {f"pulse_{i}": entry for i, entry in enumerate(result_list)}
+                result_dict["pulses"] = result_list
                 result_dict["sha256"] = f"{hash}"
 
             except requests.exceptions.RequestException as e:
