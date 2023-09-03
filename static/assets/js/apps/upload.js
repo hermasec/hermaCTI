@@ -143,35 +143,21 @@ $(document).ready(function () {
                 },
                 success: function (response) {
                     /* Virustotal */
-                    setTimeout(function () {
-                        $(".progress-bar").width("20%");
-                        $("#progressLabel").text("درحال دریافت اطلاعات از Virustotal...");
+                    $(".progress-bar").width("20%");
+                    $("#progressLabel").text("درحال دریافت اطلاعات از Virustotal...");
 
-                        virusTotal(response[0]["hash"])
-                            .then(function (result) {
-                                $(".progress-bar").width("40%");
-                                $("#progressLabel").text("درحال دریافت اطلاعات از Hybrid...");
+                    virusTotal(response[0]["hash"])
+                        .then(function (result) {
+                            $(".progress-bar").width("40%");
+                            $("#progressLabel").text("درحال دریافت اطلاعات از Hybrid...");
 
-                                hybrid(response[0]["hash"])
-                                    .then(function (result) {
-                                        $(".progress-bar").width("60%");
-                                        $("#progressLabel").text("درحال دریافت اطلاعات از OTX...");
+                            hybrid(response[0]["hash"])
+                                .then(function (result) {
+                                    $(".progress-bar").width("60%");
+                                    $("#progressLabel").text("درحال دریافت اطلاعات از OTX...");
+                                });
+                        });
 
-                                        otx(response[0]["hash"])
-                                            .then(function (result) {
-                                                $(".progress-bar").width("80%");
-                                                $("#progressLabel").text("درحال دریافت اطلاعات از OTX...");
-
-                                                intezer(response[0]["hash"])
-                                                    .then(function (result) {
-                                                        $(".progress-bar").width("100%");
-                                                        $("#progressLabel").text("درحال دریافت اطلاعات از Intezer...");
-                                                    });
-                                            });
-                                    });
-                            });
-
-                    }, 1000); // Initial delay (can be adjusted)
 
 
                 },
