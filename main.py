@@ -6,6 +6,7 @@ from lib.api.Virustotal import Virustotal
 from lib.api.Hybrid import Hybrid
 from lib.api.OTX import OTX
 from lib.api.Intezer import Intezer
+from lib.api.Recent import Recent
 from lib.Database import Database
 from bson import ObjectId
 
@@ -25,6 +26,7 @@ def file_info():
     # Save File
     if 'file' not in request.files:
         return jsonify({"status": "no_file"})
+    print(request.files)
 
     file = request.files['file']
     if file.filename == '':
@@ -35,15 +37,18 @@ def file_info():
 
     file_analysis = FileAnalysis(filename)
 
+    result_dict = {}
     if file_analysis.file_exists():
 
         query = {'hash': {'$eq': file_analysis.get_hash()}}
         data = db_manager.find_documents('fileinfo', query)
+        
 
         if data:
             for item in data:
                 if '_id' in item and isinstance(item['_id'], ObjectId):
                     del item['_id']
+                result_dict.update(item)                        
         else:
             data = file_analysis.extract_all_data()
             inserted_id = db_manager.insert_document('fileinfo', data)
@@ -51,9 +56,9 @@ def file_info():
                 del data['_id']
 
     else:
-        data = {"status": "file_not_found"}
+        result_dict = {"status": "file_not_found"}
 
-    return jsonify(data)
+    return jsonify(result_dict)
 
 
 @app.route('/api/file/virustotal/', methods=["POST"])
@@ -88,11 +93,10 @@ def hybrid():
 def otx():
     api_key = os.environ.get("OTX_API_TOKEN")
     file_sha256 = request.form.get('hash')
-    page = int(request.args.get('page', default=1))
     otx = OTX(api_key)
 
     if file_sha256 is not None and file_sha256 != '':
-        data = otx.get_desired_data(file_sha256, page)
+        data = otx.get_desired_data(file_sha256)
     else:
         data = {"error": "No parameters"}
 
@@ -113,7 +117,16 @@ def intezer():
     return jsonify(data)
 
 
-# db_manager.close_connection()
+@app.route('/api/file/recent/', methods=["POST"])
+def recent():
+    
+    recent = Recent()
+    objs = recent.organize_data()
+
+    return jsonify(objs)
+
+
+db_manager.close_connection()
 
 if __name__ == '__main__':
     app.run(debug=True)

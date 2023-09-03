@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+import pymongo
 
 class Database:
     def __init__(self, host='localhost', port=27017, database_name='mydatabase'):
@@ -13,6 +14,11 @@ class Database:
     def find_documents(self, collection_name, query=None):
         collection = self.db[collection_name]
         cursor = collection.find(query) if query else collection.find()
+        return list(cursor)
+    
+    def find_and_sort_documents(self, collection_name , limit):
+        collection = self.db[collection_name]
+        cursor = collection.find().sort("_id", pymongo.DESCENDING).limit(limit)
         return list(cursor)
 
     def close_connection(self):

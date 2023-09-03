@@ -16,7 +16,9 @@ class FileAnalysis:
             return False
 
     def extract_all_data(self):
-        file_data = {   "type" : self.get_file_type(),
+
+        file_data = {   "name" : self.get_name(),
+                        "type" : self.get_file_type(),
                         "hash": self.get_hash(),
                         "size": self.get_size(),
                         "mime_type": self.get_mime_type(),
@@ -34,6 +36,16 @@ class FileAnalysis:
             return humanize.naturalsize(size)
         except OSError:
             return None
+        
+
+    def get_name(self):
+        try:
+            file_name = os.path.basename(self.file_path)
+            return file_name
+        except OSError:
+            return None
+
+            
 
     def get_mime_type(self):
         mime_type, _ = mimetypes.guess_type(self.file_path)
