@@ -7,7 +7,7 @@ from lib.api.Hybrid import Hybrid
 from lib.api.OTX import OTX
 from lib.api.Intezer import Intezer
 from lib.Database import Database
-from bson import ObjectId 
+from bson import ObjectId
 
 load_dotenv()
 
@@ -15,35 +15,29 @@ app = Flask(__name__)
 db_manager = Database(database_name='mydatabase')
 
 
-
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
-    if request.method == 'POST':
-
-        # Save File
-        if 'file' not in request.files:
-            return jsonify({"status": "no_file"})
-
-        file = request.files['file']
-        if file.filename == '':
-            return jsonify({"status": "no_file"})
-
-        filename = os.path.join(os.environ.get("UPLOAD_FOLDER"), file.filename)
-        file.save(filename)
-
-
-        return jsonify({"status": "ok"})
-
-    else:
-        return render_template('index.html')
+    return render_template('index.html')
 
 
 @app.route('/api/file/info/', methods=["POST"])
 def file_info():
+    # Save File
+    if 'file' not in request.files:
+        return jsonify({"status": "no_file"})
+
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({"status": "no_file"})
+
+    filename = os.path.join(os.environ.get("UPLOAD_FOLDER"), file.filename)
+    file.save(filename)
+
+    return jsonify({"status": "ok"})
+
     filename = request.form.get('filename')
     file_analysis = FileAnalysis(filename)
 
-    
     if file_analysis.file_exists():
 
         query = {'hash': {'$eq': file_analysis.get_hash()}}
@@ -65,15 +59,13 @@ def file_info():
     return jsonify(data)
 
 
-
 @app.route('/api/file/virustotal/', methods=["POST"])
 def virustotal():
-
     api_key = os.environ.get("VIRUSTOTAL_API_TOKEN")
     file_sha256 = request.form.get('hash')
     virustotal = Virustotal(api_key)
 
-    if file_sha256 is not None and file_sha256 != '' :
+    if file_sha256 is not None and file_sha256 != '':
         data = virustotal.get_desired_data(file_sha256)
     else:
         data = {"error": "No parameters"}
@@ -87,14 +79,12 @@ def hybrid():
     file_sha256 = request.form.get('hash')
     hybrid = Hybrid(api_key)
 
-    if file_sha256 is not None and file_sha256 != '' :
+    if file_sha256 is not None and file_sha256 != '':
         data = hybrid.get_desired_data(file_sha256)
     else:
         data = {"error": "No parameters"}
 
-
     return jsonify(data)
-
 
 
 @app.route('/api/file/otx/', methods=["POST"])
@@ -105,10 +95,9 @@ def otx():
     otx = OTX(api_key)
 
     if file_sha256 is not None and file_sha256 != '':
-        data = otx.get_desired_data(file_sha256 , page)
+        data = otx.get_desired_data(file_sha256, page)
     else:
         data = {"error": "No parameters"}
-
 
     return jsonify(data)
 
