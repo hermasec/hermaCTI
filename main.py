@@ -24,6 +24,8 @@ def upload_file():
 @app.route('/api/file/info/', methods=["POST"])
 def file_info():
     # Save File
+    print(request.files)
+    return ""
     if 'file' not in request.files:
         return jsonify({"status": "no_file"})
     print(request.files)

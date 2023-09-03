@@ -108,15 +108,11 @@ $(document).ready(function () {
     });
 
     $('#btn-scan').on('click', function () {
-        var additionalPath = 'uploads\\'; 
         var fileInput = $('#uploader')[0].files[0];
-        
 
         if (fileInput) {
-            var filename = fileInput.name;
-            var fullPath = additionalPath + filename;
             var formData = new FormData();
-            formData.append('filename', fullPath);
+            formData.append('file', fileInput);
 
 
             $(".contact-name").html(addProgressBar());
