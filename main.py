@@ -21,7 +21,7 @@ def upload_file():
     return render_template('index.html')
 
 
-@app.route('/api/file/info/', methods=["POST"])
+@app.route('/api/file/info/', methods=["POST"], strict_slashes=False)
 def file_info():
     # Save File
     if 'file' not in request.files:
@@ -53,6 +53,7 @@ def file_info():
             inserted_id = db_manager.insert_document('fileinfo', data)
             if '_id' in data and isinstance(data['_id'], ObjectId):
                 del data['_id']
+            result_dict.update(data)
 
     else:
         result_dict = {"status": "file_not_found"}

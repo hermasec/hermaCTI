@@ -42,7 +42,6 @@ class OTX:
             if "error" in data:
                 result_list = data
             else:
-
                 inserted_id = self.db_manager.insert_document('otx', data)
                 result_list = []
                 for pulse in data["pulses"]:
@@ -86,7 +85,7 @@ class OTX:
         result_list = []
 
         pulse_urls = [f"{self.base_url}/pulses/{pulse_id}" for pulse_id in pulse_ids]
-        for url in pulse_urls:
+        for url in pulse_urls[0:3]:
             try:
                 response = requests.get(url, headers=self.headers)
                 result_list.append(response.json())

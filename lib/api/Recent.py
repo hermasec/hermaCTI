@@ -61,7 +61,7 @@ class Recent:
                 for item in data:
                     result_dict.update(item)
 
-                ttps = result_dict["result"]
+                ttps = result_dict["ttps"]
             else:
                 ttps = {}
 
