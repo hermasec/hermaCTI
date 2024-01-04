@@ -1,4 +1,6 @@
 import os
+import re
+
 from dotenv import load_dotenv
 from flask import Flask, render_template, request, jsonify
 from lib.FileAnalysis import FileAnalysis
@@ -6,9 +8,9 @@ from lib.api.Virustotal import Virustotal
 from lib.api.Hybrid import Hybrid
 from lib.api.OTX import OTX
 from lib.api.Intezer import Intezer
+from lib.Filter import Filter
 from lib.api.Recent import Recent
 from lib.Database import Database
-from bson import ObjectId
 
 load_dotenv()
 
@@ -21,8 +23,26 @@ def upload_file():
     return render_template('index.html')
 
 
-@app.route('/api/file/info/', methods=["POST"], strict_slashes=False)
-def file_info():
+def is_sha256(hash_string):
+    # Check if the string matches the SHA256 pattern
+    return re.match(r'^[a-fA-F0-9]{64}$', hash_string) is not None
+
+@app.route('/api/scan/<hash>', methods=['GET'])
+def scan_api(hash):
+    # Check if the provided hash is a valid SHA256 hash
+    if not is_sha256(hash):
+        error_response = {
+            "error": "hash_error",
+            "desc": "algorithm is not sha256"
+        }
+        return jsonify(error_response), 400  # Return a 400 Bad Request status
+
+    filter = Filter(hash)
+    return filter.get_all_data()
+
+
+@app.route('/api/file/upload/', methods=["POST"], strict_slashes=False)
+def search_by_file():
     # Save File
     if 'file' not in request.files:
         return jsonify({"status": "no_file"})
@@ -34,31 +54,9 @@ def file_info():
     filename = os.path.join(os.environ.get("UPLOAD_FOLDER"), file.filename)
     file.save(filename)
 
-    file_analysis = FileAnalysis(filename)
-
-    result_dict = {}
-    if file_analysis.file_exists():
-
-        query = {'hash': {'$eq': file_analysis.get_hash()}}
-        data = db_manager.find_documents('fileinfo', query)
-        
-
-        if data:
-            for item in data:
-                if '_id' in item and isinstance(item['_id'], ObjectId):
-                    del item['_id']
-                result_dict.update(item)                        
-        else:
-            data = file_analysis.extract_all_data()
-            inserted_id = db_manager.insert_document('fileinfo', data)
-            if '_id' in data and isinstance(data['_id'], ObjectId):
-                del data['_id']
-            result_dict.update(data)
-
-    else:
-        result_dict = {"status": "file_not_found"}
-
-    return jsonify(result_dict)
+    file_analysis = FileAnalysis()
+    result = file_analysis.get_uploaded_fileinfo(filename)
+    return result
 
 
 @app.route('/api/file/virustotal/', methods=["POST"])
@@ -72,12 +70,13 @@ def virustotal():
     else:
         data = {"error": "No parameters"}
 
-    return jsonify(data)
+    return data
 
 
 @app.route('/api/file/hybrid/', methods=["POST"])
 def hybrid():
     api_key = os.environ.get("HYBRID_API_TOKEN")
+    print(api_key)
     file_sha256 = request.form.get('hash')
     hybrid = Hybrid(api_key)
 
