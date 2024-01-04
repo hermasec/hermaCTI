@@ -28,10 +28,20 @@ class OTX:
             result_list = []
             for pulse in result_dict["pulses"]:
                 attack_name = pulse["name"]
+                description = pulse["description"]
+                attack_ids = pulse["attack_ids"]
                 indicators = pulse["indicators"]
+
+                filtered_indicators=[
+                    {"indicator": item["indicator"], "type": item["type"]} for item in indicators
+                ]
+
+
                 dic = {
                         "attack_name" : attack_name,
-                        "page_ioc" : indicators
+                        "description" : description,
+                        "TTPs" : attack_ids,
+                        "IOCs" : filtered_indicators
                 }
                 result_list.append(dic)
 
@@ -46,10 +56,20 @@ class OTX:
                 result_list = []
                 for pulse in data["pulses"]:
                     attack_name = pulse["name"]
+                    description = pulse["description"]
+                    attack_ids = pulse["attack_ids"]
+
                     indicators = pulse["indicators"]
+
+                    filtered_indicators = [
+                        {"indicator": item["indicator"], "type": item["type"]} for item in indicators
+                    ]
+
                     dic = {
-                        "attack_name" : attack_name,
-                        "page_ioc" : indicators
+                        "attack_name": attack_name,
+                        "description": description,
+                        "TTPs": attack_ids,
+                        "IOCs": filtered_indicators
                     }
                     result_list.append(dic)
 
@@ -68,11 +88,12 @@ class OTX:
             response = requests.get(url, headers=self.headers)
             json_response = response.json()
 
+
             if json_response['pulse_info']['count']>0:
                 pulse_info = json_response['pulse_info']
                 return self.get_pulse_info(pulse_info , hash)
             else:
-                return {"error": "pulse_info not found in response"}
+                return {"error": "attack_info not found in response"}
 
         except requests.exceptions.RequestException as e:
             return {"error": f"Request failed: {e}"}
@@ -85,7 +106,7 @@ class OTX:
         result_list = []
 
         pulse_urls = [f"{self.base_url}/pulses/{pulse_id}" for pulse_id in pulse_ids]
-        for url in pulse_urls[0:3]:
+        for url in pulse_urls:
             try:
                 response = requests.get(url, headers=self.headers)
                 result_list.append(response.json())
@@ -97,42 +118,3 @@ class OTX:
             except requests.exceptions.RequestException as e:
                 return {"error": f"Request failed: {e}"}
         return result_dict
-
-
-
-    def get_indicators_types(self):
-
-        indicator_types = [
-            IndicatorTypes.IPv4,
-            IndicatorTypes.IPv6,
-            IndicatorTypes.DOMAIN,
-            IndicatorTypes.HOSTNAME,
-            IndicatorTypes.EMAIL,
-            IndicatorTypes.URL,
-            IndicatorTypes.URI,
-            IndicatorTypes.FILE_HASH_MD5,
-            IndicatorTypes.FILE_HASH_SHA1,
-            IndicatorTypes.FILE_HASH_SHA256,
-            IndicatorTypes.FILE_HASH_PEHASH,
-            IndicatorTypes.FILE_HASH_IMPHASH,
-            IndicatorTypes.CIDR,
-            IndicatorTypes.FILE_PATH,
-            IndicatorTypes.MUTEX,
-            IndicatorTypes.CVE,
-            IndicatorTypes.YARA
-        ]
-
-        # Print name and description of each indicator type
-        for indicator_type in indicator_types:
-            print("Name:", indicator_type.name)
-            print("Description:", indicator_type.description)
-            print("-----")
-     
-
-
-# api_key = "d535cee3308ca62de696438152cff365e41b08e62e4f343eeb83e0faaf3beab6"
-
-# otx = OTX(api_key)
-# res = otx.search_sha256("0004efbd2df87521c4a440c996b9b13619379453b30534213d3f60f3199e7729")
-# print(res)
-# otx.get_indicators_types()

@@ -4,38 +4,13 @@ from lib.Database import Database
 
 class Virustotal:
 
-    def __init__(self, token):
+    def __init__(self,api_key):
         self.base_url = "https://www.virustotal.com/api/v3"
         self.headers = {
             "accept": "application/json",
-            "x-apikey": token
+            "x-apikey": api_key
         }
         self.db_manager = Database(database_name='mydatabase')
-
-
-    def perform_file_scan(self,file_path):
-
-        url = f'{self.base_url}/api/v3/files'
-
-        files = { "file": (file_path, open(file_path, "rb"), "application/x-msdownload") }
-
-        try:
-            response = requests.post(url, files=files, headers=self.headers)
-            json_response = response.json()
-
-            if 'id' in json_response:
-                analyze_url = json_response["data"]["links"]["self"]
-                json_response = requests.get(analyze_url, headers=self.headers)
-                if 'sha256' in response:
-                    file_sha256 = json_response["sha256"]
-                    return self.search_sha256(file_sha256)
-                else:
-                    {"error": "sha256 not found in response"}
-            else:
-                {"error": "analyse id not found in response"}
-
-        except requests.exceptions.RequestException as e:
-            return {"error": f"Request failed: {e}"}
 
 
     def get_desired_data(self , hash):
@@ -48,10 +23,9 @@ class Virustotal:
             for item in data:
                 result_dict.update(item)
 
-            data = {    "malicious" : self.malicious(result_dict),
-                        "undetected" : self.undetected(result_dict)
-
-                     }
+            AVs = self.malicious(result_dict)
+            AVs.update(self.undetected(result_dict))
+            return AVs
 
         else:
             data = self.search_sha256(hash)
@@ -61,30 +35,19 @@ class Virustotal:
             else:
                 inserted_id = self.db_manager.insert_document('virustotal', data)
 
-                data = {   "malicious" : self.malicious(data),
-                            "undetected" : self.undetected(data)
+                AVs = self.malicious(data)
+                AVs.update(self.undetected(data))
 
-                                }
-        return data
-
-
-
+                return AVs
 
 
     def search_sha256(self, hash):
         url = f'{self.base_url}/files/{hash}'
 
-        # f = open('uploads\\res.json')
-        # data = json.load(f)
-        # return data
-
-
         try:
             response = requests.get(url, headers=self.headers)
 
             if response.status_code == 200:
-                print(response)
-                
                 return response.json()
             else:
                 return {"error": f"Request failed with status code: {response.status_code}"}
@@ -101,10 +64,7 @@ class Virustotal:
         # Extract engine names with category "malicious" and store in the dictionary
         for engine, info in data['data']['attributes']['last_analysis_results'].items():
             if info['category'] == 'malicious':
-                malicious_engines[engine] = {
-                    "result": info['result'],
-                    "method": info['method']
-                }
+                malicious_engines[engine] = 'malicious'
 
         return malicious_engines
     
@@ -115,21 +75,6 @@ class Virustotal:
 
         for engine, info in data['data']['attributes']['last_analysis_results'].items():
             if info['category'] == 'undetected':
-                undetected_engines[engine] = {
-                    "result": info['result'],
-                    "method": info['method']
-                }
+                undetected_engines[engine] = 'undetected'
 
         return undetected_engines
-
-
-
-
-        
-    
-
-# token="199b22b0da5bc1ffcf0700b043b07c0f578cef4a74593f1447e53bb9667543ce"
-# vir = Virustotal(token)
-# # 1a1c5cfc2a24ba5eaa67035d1ca2b5d954597de7dda0154eaef8f66d537672b0
-# res = vir.get_desired_data()
-# print(type(res))

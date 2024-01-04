@@ -5,7 +5,6 @@ from lib.Database import Database
 class Hybrid:
 
     def __init__(self, api_key):
-        self.api_key = api_key
         self.base_url = 'https://www.hybrid-analysis.com/api/v2'
         self.headers = {
             'accept': 'application/json',
@@ -58,24 +57,43 @@ class Hybrid:
             for item in data:
                 result_dict.update(item)
 
+            crowdstrike_ml = result_dict.get("scanners_v2")['crowdstrike_ml']['status']
+            metadefender = result_dict.get("scanners_v2")['metadefender']['status']
+            virustotal = result_dict.get("scanners_v2")['virustotal']['status']
+
             data = {
                 "verdict": result_dict.get("verdict"),
                 "vx_family": result_dict.get("vx_family"),
-                "scanners": result_dict.get("scanners"),
+                "AVs" :{
+                    "crowdstrike_ml": crowdstrike_ml,
+                    "metadefender": metadefender,
+                    "virustotal": virustotal
+                }
             }
+
 
         else:
             data = self.search_sha256(hash)
 
             if "error" in data:
-                pass
+                return data
             else:
+
                 inserted_id = self.db_manager.insert_document('hybrid', data)
+
+                crowdstrike_ml = data.get("scanners_v2")['crowdstrike_ml']['status']
+                metadefender = data.get("scanners_v2")['metadefender']['status']
+                virustotal = data.get("scanners_v2")['virustotal']['status']
+
 
                 data = {
                     "verdict": data.get("verdict"),
                     "vx_family": data.get("vx_family"),
-                    "scanners": data.get("scanners"),
+                    "AVs": {
+                        "crowdstrike_ml": crowdstrike_ml ,
+                        "metadefender": metadefender,
+                        "virustotal": virustotal
+                    }
                 }
 
         return data
@@ -90,7 +108,17 @@ class Hybrid:
             response.raise_for_status()
 
             if response.status_code == 200:
-                return response.json()
+                final_response=response.json()
+                null_count = 0
+                for scanner in final_response['scanners']:
+                    percent_value = scanner.get('percent')
+                    if percent_value is None:
+                        null_count += 1
+
+                if null_count > 2:
+                    self.search_sha256(sha256_value)
+                else:
+                    return final_response
             else:
                 return {"error": f"Request failed with status code: {response.status_code}"}
 

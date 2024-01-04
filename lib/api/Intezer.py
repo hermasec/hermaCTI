@@ -86,7 +86,7 @@ class Intezer:
 
             if response.status_code == 200 or 201:
                 result_url = response.json()['result_url']
-                time.sleep(10)
+                time.sleep(24)
                 return self.get_ttps(result_url , sha256_value)
             else:
                 return {"error": f"Request failed with status code: {response.status_code}"}
@@ -118,8 +118,10 @@ class Intezer:
 
                 ttps_dict["ttps"] = all_ttps
                 ttps_dict["sha256"] = f"{sha256_value}"
-
-                return ttps_dict
+                if ttps_dict["ttps"]==[]:
+                    return {"error": "No ttps found for this hash"}
+                else:
+                    return ttps_dict
 
             else:
                 return {"error": f"Request failed with status code: {response.status_code}"}
