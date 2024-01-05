@@ -1,7 +1,8 @@
 import os
 import time
 import hashlib
-import mimetypes
+from datetime import datetime
+
 import magic
 import humanize
 from lib.Database import Database
@@ -51,7 +52,9 @@ class FileAnalysis:
     def gather_all_data(self, filePath):
 
         file_data = {"name": self.get_name(filePath),
+                     "file_extension": self.get_extension(filePath),
                      "type": self.get_file_type(filePath),
+                     "scan_date": datetime.now(),
                      "sha256": self.get_sha256(filePath),
                      "md5": self.get_md5(filePath),
                      "size": self.get_size(filePath),
@@ -59,7 +62,9 @@ class FileAnalysis:
                          "compilation": self.get_compilation_time(filePath),
                          "created": self.get_creation_time(filePath),
                          "modified": self.get_modification_time(filePath)
-                     }}
+                     }
+                }
+
         return file_data
 
     def get_size(self, filePath):
@@ -69,17 +74,20 @@ class FileAnalysis:
         except OSError:
             return None
 
+    def get_extension(self, filePath):
+        try:
+            _, file_extension = os.path.splitext(filePath)
+            return file_extension[1:]
+        except OSError:
+            return None
+
+
     def get_name(self, filePath):
         try:
             file_name = os.path.basename(filePath)
             return file_name
         except OSError:
             return None
-
-    def get_mime_type(self, filePath):
-        mime_type, _ = mimetypes.guess_type(filePath)
-        file_type, file_extension = mime_type.split('/')
-        return file_type
 
     def get_sha256(self, filePath):
         try:

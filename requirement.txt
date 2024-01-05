@@ -4,4 +4,3 @@ pymongo
 OTXv2
 humanize
 python-magic-bin
-humanize

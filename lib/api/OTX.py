@@ -1,5 +1,4 @@
 import requests
-from OTXv2 import IndicatorTypes
 from lib.Database import Database
 
 
@@ -50,7 +49,7 @@ class OTX:
             data = self.search_sha256(hash)
             
             if "error" in data:
-                result_list = data
+                result_list = []
             else:
                 inserted_id = self.db_manager.insert_document('otx', data)
                 result_list = []
@@ -73,7 +72,6 @@ class OTX:
                     }
                     result_list.append(dic)
 
-                
         return result_list
     
 

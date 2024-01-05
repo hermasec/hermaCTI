@@ -1,6 +1,5 @@
 import os
 import re
-
 from dotenv import load_dotenv
 from flask import Flask, render_template, request, jsonify
 from lib.FileAnalysis import FileAnalysis
@@ -9,7 +8,6 @@ from lib.api.Hybrid import Hybrid
 from lib.api.OTX import OTX
 from lib.api.Intezer import Intezer
 from lib.Filter import Filter
-from lib.api.Recent import Recent
 from lib.Database import Database
 
 load_dotenv()
@@ -21,6 +19,11 @@ db_manager = Database(database_name='mydatabase')
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
     return render_template('index.html')
+
+@app.route('/api/scan/latest', methods=['GET'])
+def get_latest_scan():
+    filter = Filter()
+    return filter.get_last_scans()
 
 
 def is_sha256(hash_string):
@@ -37,8 +40,8 @@ def scan_api(hash):
         }
         return jsonify(error_response), 400  # Return a 400 Bad Request status
 
-    filter = Filter(hash)
-    return filter.get_all_data()
+    filter = Filter()
+    return filter.get_hash_data(hash)
 
 
 @app.route('/api/file/upload/', methods=["POST"], strict_slashes=False)
@@ -114,16 +117,6 @@ def intezer():
         data = {"error": "No parameters"}
 
     return jsonify(data)
-
-
-@app.route('/api/file/recent/', methods=["POST"])
-def recent():
-    
-    recent = Recent()
-    objs = recent.organize_data()
-
-    return jsonify(objs)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
