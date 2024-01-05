@@ -1,0 +1,209 @@
+[{
+  "_id": {
+    "$oid": "659875e3e4b8cc14000b25d0"
+  },
+  "name": "blGzkW8.rkj8",
+  "file_extension": "dll",
+  "type": "PE32+ executable (DLL) (GUI) x86-64, for MS Windows",
+  "scan_time": {
+    "$date": "2024-01-06T01:04:27.260Z"
+  },
+  "sha256": "cbdcf6224aa15c70a22346594d1956c0589a9411beb75a003eaccb15db4370a5",
+  "md5": "1f7d2cbfc75d6eb2c4f2b8b7a3eec1bf",
+  "size": "6.4 MB",
+  "time": {
+    "compilation": "Tue Oct 31 02:31:28 2023",
+    "created": "Tue Oct 31 02:31:28 2023",
+    "modified": "Thu Jan 04 14:00:15 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "659876ae13b238ee21524f9a"
+  },
+  "name": "AlcRmv",
+  "file_extension": "exe",
+  "type": "PE32+ executable (GUI) x86-64, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-06T01:07:50.001Z"
+  },
+  "sha256": "c5119b8a75d4965e51e7424964bf92f2708b099a4e6049b13f8aaddabfb6860e",
+  "md5": "fa2edd8a24266f9ecccea44b4b47100f",
+  "size": "190.5 kB",
+  "time": {
+    "compilation": "Fri Sep 06 16:33:56 2019",
+    "created": "Fri Sep 06 16:33:56 2019",
+    "modified": "Sun Dec 31 13:17:29 2023"
+  }
+},
+{
+  "_id": {
+    "$oid": "6598771b13b238ee21524fa0"
+  },
+  "name": null,
+  "file_extension": "lnk",
+  "type": "MS Windows shortcut, Item id list present, Points to a file or directory, Has Relative path, Has command line arguments, Icon number=0, Archive, ctime=Sun Nov 21 03:24:06 2010, mtime=Sun Nov 21 03:24:06 2010, atime=Sun Nov 21 03:24:06 2010, length=302592, window=hidenormalshowminimized",
+  "scan_date": {
+    "$date": "2024-01-06T01:09:39.630Z"
+  },
+  "sha256": "f3ea4611c72d57eabf381d5639c3c8d1840cb005ed811f3038410fb2e04978c1",
+  "md5": "cfe4a2fc19b77dea154c106918dcc1a3",
+  "size": "650.2 kB",
+  "time": {
+    "compilation": null,
+    "created": "Sun Nov 21 06:54:06 2010",
+    "modified": "Tue Dec 12 04:13:28 2023"
+  }
+},
+{
+  "_id": {
+    "$oid": "6598776513b238ee21524fa6"
+  },
+  "name": "plugmanzx.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-06T01:10:53.784Z"
+  },
+  "sha256": "dfb9b3c7cf15baa877da2d2c87e1e53761517094bab2de1a6b92ebca122fa858",
+  "md5": "cc4785f780b286ccdaf01c38bbbc809d",
+  "size": "628.7 kB",
+  "time": {
+    "compilation": "Mon Oct 16 13:55:19 2023",
+    "created": "Mon Oct 16 13:55:19 2023",
+    "modified": "Sun Oct 29 05:31:14 2023"
+  }
+},
+{
+  "_id": {
+    "$oid": "659877a013b238ee21524fac"
+  },
+  "name": "libcrypto-3-zm.dll",
+  "file_extension": "dll",
+  "type": "PE32+ executable (DLL) (console) x86-64, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-06T01:11:52.512Z"
+  },
+  "sha256": "30fda67726f77706955f6b52b202452e91d5ff132783854eec63e809061a4b5c",
+  "md5": "174ff2e9b7a6b77382a5de6cf6f8a877",
+  "size": "6.8 MB",
+  "time": {
+    "compilation": "Sat Oct 14 12:29:51 2023",
+    "created": "Sat Oct 14 12:29:51 2023",
+    "modified": "Mon Dec 25 16:14:22 2023"
+  }
+},
+{
+  "_id": {
+    "$oid": "659877cd13b238ee21524fb2"
+  },
+  "name": "b5c001cbcd72b919e9b05e3281cc4e4914fee0748b3d81954772975630233a6e.docx",
+  "file_extension": "docx",
+  "type": "Microsoft Word 2007+",
+  "scan_date": {
+    "$date": "2024-01-06T01:12:37.762Z"
+  },
+  "sha256": "b5c001cbcd72b919e9b05e3281cc4e4914fee0748b3d81954772975630233a6e",
+  "md5": "e2a3edc708016316477228de885f0c39",
+  "size": "878.3 kB",
+  "time": {
+    "compilation": null,
+    "created": "Sat Nov 18 07:14:00 2023",
+    "modified": "Thu Jan 04 11:27:10 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "6598780013b238ee21524fb8"
+  },
+  "name": "unknown",
+  "file_extension": null,
+  "type": "ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, stripped",
+  "scan_date": {
+    "$date": "2024-01-06T01:13:28.325Z"
+  },
+  "sha256": "5466d9405031060ffb564f14b5a263eda12e179287ca4a4a7c94501cd6a25c53",
+  "md5": "91c36bd124e4c8f7a2bc6b6d01324d3c",
+  "size": "128.8 kB",
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Thu Jan 04 15:14:57 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "659878a413b238ee21524fbe"
+  },
+  "name": "GRB_NET.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable (console) Intel 80386 Mono/.Net assembly, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-06T01:16:12.441Z"
+  },
+  "sha256": "453257c3494addafb39cb6815862403e827947a1e7737eb8168cd10522465deb",
+  "md5": "09f341874f72a5cfcedbca707bfd1b3b",
+  "size": "167.9 kB",
+  "time": {
+    "compilation": "Sun Sep 18 23:18:27 2022",
+    "created": "Sun Sep 18 23:18:27 2022",
+    "modified": "Mon Jan 01 00:19:06 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "659878dc13b238ee21524fc4"
+  },
+  "name": "acb.sh",
+  "file_extension": "sh",
+  "type": "Bourne-Again shell script, ASCII text executable, with very long lines (363u)",
+  "scan_date": {
+    "$date": "2024-01-06T01:17:08.519Z"
+  },
+  "sha256": "0cc60a0c480e4d898fa77ab501bbd2afaf3f5fb89a2917a31e7f5fdaa6c3879c",
+  "md5": "cb93528a1ca950307c4f14b48a93564b",
+  "size": "15.2 kB",
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Tue Jan 02 01:01:23 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "6598795413b238ee21524fca"
+  },
+  "name": null,
+  "file_extension": "doc",
+  "type": "Composite Document File V2 Document, Little Endian, Os: Windows, Version 6.2, Code page: 1252, Template: temp.dot, Revision Number: 1, Name of Creating Application: Microsoft Office Word, Create Time/Date: Tue Nov 21 14:27:00 2023, Last Saved Time/Date: Tue Nov 21 14:27:00 2023, Number of Pages: 2, Number of Words: 364, Number of Characters: 2075, Security: 0",
+  "scan_date": {
+    "$date": "2024-01-06T01:19:08.605Z"
+  },
+  "sha256": "1e931660cce69add24e405c9fbdd3072190c9f716c1675334f00d0bdbf84bf46",
+  "md5": "efd493e8ebcd66f9404338532519eb90",
+  "size": "27.1 kB",
+  "time": {
+    "compilation": null,
+    "created": "Tue Nov 21 17:57:00 2023",
+    "modified": "Thu Dec 28 20:44:45 2023"
+  }
+},
+{
+  "_id": {
+    "$oid": "65987af5b9777f500490c332"
+  },
+  "name": "uplay_r164.dll",
+  "file_extension": "dll",
+  "type": "PE32+ executable (DLL) (GUI) x86-64, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-06T01:26:05.373Z"
+  },
+  "sha256": "1a1c5cfc2a24ba5eaa67035d1ca2b5d954597de7dda0154eaef8f66d537672b0",
+  "md5": "50947fe39cffb3b03f5109e26fae1aa8",
+  "size": "901.1 kB",
+  "time": {
+    "compilation": "Tue Nov 25 00:47:59 2014",
+    "created": "Tue Nov 25 00:47:59 2014",
+    "modified": "Tue Jan 02 13:51:14 2024"
+  }
+}]
