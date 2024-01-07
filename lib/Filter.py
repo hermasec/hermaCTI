@@ -92,6 +92,8 @@ class Filter:
 
         if 'type_extension' in all_json['data']['attributes']:
             extension = all_json['data']['attributes']['type_extension']
+        elif 'type_tag' in all_json['data']['attributes']:
+            extension = all_json['data']['attributes']['type_tag']
         else:
             extension = None
 

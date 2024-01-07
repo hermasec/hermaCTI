@@ -4,7 +4,7 @@ from lib.Database import Database
 
 class Virustotal:
 
-    def __init__(self,api_key):
+    def __init__(self, api_key):
         self.base_url = "https://www.virustotal.com/api/v3"
         self.headers = {
             "accept": "application/json",
@@ -12,8 +12,7 @@ class Virustotal:
         }
         self.db_manager = Database(database_name='mydatabase')
 
-
-    def get_desired_data(self , hash):
+    def get_desired_data(self, hash):
 
         query = {'data.id': {'$eq': hash}}
         data = self.db_manager.find_documents('virustotal', query)
@@ -23,23 +22,19 @@ class Virustotal:
             for item in data:
                 result_dict.update(item)
 
-            AVs = self.malicious(result_dict)
-            AVs.update(self.undetected(result_dict))
+            AVs = self.AV_results(result_dict)
             return AVs
 
         else:
             data = self.search_sha256(hash)
-            
+
             if "error" in data:
                 pass
             else:
                 inserted_id = self.db_manager.insert_document('virustotal', data)
 
-                AVs = self.malicious(data)
-                AVs.update(self.undetected(data))
-
+                AVs = self.AV_results(data)
                 return AVs
-
 
     def search_sha256(self, hash):
         url = f'{self.base_url}/files/{hash}'
@@ -55,9 +50,7 @@ class Virustotal:
         except requests.exceptions.RequestException as e:
             return {"error": f"Request failed: {e}"}
 
-        
-    
-    def malicious(self , data):
+    def malicious(self, data):
 
         malicious_engines = {}
 
@@ -67,9 +60,8 @@ class Virustotal:
                 malicious_engines[engine] = 'malicious'
 
         return malicious_engines
-    
 
-    def undetected(self , data):
+    def undetected(self, data):
 
         undetected_engines = {}
 
@@ -78,3 +70,16 @@ class Virustotal:
                 undetected_engines[engine] = 'undetected'
 
         return undetected_engines
+
+    def AV_results(self, data):
+
+        engines = {}
+
+        for engine, info in data['data']['attributes']['last_analysis_results'].items():
+            engines[engine] = {
+                "status": info['category'],
+                "result": info['result'],
+                "method": info['method']
+            }
+
+        return engines

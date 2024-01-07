@@ -57,17 +57,29 @@ class Hybrid:
             for item in data:
                 result_dict.update(item)
 
-            crowdstrike_ml = result_dict.get("scanners_v2")['crowdstrike_ml']['status']
-            metadefender = result_dict.get("scanners_v2")['metadefender']['status']
-            virustotal = result_dict.get("scanners_v2")['virustotal']['status']
+            crowdstrike_ml_status = result_dict.get("scanners_v2")['crowdstrike_ml']['status']
+            metadefender_status = result_dict.get("scanners_v2")['metadefender']['status']
+            virustotal_status = result_dict.get("scanners_v2")['virustotal']['status']
 
             data = {
                 "verdict": result_dict.get("verdict"),
                 "vx_family": result_dict.get("vx_family"),
                 "AVs" :{
-                    "crowdstrike_ml": crowdstrike_ml,
-                    "metadefender": metadefender,
-                    "virustotal": virustotal
+                    "crowdstrike_ml": {
+                        "status": crowdstrike_ml_status,
+                        "result": None,
+                        "method": None
+                    },
+                    "metadefender": {
+                        "status": metadefender_status,
+                        "result": None,
+                        "method": None
+                    },
+                    "virustotal": {
+                        "status": virustotal_status,
+                        "result": None,
+                        "method": None
+                    }
                 }
             }
 
@@ -81,18 +93,29 @@ class Hybrid:
 
                 inserted_id = self.db_manager.insert_document('hybrid', data)
 
-                crowdstrike_ml = data.get("scanners_v2")['crowdstrike_ml']['status']
-                metadefender = data.get("scanners_v2")['metadefender']['status']
-                virustotal = data.get("scanners_v2")['virustotal']['status']
-
+                crowdstrike_ml_status = data.get("scanners_v2")['crowdstrike_ml']['status']
+                metadefender_status = data.get("scanners_v2")['metadefender']['status']
+                virustotal_status = data.get("scanners_v2")['virustotal']['status']
 
                 data = {
                     "verdict": data.get("verdict"),
                     "vx_family": data.get("vx_family"),
                     "AVs": {
-                        "crowdstrike_ml": crowdstrike_ml ,
-                        "metadefender": metadefender,
-                        "virustotal": virustotal
+                        "crowdstrike_ml": {
+                            "status": crowdstrike_ml_status,
+                            "result":None,
+                            "method":None
+                        },
+                        "metadefender": {
+                            "status": metadefender_status,
+                            "result": None,
+                            "method": None
+                        },
+                        "virustotal": {
+                            "status": virustotal_status,
+                            "result": None,
+                            "method": None
+                        }
                     }
                 }
 
