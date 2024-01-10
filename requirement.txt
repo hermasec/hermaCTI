@@ -3,4 +3,7 @@ flask
 pymongo
 OTXv2
 humanize
-python-magic-bin
+python-magic
+stix2
+taxii2-client
+medallion

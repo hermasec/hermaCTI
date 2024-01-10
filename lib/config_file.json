@@ -1,0 +1,19 @@
+{
+  "backend": {
+    "module_class": "MyCustomBackend",
+    "module" : "medallion",
+    "uri": "mongodb://localhost:27017/",
+    "filename": "../test/data/default_data.json"
+  },
+
+  "users": {
+       "admin": "Password0"
+    },
+
+  "taxii": {
+       "max_page_size": 100,
+       "interop_requirements": true
+    }
+
+}
+

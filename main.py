@@ -20,6 +20,7 @@ db_manager = Database(database_name='mydatabase')
 def upload_file():
     return render_template('index.html')
 
+
 @app.route('/api/scan/latest', methods=['GET'])
 def get_latest_scan():
     filter = Filter()
@@ -29,6 +30,7 @@ def get_latest_scan():
 def is_sha256(hash_string):
     # Check if the string matches the SHA256 pattern
     return re.match(r'^[a-fA-F0-9]{64}$', hash_string) is not None
+
 
 @app.route('/api/scan/<hash>', methods=['GET'])
 def scan_api(hash):
@@ -41,7 +43,7 @@ def scan_api(hash):
         return jsonify(error_response), 400  # Return a 400 Bad Request status
 
     filter = Filter()
-    return filter.get_hash_data(hash)
+    return filter.get_hash_data(hash, from_module="api")
 
 
 @app.route('/api/file/upload/', methods=["POST"], strict_slashes=False)
@@ -117,6 +119,7 @@ def intezer():
         data = {"error": "No parameters"}
 
     return jsonify(data)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

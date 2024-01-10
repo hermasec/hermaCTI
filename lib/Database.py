@@ -12,7 +12,8 @@ class Database:
         return result.inserted_id
 
     def update_document(self, collection_name ,filter_criteria, update_operation):
-        result = collection_name.update_one(filter_criteria, update_operation)
+        collection = self.db[collection_name]
+        result = collection.update_one(filter_criteria, update_operation)
 
     def find_documents(self, collection_name, query=None):
         collection = self.db[collection_name]

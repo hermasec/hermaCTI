@@ -13,8 +13,7 @@ class Hybrid:
         }
         self.db_manager = Database(database_name='mydatabase')
 
-    def perform_quick_scan(self,file_path):
-
+    def perform_quick_scan(self, file_path):
 
         url = f'{self.base_url}/quick-scan/file'
 
@@ -42,29 +41,34 @@ class Hybrid:
 
         except requests.exceptions.RequestException as e:
             return {"error": f"Request failed: {e}"}
-        
 
-
-    def get_desired_data(self , hash):
+    def get_desired_data(self, hash):
 
         query = {'sha256': {'$eq': hash}}
         data = self.db_manager.find_documents('hybrid', query)
-
-        
 
         if data:
             result_dict = {}
             for item in data:
                 result_dict.update(item)
 
-            crowdstrike_ml_status = result_dict.get("scanners_v2")['crowdstrike_ml']['status']
-            metadefender_status = result_dict.get("scanners_v2")['metadefender']['status']
-            virustotal_status = result_dict.get("scanners_v2")['virustotal']['status']
+            if result_dict.get("scanners_v2")['crowdstrike_ml']:
+                crowdstrike_ml_status = result_dict.get("scanners_v2")['crowdstrike_ml']['status']
+            else:
+                crowdstrike_ml_status = None
+            if result_dict.get("scanners_v2")['metadefender']:
+                metadefender_status = result_dict.get("scanners_v2")['metadefender']['status']
+            else:
+                metadefender_status = None
+            if result_dict.get("scanners_v2")['virustotal']:
+                virustotal_status = result_dict.get("scanners_v2")['virustotal']['status']
+            else:
+                virustotal_status = None
 
             data = {
                 "verdict": result_dict.get("verdict"),
                 "vx_family": result_dict.get("vx_family"),
-                "AVs" :{
+                "AVs": {
                     "crowdstrike_ml": {
                         "status": crowdstrike_ml_status,
                         "result": None,
@@ -90,12 +94,20 @@ class Hybrid:
             if "error" in data:
                 return data
             else:
-
                 inserted_id = self.db_manager.insert_document('hybrid', data)
 
-                crowdstrike_ml_status = data.get("scanners_v2")['crowdstrike_ml']['status']
-                metadefender_status = data.get("scanners_v2")['metadefender']['status']
-                virustotal_status = data.get("scanners_v2")['virustotal']['status']
+                if data.get("scanners_v2")['crowdstrike_ml']:
+                    crowdstrike_ml_status = data.get("scanners_v2")['crowdstrike_ml']['status']
+                else:
+                    crowdstrike_ml_status = None
+                if data.get("scanners_v2")['metadefender']:
+                    metadefender_status = data.get("scanners_v2")['metadefender']['status']
+                else:
+                    metadefender_status = None
+                if data.get("scanners_v2")['virustotal']:
+                    virustotal_status = data.get("scanners_v2")['virustotal']['status']
+                else:
+                    virustotal_status = None
 
                 data = {
                     "verdict": data.get("verdict"),
@@ -103,8 +115,8 @@ class Hybrid:
                     "AVs": {
                         "crowdstrike_ml": {
                             "status": crowdstrike_ml_status,
-                            "result":None,
-                            "method":None
+                            "result": None,
+                            "method": None
                         },
                         "metadefender": {
                             "status": metadefender_status,
@@ -120,9 +132,8 @@ class Hybrid:
                 }
 
         return data
-        
 
-    def search_sha256(self,sha256_value):
+    def search_sha256(self, sha256_value):
 
         url = f'{self.base_url}/overview/{sha256_value}'
 
@@ -131,7 +142,7 @@ class Hybrid:
             response.raise_for_status()
 
             if response.status_code == 200:
-                final_response=response.json()
+                final_response = response.json()
                 null_count = 0
                 for scanner in final_response['scanners']:
                     percent_value = scanner.get('percent')

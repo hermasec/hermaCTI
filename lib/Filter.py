@@ -18,11 +18,13 @@ class Filter:
         self.otx = OTX(os.environ.get("OTX_API_TOKEN"))
         self.file = FileAnalysis()
 
-    def get_hash_data(self, hash):
+    def get_hash_data(self, hash, from_module):
         fileinfo = {}
         hybrid_data = self.hybrid.get_desired_data(hash)
         virustotal_data = self.virustotal.get_desired_data(hash)
         otx_data = self.otx.get_desired_data(hash)
+        virustotal_ttps = self.virustotal.get_ttps(hash) if from_module == "stix" else self.filter_virustotal_ttps_data(
+            self.virustotal.get_ttps(hash))
 
         if "error" in hybrid_data or "error" in virustotal_data:
             return {"error": "error in returning hybrid and virustotal data"}
@@ -46,13 +48,20 @@ class Filter:
 
             AVs_data = hybrid_data["AVs"]
             AVs_data.update(virustotal_data)
-            file_status = hybrid_data["verdict"]
+            file_status = "clean" if hybrid_data["verdict"] == "no specific threat" else hybrid_data["verdict"]
             file_family = hybrid_data["vx_family"]
-            if otx_data:
-                has_IOC = True if otx_data[0]["IOCs"] else False
+
+            if virustotal_ttps:
+                has_TTP = True
+            elif otx_data:
                 has_TTP = True if otx_data[0]["TTPs"] else False
             else:
-                has_IOC, has_TTP = False, False
+                has_TTP = False
+
+            if otx_data:
+                has_IOC = True if otx_data[0]["IOCs"] else False
+            else:
+                has_IOC = False
 
             return_data = {
                 "sha256": hash,
@@ -62,10 +71,24 @@ class Filter:
                 "has_IOC": has_IOC,
                 "has_TTP": has_TTP,
                 "AVs": AVs_data,
-                "Attacks": otx_data
+                "Attacks": otx_data,
+                "TTPs": virustotal_ttps
             }
 
         return return_data
+
+    def filter_virustotal_ttps_data(self, data):
+        techniques_ids = []
+
+        for tool_name, tool_data in data["data"].items():
+            for tactic_data in tool_data["tactics"]:
+                for technique_data in tactic_data["techniques"]:
+                    technique_id = technique_data["id"]
+                    techniques_ids.append(technique_id)
+
+        unique_techniques_ids = list(set(techniques_ids))
+
+        return unique_techniques_ids
 
     def add_fileinfo_from_virustotal(self, all_json):
         names = all_json['data']['attributes']['names']
@@ -132,11 +155,11 @@ class Filter:
             required_data = {
                 "name": all_data["fileinfo"]["name"],
                 "sha256": all_data["sha256"],
-                "type" : all_data["fileinfo"]["file_extension"],
+                "type": all_data["fileinfo"]["file_extension"],
                 "file_status": all_data["file_status"],
                 "has_IOC": all_data["has_IOC"],
                 "has_TTP": all_data["has_TTP"],
-                "scan_date" : all_data["fileinfo"]["scan_date"]
+                "scan_date": all_data["fileinfo"]["scan_date"]
             }
             result_list.append(required_data)
         return result_list
