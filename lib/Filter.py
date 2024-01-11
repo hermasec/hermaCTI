@@ -158,7 +158,7 @@ class Filter:
         result_list = []
         for item in last_objects:
             sha256 = item["sha256"]
-            all_data = self.get_hash_data(sha256)
+            all_data = self.get_hash_data(sha256, from_module="api")
             required_data = {
                 "name": all_data["fileinfo"]["name"],
                 "sha256": all_data["sha256"],
