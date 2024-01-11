@@ -1,7 +1,6 @@
 import os
 from datetime import datetime
 import humanize
-from bson import ObjectId
 from lib.Database import Database
 from lib.FileAnalysis import FileAnalysis
 from lib.api.Virustotal import Virustotal
@@ -19,16 +18,16 @@ class Filter:
         self.otx = OTX(os.environ.get("OTX_API_TOKEN"))
         self.file = FileAnalysis()
 
-    def get_hash_data(self, hash, from_module):
+    def get_hash_data(self, hash):
         fileinfo = {}
         hybrid_data = self.hybrid.get_desired_data(hash)
         virustotal_data = self.virustotal.get_desired_data(hash)
         otx_data = self.otx.get_desired_data(hash)
         if self.virustotal.get_ttps(hash) == {}:
-            virustotal_ttps = self.virustotal.get_ttps(hash)
+            virustotal_ttps = {}
         else:
-            virustotal_ttps = self.virustotal.get_ttps(hash) if from_module == "stix" else self.filter_virustotal_ttps_data(
-            self.virustotal.get_ttps(hash))
+            virustotal_ttps_for_stix = self.virustotal.get_ttps(hash)
+            virustotal_ttps = self.filter_virustotal_ttps_data(self.virustotal.get_ttps(hash))
 
         if "error" in hybrid_data or "error" in virustotal_data:
             return {"error": "error in returning hybrid and virustotal data"}
@@ -36,19 +35,11 @@ class Filter:
             query = {'sha256': {'$eq': hash}}
             data = self.db_manager.find_documents('fileinfo', query)
             if data:
-                for item in data:
-                    if '_id' in item and isinstance(item['_id'], ObjectId):
-                        del item['_id']
-                    fileinfo.update(item)
+                fileinfo = data[0]
             else:
                 query = {'data.id': {'$eq': hash}}
                 vt_data = self.db_manager.find_documents('virustotal', query)
-                result_dict = {}
-                for item in vt_data:
-                    if '_id' in item and isinstance(item['_id'], ObjectId):
-                        del item['_id']
-                    result_dict.update(item)
-                fileinfo = self.add_fileinfo_from_virustotal(result_dict)
+                fileinfo = self.add_fileinfo_from_virustotal(vt_data[0])
 
             AVs_data = hybrid_data["AVs"]
             AVs_data.update(virustotal_data)
@@ -79,10 +70,29 @@ class Filter:
                 "TTPs": virustotal_ttps
             }
 
-            # stix = STIX()
-            # stix.all_stix_data(return_data)
+            return_data_for_stix = {
+                "sha256": hash,
+                "fileinfo": fileinfo,
+                "file_status": file_status,
+                "family": file_family,
+                "has_IOC": has_IOC,
+                "has_TTP": has_TTP,
+                "AVs": AVs_data,
+                "Attacks": otx_data,
+                "TTPs": virustotal_ttps_for_stix
+            }
+
+        # self.add_stix(return_data_for_stix)
 
         return return_data
+
+
+    def add_stix(self, data):
+        stix = STIX()
+        stix_bundle = stix.all_stix_data(data)
+        stix_json = stix_bundle.serialize(pretty=True)
+        with open("output.json", "w") as json_file:
+            json_file.write(stix_json)
 
     def filter_virustotal_ttps_data(self, data):
         techniques_ids = []
@@ -142,31 +152,59 @@ class Filter:
             }
         }
 
-        inserted_id = self.db_manager.insert_document('fileinfo', file_data)
-        result_dict = {}
-        if '_id' in file_data and isinstance(file_data['_id'], ObjectId):
-            del file_data['_id']
-        result_dict.update(file_data)
-        return result_dict
+        self.db_manager.insert_document('fileinfo', file_data)
+        return file_data
 
     def transfer_time(self, timestamp):
         formatted_date = datetime.fromtimestamp(timestamp).strftime("%a %b %d %H:%M:%S %Y")
         return formatted_date
+
+    def get_short_hash_data(self, hash):
+        query = {'sha256': {'$eq': hash}}
+
+        fileinfo = self.db_manager.find_documents('fileinfo', query)
+        if fileinfo:
+            name = fileinfo[0]["name"]
+            sha256 = fileinfo[0]["sha256"]
+            file_extension = fileinfo[0]["file_extension"]
+            scan_date = fileinfo[0]["scan_date"]
+
+        hybrid_data = self.db_manager.find_documents('hybrid', query)
+        if hybrid_data:
+            file_status = "clean" if hybrid_data[0]["verdict"] == "no specific threat" else hybrid_data[0]["verdict"]
+
+        otx_data = self.db_manager.find_documents('otx', query)
+
+        has_IOC, has_TTP = False, False
+        if otx_data:
+            for pulse in otx_data[0]["pulses"]:
+                has_IOC = True if pulse["indicators"] else False
+                has_TTP = True if pulse["attack_ids"] else False
+                if has_IOC == True and has_TTP == True:
+                    break
+
+        query = {'data.id': {'$eq': hash}}
+        virustotal_data = self.db_manager.find_documents('virustotal', query)
+        if virustotal_data:
+            if 'mitre' in virustotal_data[0]:
+                has_TTP = True
+
+        required_data = {
+            "name": name,
+            "sha256": sha256,
+            "type": file_extension,
+            "file_status": file_status,
+            "has_IOC": has_IOC,
+            "has_TTP": has_TTP,
+            "scan_date": scan_date
+        }
+        return required_data
 
     def get_last_scans(self, limit=10):
         last_objects = self.db_manager.find_and_sort_documents("fileinfo", "scan_date", limit)
         result_list = []
         for item in last_objects:
             sha256 = item["sha256"]
-            all_data = self.get_hash_data(sha256, from_module="api")
-            required_data = {
-                "name": all_data["fileinfo"]["name"],
-                "sha256": all_data["sha256"],
-                "type": all_data["fileinfo"]["file_extension"],
-                "file_status": all_data["file_status"],
-                "has_IOC": all_data["has_IOC"],
-                "has_TTP": all_data["has_TTP"],
-                "scan_date": all_data["fileinfo"]["scan_date"]
-            }
-            result_list.append(required_data)
+            all_data = self.get_short_hash_data(sha256)
+            result_list.append(all_data)
         return result_list

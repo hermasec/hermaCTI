@@ -157,10 +157,6 @@ class STIX:
         return bundle
 
 
-# st = STIX()
-# print(st.all_stix_data(json_data))
-
-
 # # Your CTI data
 # filter = Filter()
 # cti_data = filter.get_hash_data("1e931660cce69add24e405c9fbdd3072190c9f716c1675334f00d0bdbf84bf46")

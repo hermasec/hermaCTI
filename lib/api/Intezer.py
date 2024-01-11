@@ -2,7 +2,6 @@ import requests
 import json
 import time
 from lib.Database import Database
-from bson import ObjectId 
 
 
 class Intezer:
@@ -36,10 +35,7 @@ class Intezer:
             if "error" in result_dict:
                 pass
             else:
-                inserted_id = self.db_manager.insert_document('intezer', result_dict)
-                
-        if '_id' in result_dict and isinstance(result_dict['_id'], ObjectId):
-            del result_dict['_id']
+                self.db_manager.insert_document('intezer', result_dict)
 
         return result_dict
 
@@ -128,13 +124,3 @@ class Intezer:
 
         except requests.exceptions.RequestException as e:
             return {"error": f"Request failed: {e}"}
-
-
-
-        
-# api_key = "78f86730-b371-4f02-a0dd-846d20c24dc3"
-
-
-# intezer = Intezer(api_key)
-# res = intezer.search_sha256("c42b0d200c2022fba3332dd1078cf1412ba37eb52bd74acf7edb4672b1d0f330")
-# print(res)

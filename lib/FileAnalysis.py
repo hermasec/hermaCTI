@@ -2,11 +2,9 @@ import os
 import time
 import hashlib
 from datetime import datetime
-
 import magic
 import humanize
 from lib.Database import Database
-from bson import ObjectId
 
 
 class FileAnalysis:
@@ -28,17 +26,11 @@ class FileAnalysis:
             data = self.db_manager.find_documents('fileinfo', query)
 
             if data:
-                for item in data:
-                    if '_id' in item and isinstance(item['_id'], ObjectId):
-                        del item['_id']
-                    result_dict.update(item)
+                result_dict = data[0]
             else:
                 data = self.gather_all_data(filePath)
-                inserted_id = self.db_manager.insert_document('fileinfo', data)
-                if '_id' in data and isinstance(data['_id'], ObjectId):
-                    del data['_id']
-                result_dict.update(data)
-
+                self.db_manager.insert_document('fileinfo', data)
+                result_dict = data
         else:
             result_dict = {"error": "file_not_found"}
 

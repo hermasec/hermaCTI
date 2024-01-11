@@ -43,7 +43,7 @@ def scan_api(hash):
         return jsonify(error_response), 400  # Return a 400 Bad Request status
 
     filter = Filter()
-    return filter.get_hash_data(hash, from_module="api")
+    return filter.get_hash_data(hash)
 
 
 @app.route('/api/file/upload/', methods=["POST"], strict_slashes=False)

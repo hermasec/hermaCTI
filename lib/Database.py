@@ -8,16 +8,15 @@ class Database:
 
     def insert_document(self, collection_name, document):
         collection = self.db[collection_name]
-        result = collection.insert_one(document)
-        return result.inserted_id
+        collection.insert_one(document.copy())
 
     def update_document(self, collection_name ,filter_criteria, update_operation):
         collection = self.db[collection_name]
-        result = collection.update_one(filter_criteria, update_operation)
+        collection.update_one(filter_criteria, update_operation)
 
     def find_documents(self, collection_name, query=None):
         collection = self.db[collection_name]
-        cursor = collection.find(query) if query else collection.find()
+        cursor = collection.find(query,projection={'_id': 0}) if query else collection.find(projection={'_id': 0})
         return list(cursor)
     
     def find_and_sort_documents(self, collection_name , sort_field , limit):

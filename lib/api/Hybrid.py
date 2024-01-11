@@ -48,10 +48,7 @@ class Hybrid:
         data = self.db_manager.find_documents('hybrid', query)
 
         if data:
-            result_dict = {}
-            for item in data:
-                result_dict.update(item)
-
+            result_dict = data[0]
             if result_dict.get("scanners_v2")['crowdstrike_ml']:
                 crowdstrike_ml_status = result_dict.get("scanners_v2")['crowdstrike_ml']['status']
             else:
@@ -94,7 +91,7 @@ class Hybrid:
             if "error" in data:
                 return data
             else:
-                inserted_id = self.db_manager.insert_document('hybrid', data)
+                self.db_manager.insert_document('hybrid', data)
 
                 if data.get("scanners_v2")['crowdstrike_ml']:
                     crowdstrike_ml_status = data.get("scanners_v2")['crowdstrike_ml']['status']

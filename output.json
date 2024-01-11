@@ -1,0 +1,3896 @@
+{
+    "type": "bundle",
+    "id": "bundle--ca182f72-f025-47cf-a99e-010dc97fabb2",
+    "objects": [
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9",
+            "created": "2023-10-16T13:55:19.000Z",
+            "modified": "2023-10-29T05:31:14.000Z",
+            "name": "plugmanzx.exe",
+            "malware_types": [
+                "Trojan.Generic"
+            ],
+            "is_family": true
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--c5e03584-cdbd-453c-a88d-5c5a35e12b7f",
+            "created": "2024-01-11T20:11:57.243563Z",
+            "modified": "2024-01-11T20:11:57.243563Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[ipv4-addr: value = '193.161.193.99']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.243563Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--af9d69b2-eaa0-41ae-965d-27f255857a34",
+            "created": "2024-01-11T20:11:57.281567Z",
+            "modified": "2024-01-11T20:11:57.281567Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='2916c6e4cefea97681e5f7d39afe1baa']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.281567Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--45fb82c9-7bcb-48a1-a184-7afbe8619a44",
+            "created": "2024-01-11T20:11:57.30352Z",
+            "modified": "2024-01-11T20:11:57.30352Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='56a626b9244c18ac768b5d3db7e014ed']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.30352Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--bf679ad0-a791-47af-8dda-86f89c1c783a",
+            "created": "2024-01-11T20:11:57.310532Z",
+            "modified": "2024-01-11T20:11:57.310532Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='80225e6fc6a1c15d38a7c924641fdb84']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.310532Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--71363d21-a8cd-4399-8388-4d57d3ecd5ab",
+            "created": "2024-01-11T20:11:57.315568Z",
+            "modified": "2024-01-11T20:11:57.315568Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='88b17e26ef2c53627314448b4894bb9a']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.315568Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--10c3ad4e-4382-42e7-8805-a49be7cfdd8c",
+            "created": "2024-01-11T20:11:57.320523Z",
+            "modified": "2024-01-11T20:11:57.320523Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='cc4785f780b286ccdaf01c38bbbc809d']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.320523Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--dd0dbd52-1807-4800-b673-95a522dc8c92",
+            "created": "2024-01-11T20:11:57.325568Z",
+            "modified": "2024-01-11T20:11:57.325568Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='68fd0f6dd5cef4e94a2d745baa50d0d295b8acf9']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.325568Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--0f11c935-2740-4e9e-a692-7606a42d24a1",
+            "created": "2024-01-11T20:11:57.331568Z",
+            "modified": "2024-01-11T20:11:57.331568Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='6cdc821855a5244b4cef53ce9004ae95ff1daa14']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.331568Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--7867237d-4f5b-48f2-9434-68b16053125a",
+            "created": "2024-01-11T20:11:57.336522Z",
+            "modified": "2024-01-11T20:11:57.336522Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='8d5204e5661d704522b6f18864bd6c1b8299eba7']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.336522Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--16b5e1d5-54d2-404a-a091-47abc261c96a",
+            "created": "2024-01-11T20:11:57.34257Z",
+            "modified": "2024-01-11T20:11:57.34257Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='d43034fe47dceff4c24765df55e16e973a745536']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.34257Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--3a535bab-ee3b-461e-95b2-d51182725d40",
+            "created": "2024-01-11T20:11:57.348568Z",
+            "modified": "2024-01-11T20:11:57.348568Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='e444ca1f1c3a1bc003e9e03f5dbcc3e88400e7fd']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.348568Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--0d436f0d-df1a-47cc-a4d9-0f83417f22d2",
+            "created": "2024-01-11T20:11:57.354531Z",
+            "modified": "2024-01-11T20:11:57.354531Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='12a39d099a6744863a5349b84e91fc582e4956a5060d61597de43cdcbba8df7e']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.354531Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--66a8002d-62e1-445a-bcd7-7326f6be7cfd",
+            "created": "2024-01-11T20:11:57.359554Z",
+            "modified": "2024-01-11T20:11:57.359554Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='4635920e78112660335f3ee1a05290b0fc174787a0e4532a029983e02179ad0b']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.359554Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b97b1607-d8d9-4864-a9a5-abf590005808",
+            "created": "2024-01-11T20:11:57.362554Z",
+            "modified": "2024-01-11T20:11:57.362554Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='71d8447b0d646903db508314cdc59708855c914ec4a3a72d7f06f487177e11fc']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.362554Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ee002ee0-7255-45b9-ba25-ee496ce0b03d",
+            "created": "2024-01-11T20:11:57.365553Z",
+            "modified": "2024-01-11T20:11:57.365553Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='b125d23b3416c85b1f35d0d2f6d0f9aee2f1d905af6c79f39a9d6486033a6a45']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.365553Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--2669373d-9807-471e-abea-6bf3a7f17442",
+            "created": "2024-01-11T20:11:57.368532Z",
+            "modified": "2024-01-11T20:11:57.368532Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='dfb9b3c7cf15baa877da2d2c87e1e53761517094bab2de1a6b92ebca122fa858']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.368532Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--62a5a985-36fd-4cdb-a8ac-66fd6f839ea3",
+            "created": "2024-01-11T20:11:57.37252Z",
+            "modified": "2024-01-11T20:11:57.37252Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[ipv4-addr: value = '79.134.225.113']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.37252Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e1bd6837-b9a1-4097-beec-5db00de281c8",
+            "created": "2024-01-11T20:11:57.375516Z",
+            "modified": "2024-01-11T20:11:57.375516Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='7b5ffc7abe4ca48da678b87c0f6b4c0a']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.375516Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--5ca11506-2f01-4efe-83af-c3cead0d2a00",
+            "created": "2024-01-11T20:11:57.378553Z",
+            "modified": "2024-01-11T20:11:57.378553Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='3ee744364eacab0bf28a99f46c509968294cfac9']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.378553Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--3f4b1fa5-979f-401a-9c42-eb175e554892",
+            "created": "2024-01-11T20:11:57.381556Z",
+            "modified": "2024-01-11T20:11:57.381556Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='6604fa6459dae8e7fa422b3fe8946417ac5b8383127b00a38b2990da6b1a6a04']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.381556Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--252b0e95-7a8d-445c-aa03-1801af77e5c9",
+            "created": "2024-01-11T20:11:57.384547Z",
+            "modified": "2024-01-11T20:11:57.384547Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='02d1d6119f13b83cab2278c3e43b08a9']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.384547Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--9f863ac5-6b2f-4368-9d9b-c9fa57bdd043",
+            "created": "2024-01-11T20:11:57.387516Z",
+            "modified": "2024-01-11T20:11:57.387516Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='04b12e17ab63048b21b8996955aeee5a']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.387516Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e4188d28-a782-4e98-9bd5-95083f96fb82",
+            "created": "2024-01-11T20:11:57.389542Z",
+            "modified": "2024-01-11T20:11:57.389542Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='09768ed665365838e5f15dff9c5b3e74']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.389542Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--05480b34-6e35-479d-92e3-9bcd1cfd3935",
+            "created": "2024-01-11T20:11:57.391541Z",
+            "modified": "2024-01-11T20:11:57.391541Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='17bb37120b51ff2558ba2d2f9db05ec4']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.391541Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--612690e2-3b65-44f5-9c5d-d5bb00bd6f3f",
+            "created": "2024-01-11T20:11:57.392541Z",
+            "modified": "2024-01-11T20:11:57.392541Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='1cbfd7fcf52961bf55fbbe7dcfb42607']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.392541Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--034bcd7d-69da-4880-a3e4-32338ab67d4f",
+            "created": "2024-01-11T20:11:57.394541Z",
+            "modified": "2024-01-11T20:11:57.394541Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='1d615678fe4e768a0b8ff9f15d4a2884']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.394541Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--f4cf771e-5454-4d12-b65c-08b0ef435e83",
+            "created": "2024-01-11T20:11:57.395529Z",
+            "modified": "2024-01-11T20:11:57.395529Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='23ee6fc8b90d6619cc22f1f5577fa5ed']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.395529Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--fe500806-4009-43f9-b3b7-9653bad7c35e",
+            "created": "2024-01-11T20:11:57.396548Z",
+            "modified": "2024-01-11T20:11:57.396548Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='264e01e9cae9c9e1967ea892288bc9ae']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.396548Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--c4d92beb-3638-43dd-bf40-bebf2245e67c",
+            "created": "2024-01-11T20:11:57.398549Z",
+            "modified": "2024-01-11T20:11:57.398549Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='290fce33014ad508c6a7e7cf17c2e991']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.398549Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--5f806a5f-accc-4373-82f6-67ace0c698aa",
+            "created": "2024-01-11T20:11:57.399549Z",
+            "modified": "2024-01-11T20:11:57.399549Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='2bd30803f1a6a7aa3f280e8da02ae04b']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.399549Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b8cd1edb-10dd-4b72-bc42-9cb55a598caf",
+            "created": "2024-01-11T20:11:57.400541Z",
+            "modified": "2024-01-11T20:11:57.400541Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='2d330c354c14b39368876392d56fb18c']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.400541Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--78213847-5a46-4121-8b8f-9cf7ca2353e0",
+            "created": "2024-01-11T20:11:57.402523Z",
+            "modified": "2024-01-11T20:11:57.402523Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='2f7fc48c821a1ee87c7c95b069fe69ef']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.402523Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--376a01b3-1b19-4f36-9e9a-3466907d5679",
+            "created": "2024-01-11T20:11:57.404513Z",
+            "modified": "2024-01-11T20:11:57.404513Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='411e2a93398bddd6c13c105da83ca801']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.404513Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--305b074d-9e2f-492a-84de-78c0ebb78d8c",
+            "created": "2024-01-11T20:11:57.40651Z",
+            "modified": "2024-01-11T20:11:57.40651Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='42b86b1774e0634afa169f72a9ef08cb']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.40651Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--93f750fb-dab7-49e8-bd78-de54ae72b5dc",
+            "created": "2024-01-11T20:11:57.407509Z",
+            "modified": "2024-01-11T20:11:57.407509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='444f0a93e49f13d2863e4bbe80395e43']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.407509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ec095bdf-c426-48d3-9eae-52cbe2a58ff4",
+            "created": "2024-01-11T20:11:57.407509Z",
+            "modified": "2024-01-11T20:11:57.407509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='47cf778895d5e51b3be5ada7f81f7907']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.407509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--02daf811-53b2-45de-b285-0a769fbdf1fd",
+            "created": "2024-01-11T20:11:57.408509Z",
+            "modified": "2024-01-11T20:11:57.408509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='4cfc0e1b4abecad9e5e862d34d9b014d']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.408509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8396e37b-ddcf-4dc6-9030-b3b61c4acdf0",
+            "created": "2024-01-11T20:11:57.409509Z",
+            "modified": "2024-01-11T20:11:57.409509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='4e2d8ca775d0214e2532acd778b91424']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.409509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ec41dac3-0565-438d-947e-55dc3c28bfee",
+            "created": "2024-01-11T20:11:57.410509Z",
+            "modified": "2024-01-11T20:11:57.410509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='52b29489c928823c8da84a6e3d22fc12']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.410509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--6b65d7e2-5909-45d2-bab2-7fcd23743fe3",
+            "created": "2024-01-11T20:11:57.411509Z",
+            "modified": "2024-01-11T20:11:57.411509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='581d9f88bf2bf367e29bab4544111547']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.411509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--5e258959-324d-478a-9c80-d08ccec1ac10",
+            "created": "2024-01-11T20:11:57.412509Z",
+            "modified": "2024-01-11T20:11:57.412509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='62c6f595b570eafda24cab01dc2e18a2']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.412509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--33985ffa-8d31-4722-9c7f-76fc8375a439",
+            "created": "2024-01-11T20:11:57.413509Z",
+            "modified": "2024-01-11T20:11:57.413509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='68009cdd2529871592a32554ee184abd']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.413509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--bfa76c00-383c-44c5-b886-758b920a7c96",
+            "created": "2024-01-11T20:11:57.414508Z",
+            "modified": "2024-01-11T20:11:57.414508Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='688e964feeb18ae69d6f9159e379a694']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.414508Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--20ab2409-e4f2-46bd-9f3b-3f5589679eb6",
+            "created": "2024-01-11T20:11:57.415509Z",
+            "modified": "2024-01-11T20:11:57.415509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='6b7cfb983a2dc2338b89cbadd837c801']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.415509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--9c102a1f-a9e3-412a-a377-7ed3979730b9",
+            "created": "2024-01-11T20:11:57.416527Z",
+            "modified": "2024-01-11T20:11:57.416527Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='6e65813ad51126c4fcabcf6ad9267e26']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.416527Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--22206770-92fe-42ee-a641-0c59917d12d2",
+            "created": "2024-01-11T20:11:57.417508Z",
+            "modified": "2024-01-11T20:11:57.417508Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='80a9f5a1f01d4716c15bcdc8d025a8b2']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.417508Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b75306e0-f61b-47bf-beac-3bbd5b6eda91",
+            "created": "2024-01-11T20:11:57.419525Z",
+            "modified": "2024-01-11T20:11:57.419525Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='81abca731625a26c26b7831db81c0e1e']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.419525Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--3186d42a-caaa-4d3a-a1b2-8b3cf984ed3f",
+            "created": "2024-01-11T20:11:57.420509Z",
+            "modified": "2024-01-11T20:11:57.420509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='8cd95ee6d335088255f79db2579e8a98']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.420509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--152c7da1-27d3-480d-a251-610deb3b6a0c",
+            "created": "2024-01-11T20:11:57.422509Z",
+            "modified": "2024-01-11T20:11:57.422509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='91ddaf1628da8f0c1d532cd217a7f26d']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.422509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e624267a-b3b3-4407-897d-6dd07655283a",
+            "created": "2024-01-11T20:11:57.423509Z",
+            "modified": "2024-01-11T20:11:57.423509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='9d10e2af44800c5f5248adb48d22c687']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.423509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--6f619a34-6e57-41d0-a8d5-721680eb84b7",
+            "created": "2024-01-11T20:11:57.424509Z",
+            "modified": "2024-01-11T20:11:57.424509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='9e48278fd8663c2722eb3ce7b5ae34e7']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.424509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--0c2ed321-8c02-49b8-9e6b-aa4e697f6f1e",
+            "created": "2024-01-11T20:11:57.425514Z",
+            "modified": "2024-01-11T20:11:57.425514Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='a1d4eaa6f0f151d604a1e6f79583ff88']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.425514Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--fe72aff4-896d-49dc-85c1-e5b5144acc87",
+            "created": "2024-01-11T20:11:57.426509Z",
+            "modified": "2024-01-11T20:11:57.426509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='a974ba2381279891bbb4b89e7b81329b']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.426509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e6734ccf-6711-45d6-b153-c437c2b5db5e",
+            "created": "2024-01-11T20:11:57.427508Z",
+            "modified": "2024-01-11T20:11:57.427508Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='ac2f55cefd715937e9584752b706712b']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.427508Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--39b11fe4-0388-4b0d-af2b-0d2a938bfee8",
+            "created": "2024-01-11T20:11:57.428508Z",
+            "modified": "2024-01-11T20:11:57.428508Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='af1ee91fdbf586c55760acccc9c6ea52']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.428508Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--bde12ff3-5f80-4165-9d65-8855f0940da0",
+            "created": "2024-01-11T20:11:57.429508Z",
+            "modified": "2024-01-11T20:11:57.429508Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='b4280a4c2797d899137625740b57a144']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.429508Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--512985b4-3e02-41c9-97dd-d972cb8f3c52",
+            "created": "2024-01-11T20:11:57.430508Z",
+            "modified": "2024-01-11T20:11:57.430508Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='b9ff56932963babf8acf628bb6d33daf']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.430508Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--0b8430d8-d2de-4019-8939-37d4b389f682",
+            "created": "2024-01-11T20:11:57.430508Z",
+            "modified": "2024-01-11T20:11:57.430508Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='ba08c0723b7d96a47c83bc8d7111e01c']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.430508Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--c8e09bcf-d50f-4f7f-919c-e069954dcc8f",
+            "created": "2024-01-11T20:11:57.431509Z",
+            "modified": "2024-01-11T20:11:57.431509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='bc15d9095a6d6fc6c794516a839793e4']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.431509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--afb4959e-9a7e-4a41-aa43-cbb1f5a88f5f",
+            "created": "2024-01-11T20:11:57.432509Z",
+            "modified": "2024-01-11T20:11:57.432509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='c133a4df2fc42b747a8cf16603b66cfa']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.432509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--443815ff-fc18-4eca-9ade-94509802aece",
+            "created": "2024-01-11T20:11:57.433509Z",
+            "modified": "2024-01-11T20:11:57.433509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='cc4b8b6bbce04726a89a89c165241570']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.433509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--526920e2-1424-43fa-bd82-267a3dfddf10",
+            "created": "2024-01-11T20:11:57.435576Z",
+            "modified": "2024-01-11T20:11:57.435576Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='d4e61a92ff8da165dbf4922816810d0f']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.435576Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--c12f2883-c0e7-4563-b9c8-47f81e8c9144",
+            "created": "2024-01-11T20:11:57.43751Z",
+            "modified": "2024-01-11T20:11:57.43751Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='e758928032effa43ba8de94338661e9b']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.43751Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--4188c5cd-3787-4de2-9421-b2ba0dfb1b45",
+            "created": "2024-01-11T20:11:57.438511Z",
+            "modified": "2024-01-11T20:11:57.438511Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='ed24b048880a8a2a3b7ac4911a7e81df']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.438511Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--3725d52d-1362-4c5b-b4b9-3fed32dcb3e6",
+            "created": "2024-01-11T20:11:57.439555Z",
+            "modified": "2024-01-11T20:11:57.439555Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='ef0d014f8dd257f6bfb8fa7e4f6e5839']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.439555Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--fe666f68-7b33-4a5c-99c1-b3a6e5e7e3ec",
+            "created": "2024-01-11T20:11:57.440544Z",
+            "modified": "2024-01-11T20:11:57.440544Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='f0ef2c3a320448b3a8ea0535da3b411b']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.440544Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--525b6e62-62b4-4612-af83-b3299f0ca9e8",
+            "created": "2024-01-11T20:11:57.441544Z",
+            "modified": "2024-01-11T20:11:57.441544Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='f224b4bb5f65abd0d093fb29584bf370']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.441544Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--6ad3621e-0399-4814-bace-739bed4db171",
+            "created": "2024-01-11T20:11:57.442546Z",
+            "modified": "2024-01-11T20:11:57.442546Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='f4a329dff4849f902fe877e345e6d740']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.442546Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--da95c0cd-95c4-4725-8506-ce95d7e2f8a8",
+            "created": "2024-01-11T20:11:57.443544Z",
+            "modified": "2024-01-11T20:11:57.443544Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='0388fa9634f697cf371cd51ee28654a19f051bee']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.443544Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--7d125546-d6e4-45cf-99d9-f385246b168b",
+            "created": "2024-01-11T20:11:57.444555Z",
+            "modified": "2024-01-11T20:11:57.444555Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='16e83930abc3236d2954277a860f0cc4057cbf44']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.444555Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e170f093-b0f4-468e-8a51-368fe0b566b8",
+            "created": "2024-01-11T20:11:57.445546Z",
+            "modified": "2024-01-11T20:11:57.445546Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='17df042d1c8e7515f05f1029357f1ffae27ebc0b']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.445546Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--7072742a-3948-43a4-9e23-4d443f52bb97",
+            "created": "2024-01-11T20:11:57.446546Z",
+            "modified": "2024-01-11T20:11:57.446546Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='24918b78ec2c68569ca9c5236b5f56bc09ea3f48']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.446546Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--77c7becf-65cb-454b-9848-066400ca4895",
+            "created": "2024-01-11T20:11:57.44755Z",
+            "modified": "2024-01-11T20:11:57.44755Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='2972d277b9a29b5278a91dd223d18d4accec9f98']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.44755Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--7373d783-aafa-4040-a566-97503437deef",
+            "created": "2024-01-11T20:11:57.448547Z",
+            "modified": "2024-01-11T20:11:57.448547Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='2b40c885ba8997c5523e2997190e5e92f49ecee9']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.448547Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--87c18fbf-d151-42cf-b7cd-653cfcee1db6",
+            "created": "2024-01-11T20:11:57.449599Z",
+            "modified": "2024-01-11T20:11:57.449599Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='2ed5b88167919c7b6f70fb8265163d37b0815beb']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.449599Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--364c4d8f-9cf5-4608-91a4-e0747a0548cb",
+            "created": "2024-01-11T20:11:57.450551Z",
+            "modified": "2024-01-11T20:11:57.450551Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='2ef691e35656021bc80101e7871df071477cd6d4']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.450551Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--74918122-184d-400b-9809-858ccd438f1c",
+            "created": "2024-01-11T20:11:57.45352Z",
+            "modified": "2024-01-11T20:11:57.45352Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='385a907d5646ef30bf470784b89867b1ef1737d8']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.45352Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--196e9124-6447-46c1-bb70-e763f195a294",
+            "created": "2024-01-11T20:11:57.455513Z",
+            "modified": "2024-01-11T20:11:57.455513Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='3a8663443aad869b60b68e218a3bbf7d5c9c2271']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.455513Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--819ebb3a-a28f-4a19-9091-fa73a8c6c087",
+            "created": "2024-01-11T20:11:57.456511Z",
+            "modified": "2024-01-11T20:11:57.456511Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='41691753d54811793876d64bb7bc6628b6031ec5']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.456511Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--2f2c118c-1f2f-4919-b08b-518dfc38113d",
+            "created": "2024-01-11T20:11:57.457509Z",
+            "modified": "2024-01-11T20:11:57.457509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='4216195d24088bc73750ecee80010968665d7d35']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.457509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--bd73c381-dae6-4752-8762-e9011519660f",
+            "created": "2024-01-11T20:11:57.458509Z",
+            "modified": "2024-01-11T20:11:57.458509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='4a4194169382c29229a283e9c21e3759126073d1']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.458509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8a370a0b-5966-45ce-a001-1453aebeef09",
+            "created": "2024-01-11T20:11:57.459509Z",
+            "modified": "2024-01-11T20:11:57.459509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='4a7106dc7a1690c6407397b39641d24413f9fc19']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.459509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8ada0124-a5a7-4c46-850a-797f7123006d",
+            "created": "2024-01-11T20:11:57.46051Z",
+            "modified": "2024-01-11T20:11:57.46051Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='4ce31d4c9209464b1ca3c9746a0293f6eea96961']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.46051Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--3b3db7e1-d5f5-4a7d-b598-444b9e4ec860",
+            "created": "2024-01-11T20:11:57.461509Z",
+            "modified": "2024-01-11T20:11:57.461509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='534c0b0f75403235eaf576cf150416919d9bafce']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.461509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--618fcffb-d0da-47f3-8820-823e608196f6",
+            "created": "2024-01-11T20:11:57.46351Z",
+            "modified": "2024-01-11T20:11:57.46351Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='5652fa0fdc9789468533a30da488f712e1f961ca']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.46351Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--f305c1aa-142e-4fbf-9206-a5f0558fbc05",
+            "created": "2024-01-11T20:11:57.464509Z",
+            "modified": "2024-01-11T20:11:57.464509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='6316b611ba295b54b1d65f5fcf39fc5fc1f862a3']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.464509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8c56904f-ea27-43c7-9aaf-b1520ddc9f42",
+            "created": "2024-01-11T20:11:57.465509Z",
+            "modified": "2024-01-11T20:11:57.465509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='6353515cd0642b46cb95bd028a3d44f273d5e5e9']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.465509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--82a1e121-b08c-4ac7-8a39-d315edb2f31b",
+            "created": "2024-01-11T20:11:57.466509Z",
+            "modified": "2024-01-11T20:11:57.466509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='6e7d2f0a561cb1a7432b17453d95fd49ec60e70e']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.466509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--99ca0d37-93ed-4205-ad8f-aac0d943e901",
+            "created": "2024-01-11T20:11:57.467509Z",
+            "modified": "2024-01-11T20:11:57.467509Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='73a0c7160ddac36f9df413f4960cc57ee1715d77']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.467509Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b9d8bf17-fe7d-42e9-8253-2113cb448c76",
+            "created": "2024-01-11T20:11:57.470515Z",
+            "modified": "2024-01-11T20:11:57.470515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='7aa491254911fe6db95b56023d3f9d1c926d8344']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.470515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e253d44b-d225-447a-8653-d4427088c453",
+            "created": "2024-01-11T20:11:57.471515Z",
+            "modified": "2024-01-11T20:11:57.471515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='7e2d4479febcc509e23fb52d7a45d6da97b631c8']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.471515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8ee8a5ff-ed59-4bbc-97d9-d3293e0be769",
+            "created": "2024-01-11T20:11:57.472514Z",
+            "modified": "2024-01-11T20:11:57.472514Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='869a095720b32d26a6faffb6e8ba042b162eae5f']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.472514Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--acafaa8f-8cd3-44b8-9fed-d0a5812cc591",
+            "created": "2024-01-11T20:11:57.474515Z",
+            "modified": "2024-01-11T20:11:57.474515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='8a7ef5f35656f23d49bc497db4323ced6da7b8f6']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.474515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--0710ee25-2bba-4c42-9df0-4b6641bdecae",
+            "created": "2024-01-11T20:11:57.475514Z",
+            "modified": "2024-01-11T20:11:57.475514Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='a1f72c890d0b920f4f4cb2d59df6fa40734de90d']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.475514Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--fcd84f0d-85cc-4c66-942e-f966517a1b21",
+            "created": "2024-01-11T20:11:57.476515Z",
+            "modified": "2024-01-11T20:11:57.476515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='a2e70df2f7c185dd2016a723a5e926961995a05d']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.476515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--bfafd97a-e9dc-4ccc-a57b-e2b3e509c292",
+            "created": "2024-01-11T20:11:57.477514Z",
+            "modified": "2024-01-11T20:11:57.477514Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='a7d701e306a9e48920b2b681832cc8cec21e84a7']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.477514Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--2e9e68b0-8c77-45ca-97f3-4a32be8e8bb4",
+            "created": "2024-01-11T20:11:57.478515Z",
+            "modified": "2024-01-11T20:11:57.478515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='b18d090c073598d390a1f4d00b6c9b9222c5fa18']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.478515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--5fcbb1e2-9341-4c13-a96f-cd4fc71d5847",
+            "created": "2024-01-11T20:11:57.479515Z",
+            "modified": "2024-01-11T20:11:57.479515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='c4ced52e16d684b7ee61d18784231e47ab9a244b']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.479515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--688a2ed4-7aac-4549-9916-88081aae3d4d",
+            "created": "2024-01-11T20:11:57.480514Z",
+            "modified": "2024-01-11T20:11:57.480514Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='ccc7a7989411b2cbda4f16c5a145ecfc7b1079c4']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.480514Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--4b8ced7e-2182-475f-af1f-4f4cc78af969",
+            "created": "2024-01-11T20:11:57.482514Z",
+            "modified": "2024-01-11T20:11:57.482514Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='d5601ee0c53264b267e78dec2b08d43d6736212d']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.482514Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--000af2f6-88df-4808-9869-d095df3ddbd7",
+            "created": "2024-01-11T20:11:57.483514Z",
+            "modified": "2024-01-11T20:11:57.483514Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='e055a6caef8d8575151c37e5840913065a77a798']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.483514Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--82549cea-29e9-4c43-8854-9e8b51f13af7",
+            "created": "2024-01-11T20:11:57.484515Z",
+            "modified": "2024-01-11T20:11:57.484515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='e063ac4987491f752fe4096d36553219cab2dfc2']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.484515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--0876cb83-f406-4b23-ba82-7a6d4ee7be51",
+            "created": "2024-01-11T20:11:57.487512Z",
+            "modified": "2024-01-11T20:11:57.487512Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='e93c7bbd00421da94bdafae1ce0e8e6b9f946f5a']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.487512Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--26e3f210-7930-4833-b051-7ca970b1ec7a",
+            "created": "2024-01-11T20:11:57.488517Z",
+            "modified": "2024-01-11T20:11:57.488517Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='ee032642106efe7603287d5a3048e237f026e7bb']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.488517Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ea8f7764-effa-4e01-bdcb-7a79fce648e5",
+            "created": "2024-01-11T20:11:57.489515Z",
+            "modified": "2024-01-11T20:11:57.489515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='f6eb7714a71feb278ac931a8d40d89b0b21e1c9a']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.489515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--6248d4e5-4365-43e9-a66a-7e131e053495",
+            "created": "2024-01-11T20:11:57.491528Z",
+            "modified": "2024-01-11T20:11:57.491528Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='f9b6e2a4f93966873a49b365246515ff545c12f8']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.491528Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--36cda9f7-d505-4c11-8ac4-9d31f557c045",
+            "created": "2024-01-11T20:11:57.492515Z",
+            "modified": "2024-01-11T20:11:57.492515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='fa8b8952d8718ce46500f34528dc07c14f021b89']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.492515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--f9fe0798-810a-477d-9c52-435cf0ccec29",
+            "created": "2024-01-11T20:11:57.493515Z",
+            "modified": "2024-01-11T20:11:57.493515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA1'='fc97717ba926cd55e1dfff7a8e25036ba9f8785c']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.493515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--bd1ac1b0-3c99-4342-b029-ce01f8c948c0",
+            "created": "2024-01-11T20:11:57.494515Z",
+            "modified": "2024-01-11T20:11:57.494515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='02eb438f2b627fcb3a502afd3a4b0f1b0d6f2376ee8279580789b57429f7b1f6']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.494515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ac933754-e6d0-4af0-a67f-d011eaf7e6ad",
+            "created": "2024-01-11T20:11:57.496515Z",
+            "modified": "2024-01-11T20:11:57.496515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='03c24c4da5f42a1b9a770e84a0dd1f8e690b9e6873bf338fbec1d75d80006739']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.496515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--c155ecd1-0e7e-4dbf-8917-2fc0d2831680",
+            "created": "2024-01-11T20:11:57.497515Z",
+            "modified": "2024-01-11T20:11:57.497515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='046e77a53c1c11b495df74c10db753676d38847474a9948a2d2ba41ef5208183']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.497515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ffed08af-4bf6-420a-9545-158966b90d9d",
+            "created": "2024-01-11T20:11:57.498515Z",
+            "modified": "2024-01-11T20:11:57.498515Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='06fa859540733cee9ea3da2fc973b3a2c323e8b1e7d1d86a1fa37be6e58c55a1']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.498515Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ee234e29-e40f-4ab1-a6da-b8b65aab6bb9",
+            "created": "2024-01-11T20:11:57.500557Z",
+            "modified": "2024-01-11T20:11:57.500557Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='09bbc4211e7a0e63804344324e0528f31bc527e993662b5832f308629b6d2abf']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.500557Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--52c46508-3fcc-40c5-ac9d-65093c1bd2b3",
+            "created": "2024-01-11T20:11:57.502531Z",
+            "modified": "2024-01-11T20:11:57.502531Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='2bdbe25f715e65a6ae288750c0d3236b7edf55b4f43fce3a88b779f01b6101da']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.502531Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--56cf4f0c-0257-4386-aeb3-60fae0eb2e23",
+            "created": "2024-01-11T20:11:57.504512Z",
+            "modified": "2024-01-11T20:11:57.504512Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='2c3c48eb14ac08eccacfab102ab7c7ba4f2e1de5bd7f2b28e950ea37df9a741b']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.504512Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--65bd2609-8d86-46c8-a716-c4d5624502f3",
+            "created": "2024-01-11T20:11:57.505517Z",
+            "modified": "2024-01-11T20:11:57.505517Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='51f4d671f83565450e3190071868108c1476a854f463d0cd481a125ab34a8eed']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.505517Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b5e93834-46a6-4592-9a4f-a6c04b461f86",
+            "created": "2024-01-11T20:11:57.507516Z",
+            "modified": "2024-01-11T20:11:57.507516Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='5402c785037614d09ad41e41e11093635455b53afd55aa054a09a84274725841']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.507516Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--dbc29358-841f-479c-9868-67f0f8613911",
+            "created": "2024-01-11T20:11:57.508516Z",
+            "modified": "2024-01-11T20:11:57.508516Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='6056ddf4fd5f58f421883da0176a32cbad5458c80d33e1e0d4f1ddcf28f6d21d']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.508516Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--399e5ea2-2430-4b6c-a633-16ab5bed240a",
+            "created": "2024-01-11T20:11:57.509516Z",
+            "modified": "2024-01-11T20:11:57.509516Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='62c5fb5e4895a3da152268e54aecca3142b0ba8f1f5f4dd15b4a13747049d6f9']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.509516Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--a802f280-222e-429e-93ff-8509dd77f915",
+            "created": "2024-01-11T20:11:57.511516Z",
+            "modified": "2024-01-11T20:11:57.511516Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='6d07bb87e2a7e6452d67046229ad5acd89c512415ec9d8244b2c98ec57431f92']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.511516Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--4f998cf3-e7d1-4a07-acb2-012ca70b7f17",
+            "created": "2024-01-11T20:11:57.512516Z",
+            "modified": "2024-01-11T20:11:57.512516Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='6fe55b655fc4cd3b51c813e38df4416675ae81ab0cd303e15f591fd74846f9de']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.512516Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--a5a178be-d94a-4d33-ad44-a246eec1d8b9",
+            "created": "2024-01-11T20:11:57.514694Z",
+            "modified": "2024-01-11T20:11:57.514694Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='7dc7cec2c3f7e56499175691f64060ebd955813002d4db780e68a8f6e7d0a8f8']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.514694Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--846e3091-dd64-4652-b5ef-a69b89260430",
+            "created": "2024-01-11T20:11:57.516709Z",
+            "modified": "2024-01-11T20:11:57.516709Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='84143a9050c55b6467062bd75f5f10f826b9b1107f7e96e7838122b33547c844']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.516709Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--07291e7c-a208-4fed-aaf2-af1cfd5fa56a",
+            "created": "2024-01-11T20:11:57.517709Z",
+            "modified": "2024-01-11T20:11:57.517709Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='87f26bbe201d7f76fff5ae536708f3f7f18dec22e1b3424923429a54b452b29b']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.517709Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--4bcc845d-3a6a-402e-b380-a522b1de07b1",
+            "created": "2024-01-11T20:11:57.520708Z",
+            "modified": "2024-01-11T20:11:57.520708Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='983ae7a9c8a9751973adcf400c3e28674c737801f7ce4496b95b56545b40028a']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.520708Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--eba3a084-ba7d-483f-873a-7c0eab19e819",
+            "created": "2024-01-11T20:11:57.522707Z",
+            "modified": "2024-01-11T20:11:57.522707Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='a335c9ad21f67b44232a6f31f5605b013167628f63e7e00a3fc840a8ab9afc73']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.522707Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b85d1791-d2ec-46ad-8fda-de59b82056af",
+            "created": "2024-01-11T20:11:57.524706Z",
+            "modified": "2024-01-11T20:11:57.524706Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='a59a43bc9b4ba0c700a6e6b128e521e68c4e9ac1bf8de1196490ca2cae84d479']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.524706Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--935a01b3-dc91-434c-b6ae-bdb630f174ed",
+            "created": "2024-01-11T20:11:57.526706Z",
+            "modified": "2024-01-11T20:11:57.526706Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='a9eead538581c0d60d2d3f5afea21fb7e6bba4e866d13d9de3e4762df25ed528']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.526706Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--daa24fa5-1885-4ace-ae33-472fb668f5b1",
+            "created": "2024-01-11T20:11:57.528706Z",
+            "modified": "2024-01-11T20:11:57.528706Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='ad7cbe9a265326ac497121d6421e3d2c7db8e6c0ed11aacee84f4b6674317dee']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.528706Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--622b29bf-849e-40d5-9de9-9bcd01505bf7",
+            "created": "2024-01-11T20:11:57.530712Z",
+            "modified": "2024-01-11T20:11:57.530712Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='aeb8f27ac2bd40c4bb08aad29488af84d18b01a2be4b86cbe18dad6454d7c5e8']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.530712Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--a18b0cd8-e266-4fad-ac56-efaf7238760d",
+            "created": "2024-01-11T20:11:57.531747Z",
+            "modified": "2024-01-11T20:11:57.531747Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='aff9d2bb990174e2b6255a4066bf3eae5243ce4066aae6baff1ec438cd9358bc']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.531747Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8a52051c-af9a-49b7-9ded-83495616ed80",
+            "created": "2024-01-11T20:11:57.532738Z",
+            "modified": "2024-01-11T20:11:57.532738Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='b1302f8312506956db9526159dd028bb4852a0f53fba64db7aae97d8f1a1ba14']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.532738Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--85514934-b4ce-4258-a0af-b5da44c80cf9",
+            "created": "2024-01-11T20:11:57.533737Z",
+            "modified": "2024-01-11T20:11:57.533737Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='b1d71f94e245a0406f5abf36c075906dca03ef5fb1720603b101300499499758']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.533737Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--189dadb3-3759-47be-a365-92299b19c817",
+            "created": "2024-01-11T20:11:57.537708Z",
+            "modified": "2024-01-11T20:11:57.537708Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='b330d142b19023e73d7f9d5f5c9dbb2f9ca450c36c038512cb11c1b0bd7bb593']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.537708Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--c485e0d0-8981-4a37-8282-7056dffb55d1",
+            "created": "2024-01-11T20:11:57.539737Z",
+            "modified": "2024-01-11T20:11:57.539737Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='b674cc279ec0579f342c73a81a4a4bed94b6e7e3aceb017801053261bcf060b6']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.539737Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--d7b1d069-57d3-4217-b550-068a34f300d4",
+            "created": "2024-01-11T20:11:57.54074Z",
+            "modified": "2024-01-11T20:11:57.54074Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='b799a7a8d2744eed52b8c8ae4515ec1c6d3363a717572daef2cdf9eaad459106']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.54074Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--1a8c7e30-e375-4d05-8fed-0a8d7a8f6257",
+            "created": "2024-01-11T20:11:57.541741Z",
+            "modified": "2024-01-11T20:11:57.541741Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='bf52ca4d4077ae7e840cf6cd11fdec0bb5be890ddd5687af5cfa581c8c015fcd']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.541741Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--880a8dc9-a1d7-4fbe-804f-605e93fc98d1",
+            "created": "2024-01-11T20:11:57.542742Z",
+            "modified": "2024-01-11T20:11:57.542742Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='d1f622488a88176e81cdb1cb8669f586803c2dff54f660ac72a18f0a1d27194c']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.542742Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--5dea707c-8ea8-48f8-be0c-06a33cc23683",
+            "created": "2024-01-11T20:11:57.544742Z",
+            "modified": "2024-01-11T20:11:57.544742Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='d200ef20e49022f408dfda3a74b4bdbdb728aa37f628a1198f72896af722c36a']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.544742Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--2825f7c7-4d57-4f14-9be8-e73c735194fc",
+            "created": "2024-01-11T20:11:57.54574Z",
+            "modified": "2024-01-11T20:11:57.54574Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='d24e8e1b9e5cdc40797bfc894bb086d455a679f5fee5a2a03c438e4dce141265']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.54574Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--252a344a-07ff-4b7e-97be-ea15242a5267",
+            "created": "2024-01-11T20:11:57.547741Z",
+            "modified": "2024-01-11T20:11:57.547741Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='d3a2000ec18ab94aa8dbb5eef9360c6048ea3066d165fba1d9ca219ba5780385']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.547741Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e58ae149-6ed1-46fd-a636-085174020376",
+            "created": "2024-01-11T20:11:57.548707Z",
+            "modified": "2024-01-11T20:11:57.548707Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='d7004910a87c90ade7e5ff6169f2b866ece667d2feebed6f0ec856fb838d2297']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.548707Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--7506c3a9-06a4-4530-8da0-021b2ccc4bd1",
+            "created": "2024-01-11T20:11:57.549748Z",
+            "modified": "2024-01-11T20:11:57.549748Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='decc5037a8183259415746a489cc35149987ed4b7b42b2b894f52c813d4218d3']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.549748Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--de00e72b-8862-4039-b5d0-4c2c12aae321",
+            "created": "2024-01-11T20:11:57.552727Z",
+            "modified": "2024-01-11T20:11:57.552727Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='e4d193d060a99ffc9dfeeb843432b54ff639401982f596098497e52cc422b0db']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.552727Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--80bb0707-c617-4e2d-a616-f96fd2b43d0d",
+            "created": "2024-01-11T20:11:57.555738Z",
+            "modified": "2024-01-11T20:11:57.555738Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='e635ebc10abe8c2491474b6f96430958c2d7d5c4702b395e4695b37582d1670c']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.555738Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--c83a3cda-b873-4ebc-9cea-3998e48f171c",
+            "created": "2024-01-11T20:11:57.556733Z",
+            "modified": "2024-01-11T20:11:57.556733Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='eaba2822cfb7a52fc240d9b6f32cae1f98a51cfbd47ae45bddf17134a464f6cc']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.556733Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--bd0df668-a66f-48db-80ca-0ac982bf0913",
+            "created": "2024-01-11T20:11:57.557732Z",
+            "modified": "2024-01-11T20:11:57.557732Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='f35fdd43f200391be9860788b80f9d33b1da585a4d4d702c94c9d2c3a1861324']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.557732Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--02ee845b-da0c-4f65-a7df-c6148c94cc4d",
+            "created": "2024-01-11T20:11:57.558739Z",
+            "modified": "2024-01-11T20:11:57.558739Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256'='f86d05c1d7853c06fc5561f8df19b53506b724a83bb29c69b39f004a0f7f82d8']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.558739Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--7c17b565-235d-4637-a935-efeb3dfe7b75",
+            "created": "2024-01-11T20:11:57.560744Z",
+            "modified": "2024-01-11T20:11:57.560744Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[ipv4-addr: value = '167.235.49.247']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.560744Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--4c8ddc08-d0aa-4409-aa44-39210d571c6a",
+            "created": "2024-01-11T20:11:57.561751Z",
+            "modified": "2024-01-11T20:11:57.561751Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[ipv4-addr: value = '179.43.141.210']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.561751Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--23643bea-ecb2-4445-a880-c0fba8d2832d",
+            "created": "2024-01-11T20:11:57.562746Z",
+            "modified": "2024-01-11T20:11:57.562746Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'a1free9bird.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.562746Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--32da8dad-02ff-4045-aeb6-58050b034ee8",
+            "created": "2024-01-11T20:11:57.565724Z",
+            "modified": "2024-01-11T20:11:57.565724Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'alienlol.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.565724Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--1e8a0924-b734-4863-b9fa-27660effeaee",
+            "created": "2024-01-11T20:11:57.566721Z",
+            "modified": "2024-01-11T20:11:57.566721Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'altyeds.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.566721Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--85fa7fcb-3fa9-40ec-b79d-0906b045e96f",
+            "created": "2024-01-11T20:11:57.56771Z",
+            "modified": "2024-01-11T20:11:57.56771Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'dbtnqpi.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.56771Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--f0c26c53-bf1f-4b9f-922b-5dc464cd3fdc",
+            "created": "2024-01-11T20:11:57.569724Z",
+            "modified": "2024-01-11T20:11:57.569724Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'eszhbxqo.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.569724Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--7ff98577-2bbe-4cd3-9672-02864710d1b0",
+            "created": "2024-01-11T20:11:57.571707Z",
+            "modified": "2024-01-11T20:11:57.571707Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'ewylto.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.571707Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--88e41f01-d75f-4f3e-a239-bc9a49d97c53",
+            "created": "2024-01-11T20:11:57.572706Z",
+            "modified": "2024-01-11T20:11:57.572706Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'gpfnveoxt.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.572706Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--79044fb0-5e9b-4262-8edc-8e462dd86f1b",
+            "created": "2024-01-11T20:11:57.573705Z",
+            "modified": "2024-01-11T20:11:57.573705Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'gzviab.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.573705Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ced3706e-eba7-46bf-9f67-7cbd2d9abadc",
+            "created": "2024-01-11T20:11:57.574706Z",
+            "modified": "2024-01-11T20:11:57.574706Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'hodbeast.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.574706Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--5ad4c317-5b9e-49a8-ad36-d4eb0fe40237",
+            "created": "2024-01-11T20:11:57.575706Z",
+            "modified": "2024-01-11T20:11:57.575706Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'imgofxs.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.575706Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--9787e684-180b-4b93-bcc1-05616083960a",
+            "created": "2024-01-11T20:11:57.577706Z",
+            "modified": "2024-01-11T20:11:57.577706Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'jcmfdlip.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.577706Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--d5ad6f99-0968-4f9e-abb4-99fcde81c43b",
+            "created": "2024-01-11T20:11:57.578705Z",
+            "modified": "2024-01-11T20:11:57.578705Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'jgexi.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.578705Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--74308eed-a75c-4183-b8f3-97c70f9b7bb7",
+            "created": "2024-01-11T20:11:57.579712Z",
+            "modified": "2024-01-11T20:11:57.579712Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'kctunb.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.579712Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--7c87767c-cbf2-4e25-9232-9a64db9d7ff6",
+            "created": "2024-01-11T20:11:57.580711Z",
+            "modified": "2024-01-11T20:11:57.580711Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'kpqunz.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.580711Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b00ce254-baa4-4e97-abf6-ed17ffd87196",
+            "created": "2024-01-11T20:11:57.581711Z",
+            "modified": "2024-01-11T20:11:57.581711Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'lbxzwns.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.581711Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--c328cec1-85fb-4b88-938e-2218f81548d3",
+            "created": "2024-01-11T20:11:57.582711Z",
+            "modified": "2024-01-11T20:11:57.582711Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'mnpwtyvu.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.582711Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--2fc46fc3-0cf3-4e73-bd78-f756b22efe2f",
+            "created": "2024-01-11T20:11:57.583711Z",
+            "modified": "2024-01-11T20:11:57.583711Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'nkhsftpcj.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.583711Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--cd2f818f-7185-4736-9cc7-ea05ba7fe1e9",
+            "created": "2024-01-11T20:11:57.586735Z",
+            "modified": "2024-01-11T20:11:57.586735Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'odict.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.586735Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--1abb3949-3a0d-4e58-8ac6-55975ab68c54",
+            "created": "2024-01-11T20:11:57.587709Z",
+            "modified": "2024-01-11T20:11:57.587709Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'siekis.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.587709Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--cb0b0b42-1329-4ceb-b5b2-6f5e2c398dc8",
+            "created": "2024-01-11T20:11:57.589742Z",
+            "modified": "2024-01-11T20:11:57.589742Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'svxemnp.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.589742Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b974e688-99b9-43e6-a024-0afccdc87db9",
+            "created": "2024-01-11T20:11:57.590742Z",
+            "modified": "2024-01-11T20:11:57.590742Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'sxwzdkbe.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.590742Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ab1a18a9-6a6d-4d2e-8805-f1b39b808fe3",
+            "created": "2024-01-11T20:11:57.591745Z",
+            "modified": "2024-01-11T20:11:57.591745Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'takmnbj.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.591745Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--d5200050-2cc8-4b17-b3db-5d92d8ccbd06",
+            "created": "2024-01-11T20:11:57.592738Z",
+            "modified": "2024-01-11T20:11:57.592738Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'tjnhrpdco.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.592738Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--1710fc2c-8867-4f42-9e41-9a6be966d51b",
+            "created": "2024-01-11T20:11:57.593738Z",
+            "modified": "2024-01-11T20:11:57.593738Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'tzfmb.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.593738Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--5abadfcd-a9ca-4e36-b11b-bf7dd77a1247",
+            "created": "2024-01-11T20:11:57.594745Z",
+            "modified": "2024-01-11T20:11:57.594745Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'uefcml.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.594745Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--6436e4a0-5549-4465-95f5-00cc221fe02d",
+            "created": "2024-01-11T20:11:57.595743Z",
+            "modified": "2024-01-11T20:11:57.595743Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'ujsbhoi.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.595743Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--9678d735-aff4-4f7e-a4f7-b3060096d6d3",
+            "created": "2024-01-11T20:11:57.596744Z",
+            "modified": "2024-01-11T20:11:57.596744Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'vbytg.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.596744Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e7bc72e4-5ce8-4489-af71-2309d3e26724",
+            "created": "2024-01-11T20:11:57.597743Z",
+            "modified": "2024-01-11T20:11:57.597743Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'wcpotjs.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.597743Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--eab2f492-0c50-4279-9459-21e450a4f301",
+            "created": "2024-01-11T20:11:57.598745Z",
+            "modified": "2024-01-11T20:11:57.598745Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'wgviu.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.598745Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--a07ed142-820e-4dc9-a71f-18eabc709909",
+            "created": "2024-01-11T20:11:57.599753Z",
+            "modified": "2024-01-11T20:11:57.599753Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'worldinfocontact.club']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.599753Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--5fd5da5f-52df-4f0d-8de9-2f158fbb6f8a",
+            "created": "2024-01-11T20:11:57.60075Z",
+            "modified": "2024-01-11T20:11:57.60075Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'wqbvkntgj.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.60075Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--4065e981-5eb5-4508-b532-e1dae1114f8f",
+            "created": "2024-01-11T20:11:57.603708Z",
+            "modified": "2024-01-11T20:11:57.603708Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'xjymkrp.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.603708Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--7f05ea31-06a4-4993-8d20-546acaf437c8",
+            "created": "2024-01-11T20:11:57.604709Z",
+            "modified": "2024-01-11T20:11:57.604709Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'xzlmyurth.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.604709Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--95b82584-7dee-4c8e-a711-23cce3b06587",
+            "created": "2024-01-11T20:11:57.605739Z",
+            "modified": "2024-01-11T20:11:57.605739Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'ybzjisw.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.605739Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--3dfbbdb8-7cd6-4664-afb2-0c2ac24ecf75",
+            "created": "2024-01-11T20:11:57.606742Z",
+            "modified": "2024-01-11T20:11:57.606742Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[domain-name: value = 'ytknbj.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.606742Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--1b5b5ec0-aeb5-4d30-9c75-428517df51ba",
+            "created": "2024-01-11T20:11:57.607737Z",
+            "modified": "2024-01-11T20:11:57.607737Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[cve: value = 'ad.jcrsoft.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.607737Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--9aa63d93-90a1-4b1a-89fa-624ec19a6fea",
+            "created": "2024-01-11T20:11:57.608742Z",
+            "modified": "2024-01-11T20:11:57.608742Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[cve: value = 'api.private-chatting.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.608742Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b6577286-6f6a-4732-ad79-5d9c6c4c3fc5",
+            "created": "2024-01-11T20:11:57.609751Z",
+            "modified": "2024-01-11T20:11:57.609751Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[cve: value = 'assay.porchlightcommunity.org']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.609751Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e89536e2-6843-4f86-87b7-701b54e2659c",
+            "created": "2024-01-11T20:11:57.610708Z",
+            "modified": "2024-01-11T20:11:57.610708Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[cve: value = 'beiyeye.401hk.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.610708Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--44ad07db-c4fd-4db0-9213-6f9fd2cee51b",
+            "created": "2024-01-11T20:11:57.611707Z",
+            "modified": "2024-01-11T20:11:57.611707Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[cve: value = 'bj6po.a1free9bird.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.611707Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--41abaf26-a599-42b1-8867-2adf34ec1d98",
+            "created": "2024-01-11T20:11:57.612739Z",
+            "modified": "2024-01-11T20:11:57.612739Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[cve: value = 'eu-central-7075.packetriot.net']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.612739Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--38aa6222-52b5-4195-a71e-eae3e6d85099",
+            "created": "2024-01-11T20:11:57.613746Z",
+            "modified": "2024-01-11T20:11:57.613746Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[cve: value = 'hadleyshope.3utilities.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.613746Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--4b63188d-864f-44d7-805e-2cf265dab8bf",
+            "created": "2024-01-11T20:11:57.614745Z",
+            "modified": "2024-01-11T20:11:57.614745Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[cve: value = 'icybin.flnet.org']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.614745Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--49340202-c524-4c21-8ca0-dd812043084e",
+            "created": "2024-01-11T20:11:57.614745Z",
+            "modified": "2024-01-11T20:11:57.614745Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[cve: value = 'ip.yototoo.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.614745Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--d5b0dd0f-0bad-4f9e-8895-8449d078972d",
+            "created": "2024-01-11T20:11:57.615748Z",
+            "modified": "2024-01-11T20:11:57.615748Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[cve: value = 'nano8100.duckdns.org']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.615748Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--1dc84aee-ad87-4f03-ac6f-916a2f2aaedc",
+            "created": "2024-01-11T20:11:57.616751Z",
+            "modified": "2024-01-11T20:11:57.616751Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[cve: value = 'tcp.nhntech.com']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.616751Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e16d28a9-47dc-4f0a-8243-5304cfd65852",
+            "created": "2024-01-11T20:11:57.617747Z",
+            "modified": "2024-01-11T20:11:57.617747Z",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[cve: value = 'xiaoxiannv.gnway.net']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-01-11T20:11:57.617747Z"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--dbefd8bf-8a31-4f76-8bd1-51d42a242dfb",
+            "created": "2024-01-11T20:11:57.621707Z",
+            "modified": "2024-01-11T20:11:57.621707Z",
+            "name": "Windows Management Instrumentation",
+            "description": "Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and payloads. WMI is an administration feature that provides a uniform environment to access Windows system components. The WMI service enables both local and remote access, though the latter is facilitated by Remote Services such as Distributed Component Object Model (DCOM) and Windows Remote Management (WinRM). Remote WMI over DCOM operates using port 135, whereas WMI over WinRM operates over port 5985 when using HTTP and 5986 for HTTPS.\nAn adversary can use WMI to interact with local and remote systems and use it as a means to execute various behaviors, such as gathering information for Discovery as well as remote Execution of files as part of Lateral Movement.  ",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Execution"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1047/",
+                    "external_id": "T1047"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--fa3280cd-5759-4a9c-b5c2-8aa489123f78",
+            "created": "2024-01-11T20:11:57.621707Z",
+            "modified": "2024-01-11T20:11:57.621707Z",
+            "name": "Automated Collection",
+            "description": "Once established within a system or network, an adversary may use automated techniques for collecting internal data. Methods for performing this technique could include use of a Command and Scripting Interpreter to search for and copy information fitting set criteria such as file type, location, or name at specific time intervals. In cloud-based environments, adversaries may also use cloud APIs, command line interfaces, or extract, transform, and load (ETL) services to automatically collect data. This functionality could also be built into remote access tools. \nThis technique may incorporate use of other techniques such as File and Directory Discovery and Lateral Tool Transfer to identify and move files, as well as Cloud Service Dashboard and Cloud Storage Object Discovery to identify resources in cloud environments.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Collection"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1119/",
+                    "external_id": "T1119"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--a48c2e7c-7469-4a15-ba60-c8c1b4a78ecb",
+            "created": "2024-01-11T20:11:57.622744Z",
+            "modified": "2024-01-11T20:11:57.622744Z",
+            "name": "Input Capture",
+            "description": "Adversaries may use methods of capturing user input to obtain credentials or collect information. During normal system usage, users often provide credentials to various different locations, such as login pages/portals or system dialog boxes. Input capture mechanisms may be transparent to the user (e.g. Credential API Hooking) or rely on deceiving the user into providing input into what they believe to be a genuine service (e.g. Web Portal Capture).",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Collection"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1056/",
+                    "external_id": "T1056"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--c37570f3-f679-4037-bb5f-30a79aab3f67",
+            "created": "2024-01-11T20:11:57.622744Z",
+            "modified": "2024-01-11T20:11:57.622744Z",
+            "name": "System Information Discovery",
+            "description": "An adversary may attempt to get detailed information about the operating system and hardware, including version, patches, hotfixes, service packs, and architecture. Adversaries may use the information from System Information Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.\nTools such as Systeminfo can be used to gather detailed system information. If running with privileged access, a breakdown of system data can be gathered through the systemsetup configuration tool on macOS. As an example, adversaries with user-level access can execute the df -aH command to obtain currently mounted disks and associated freely available space. Adversaries may also leverage a Network Device CLI on network devices to gather detailed system information (e.g. show version). System Information Discovery combined with information gathered from other forms of discovery and reconnaissance can drive payload development and concealment.\nInfrastructure as a Service (IaaS) cloud providers such as AWS, GCP, and Azure allow access to instance and virtual machine information via APIs. Successful authenticated API calls can return data such as the operating system platform and status of a particular instance or the model view of a virtual machine.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1082/",
+                    "external_id": "T1082"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--451cba01-2bb1-4691-af55-f4ac151bd137",
+            "created": "2024-01-11T20:11:57.622744Z",
+            "modified": "2024-01-11T20:11:57.622744Z",
+            "name": "Process Discovery",
+            "description": "Adversaries may attempt to get information about running processes on a system. Information obtained could be used to gain an understanding of common software/applications running on systems within the network. Adversaries may use the information from Process Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.\nIn Windows environments, adversaries could obtain details on running processes using the Tasklist utility via cmd or Get-Process via PowerShell. Information about processes can also be extracted from the output of Native API calls such as CreateToolhelp32Snapshot. In Mac and Linux, this is accomplished with the ps command. Adversaries may also opt to enumerate processes via /proc.\nOn network devices, Network Device CLI commands such as show processes can be used to display current running processes.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1057/",
+                    "external_id": "T1057"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--c09e00cd-eda8-4249-8995-ec9d616d1614",
+            "created": "2024-01-11T20:11:57.623709Z",
+            "modified": "2024-01-11T20:11:57.623709Z",
+            "name": "Application Window Discovery",
+            "description": "Adversaries may attempt to get a listing of open application windows. Window listings could convey information about how the system is used. For example, information about application windows could be used identify potential data to collect as well as identifying security tooling (Security Software Discovery) to evade.\nAdversaries typically abuse system features for this type of enumeration. For example, they may gather information through native system features such as Command and Scripting Interpreter commands and Native API functions.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1010/",
+                    "external_id": "T1010"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--6a9e5a4c-2725-4c10-b2ed-1b7062a4c0f1",
+            "created": "2024-01-11T20:11:57.623709Z",
+            "modified": "2024-01-11T20:11:57.623709Z",
+            "name": "Query Registry",
+            "description": "Adversaries may interact with the Windows Registry to gather information about the system, configuration, and installed software.\nThe Registry contains a significant amount of information about the operating system, configuration, software, and security. Information can easily be queried using the Reg utility, though other means to access the Registry exist. Some of the information may help adversaries to further their operation within a network. Adversaries may use the information from Query Registry during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1012/",
+                    "external_id": "T1012"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--cbc8d5b8-c3ef-451b-a21b-190b0e837e08",
+            "created": "2024-01-11T20:11:57.623709Z",
+            "modified": "2024-01-11T20:11:57.623709Z",
+            "name": "Input Capture",
+            "description": "Adversaries may use methods of capturing user input to obtain credentials or collect information. During normal system usage, users often provide credentials to various different locations, such as login pages/portals or system dialog boxes. Input capture mechanisms may be transparent to the user (e.g. Credential API Hooking) or rely on deceiving the user into providing input into what they believe to be a genuine service (e.g. Web Portal Capture).",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Credential Access"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1056/",
+                    "external_id": "T1056"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--fb74111f-63e9-4b76-b933-3a3109ed0f3a",
+            "created": "2024-01-11T20:11:57.624744Z",
+            "modified": "2024-01-11T20:11:57.624744Z",
+            "name": "Modify Registry",
+            "description": "Adversaries may interact with the Windows Registry to hide configuration information within Registry keys, remove information as part of cleaning up, or as part of other techniques to aid in persistence and execution.\nAccess to specific areas of the Registry depends on account permissions, some requiring administrator-level access. The built-in Windows command-line utility Reg may be used for local or remote Registry modification.  Other tools may also be used, such as a remote access tool, which may contain functionality to interact with the Registry through the Windows API.\nRegistry modifications may also include actions to hide keys, such as prepending key names with a null character, which will cause an error and/or be ignored when read via Reg or other utilities using the Win32 API.  Adversaries may abuse these pseudo-hidden keys to conceal payloads/commands used to maintain persistence.  \nThe Registry of a remote system may be modified to aid in execution of files as part of lateral movement. It requires the remote Registry service to be running on the target system.  Often Valid Accounts are required, along with access to the remote system's SMB/Windows Admin Shares for RPC communication.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Defense Evasion"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1112/",
+                    "external_id": "T1112"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--5453a23e-1ca9-4fa8-9e41-a0cb1e46e375",
+            "created": "2024-01-11T20:11:57.624744Z",
+            "modified": "2024-01-11T20:11:57.624744Z",
+            "name": "Input Capture",
+            "description": "Adversaries may use methods of capturing user input to obtain credentials or collect information. During normal system usage, users often provide credentials to various different locations, such as login pages/portals or system dialog boxes. Input capture mechanisms may be transparent to the user (e.g. Credential API Hooking) or rely on deceiving the user into providing input into what they believe to be a genuine service (e.g. Web Portal Capture).",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Collection"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1056/",
+                    "external_id": "T1056"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--3b649736-6165-4b79-919c-cce3572772eb",
+            "created": "2024-01-11T20:11:57.624744Z",
+            "modified": "2024-01-11T20:11:57.624744Z",
+            "name": "Scheduled Task/Job",
+            "description": "Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code. Utilities exist within all major operating systems to schedule programs or scripts to be executed at a specified date and time. A task can also be scheduled on a remote system, provided the proper authentication is met (ex: RPC and file and printer sharing in Windows environments). Scheduling a task on a remote system typically may require being a member of an admin or otherwise privileged group on the remote system.\nAdversaries may use task scheduling to execute programs at system startup or on a scheduled basis for persistence. These mechanisms can also be abused to run a process under the context of a specified account (such as one with elevated permissions/privileges). Similar to System Binary Proxy Execution, adversaries have also abused task scheduling to potentially mask one-time execution under a trusted system process.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Persistence"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1053/",
+                    "external_id": "T1053"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--187f0fc3-7a15-4c16-8d38-f81f38d3a794",
+            "created": "2024-01-11T20:11:57.625733Z",
+            "modified": "2024-01-11T20:11:57.625733Z",
+            "name": "Scheduled Task/Job",
+            "description": "Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code. Utilities exist within all major operating systems to schedule programs or scripts to be executed at a specified date and time. A task can also be scheduled on a remote system, provided the proper authentication is met (ex: RPC and file and printer sharing in Windows environments). Scheduling a task on a remote system typically may require being a member of an admin or otherwise privileged group on the remote system.\nAdversaries may use task scheduling to execute programs at system startup or on a scheduled basis for persistence. These mechanisms can also be abused to run a process under the context of a specified account (such as one with elevated permissions/privileges). Similar to System Binary Proxy Execution, adversaries have also abused task scheduling to potentially mask one-time execution under a trusted system process.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Execution"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1053/",
+                    "external_id": "T1053"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--72a7a595-3d1b-4c74-af88-a1c90d6a96f4",
+            "created": "2024-01-11T20:11:57.625733Z",
+            "modified": "2024-01-11T20:11:57.625733Z",
+            "name": "File and Directory Discovery",
+            "description": "Adversaries may enumerate files and directories or may search in specific locations of a host or network share for certain information within a file system. Adversaries may use the information from File and Directory Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.\nMany command shell utilities can be used to obtain this information. Examples include dir, tree, ls, find, and locate. Custom tools may also be used to gather file and directory information and interact with the Native API. Adversaries may also leverage a Network Device CLI on network devices to gather file and directory information (e.g. dir, show flash, and/or nvram).",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1083/",
+                    "external_id": "T1083"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--7b4bac4e-37f3-4957-836c-08f81096fa02",
+            "created": "2024-01-11T20:11:57.625733Z",
+            "modified": "2024-01-11T20:11:57.625733Z",
+            "name": "Process Discovery",
+            "description": "Adversaries may attempt to get information about running processes on a system. Information obtained could be used to gain an understanding of common software/applications running on systems within the network. Adversaries may use the information from Process Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.\nIn Windows environments, adversaries could obtain details on running processes using the Tasklist utility via cmd or Get-Process via PowerShell. Information about processes can also be extracted from the output of Native API calls such as CreateToolhelp32Snapshot. In Mac and Linux, this is accomplished with the ps command. Adversaries may also opt to enumerate processes via /proc.\nOn network devices, Network Device CLI commands such as show processes can be used to display current running processes.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1057/",
+                    "external_id": "T1057"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--2b66134b-fdf5-4ba7-8470-ca154f723fef",
+            "created": "2024-01-11T20:11:57.626708Z",
+            "modified": "2024-01-11T20:11:57.626708Z",
+            "name": "Virtualization/Sandbox Evasion",
+            "description": "Adversaries may employ various means to detect and avoid virtualization and analysis environments. This may include changing behaviors based on the results of checks for the presence of artifacts indicative of a virtual machine environment (VME) or sandbox. If the adversary detects a VME, they may alter their malware to disengage from the victim or conceal the core functions of the implant. They may also search for VME artifacts before dropping secondary or additional payloads. Adversaries may use the information learned from Virtualization/Sandbox Evasion during automated discovery to shape follow-on behaviors.\nAdversaries may use several methods to accomplish Virtualization/Sandbox Evasion such as checking for security monitoring tools (e.g., Sysinternals, Wireshark, etc.) or other system artifacts associated with analysis or virtualization. Adversaries may also check for legitimate user activity to help determine if it is in an analysis environment. Additional methods include use of sleep timers or loops within malware code to avoid operating within a temporary sandbox.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1497/",
+                    "external_id": "T1497"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--fe175cf2-bb82-4a52-9dc6-0b2667c1dbae",
+            "created": "2024-01-11T20:11:57.626708Z",
+            "modified": "2024-01-11T20:11:57.626708Z",
+            "name": "System Information Discovery",
+            "description": "An adversary may attempt to get detailed information about the operating system and hardware, including version, patches, hotfixes, service packs, and architecture. Adversaries may use the information from System Information Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.\nTools such as Systeminfo can be used to gather detailed system information. If running with privileged access, a breakdown of system data can be gathered through the systemsetup configuration tool on macOS. As an example, adversaries with user-level access can execute the df -aH command to obtain currently mounted disks and associated freely available space. Adversaries may also leverage a Network Device CLI on network devices to gather detailed system information (e.g. show version). System Information Discovery combined with information gathered from other forms of discovery and reconnaissance can drive payload development and concealment.\nInfrastructure as a Service (IaaS) cloud providers such as AWS, GCP, and Azure allow access to instance and virtual machine information via APIs. Successful authenticated API calls can return data such as the operating system platform and status of a particular instance or the model view of a virtual machine.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1082/",
+                    "external_id": "T1082"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--03b19a78-0929-44e8-930b-85bfbf8e5882",
+            "created": "2024-01-11T20:11:57.626708Z",
+            "modified": "2024-01-11T20:11:57.626708Z",
+            "name": "Non-Application Layer Protocol",
+            "description": "Adversaries may use an OSI non-application layer protocol for communication between host and C2 server or among infected hosts within a network. The list of possible protocols is extensive. Specific examples include use of network layer protocols, such as the Internet Control Message Protocol (ICMP), transport layer protocols, such as the User Datagram Protocol (UDP), session layer protocols, such as Socket Secure (SOCKS), as well as redirected/tunneled protocols, such as Serial over LAN (SOL).\nICMP communication between hosts is one example. Because ICMP is part of the Internet Protocol Suite, it is required to be implemented by all IP-compatible hosts. However, it is not as commonly monitored as other Internet Protocols such as TCP or UDP and may be used by adversaries to hide communications.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Command and Control"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1095/",
+                    "external_id": "T1095"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--057649e3-2c1c-4732-a687-1ee0d3e70ec4",
+            "created": "2024-01-11T20:11:57.627744Z",
+            "modified": "2024-01-11T20:11:57.627744Z",
+            "name": "Application Layer Protocol",
+            "description": "Adversaries may communicate using OSI application layer protocols to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. \nAdversaries may utilize many different protocols, including those used for web browsing, transferring files, electronic mail, or DNS. For connections that occur internally within an enclave (such as those between a proxy or pivot node and other nodes), commonly used protocols are SMB, SSH, or RDP. ",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Command and Control"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1071/",
+                    "external_id": "T1071"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--33b90c65-c4bd-4fe9-a7bd-3634e1b4468e",
+            "created": "2024-01-11T20:11:57.627744Z",
+            "modified": "2024-01-11T20:11:57.627744Z",
+            "name": "Remote Access Software",
+            "description": "An adversary may use legitimate desktop support and remote access software to establish an interactive command and control channel to target systems within networks. These services, such as VNC, Team Viewer, AnyDesk, ScreenConnect, LogMein, AmmyyAdmin, and other remote monitoring and management (RMM) tools, are commonly used as legitimate technical support software and may be allowed by application control within a target environment.\nRemote access software may be installed and used post-compromise as an alternate communications channel for redundant access or as a way to establish an interactive remote desktop session with the target system. They may also be used as a component of malware to establish a reverse connection or back-connect to a service or adversary controlled system.\nAdversaries may similarly abuse response features included in EDR and other defensive tools that enable remote access.\nInstallation of many remote access software may also include persistence (e.g., the software's installation routine creates a Windows Service).",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Command and Control"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1219/",
+                    "external_id": "T1219"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--316c8128-08c0-40d3-baa1-790578e09e1f",
+            "created": "2024-01-11T20:11:57.627744Z",
+            "modified": "2024-01-11T20:11:57.627744Z",
+            "name": "Process Injection",
+            "description": "Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges. Process injection is a method of executing arbitrary code in the address space of a separate live process. Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via process injection may also evade detection from security products since the execution is masked under a legitimate process. \nThere are many different ways to inject code into a process, many of which abuse legitimate functionalities. These implementations exist for every major OS but are typically platform specific. \nMore sophisticated samples may perform multiple process injections to segment modules and further evade detection, utilizing named pipes or other inter-process communication (IPC) mechanisms as a communication channel. ",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Defense Evasion"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1055/",
+                    "external_id": "T1055"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--645f12fc-94ec-4f03-9659-8e12150af815",
+            "created": "2024-01-11T20:11:57.627744Z",
+            "modified": "2024-01-11T20:11:57.627744Z",
+            "name": "Disable or Modify Tools",
+            "description": "Adversaries may modify and/or disable security tools to avoid possible detection of their malware/tools and activities. This may take many forms, such as killing security software processes or services, modifying / deleting Registry keys or configuration files so that tools do not operate properly, or other methods to interfere with security tools scanning or reporting information. Adversaries may also disable updates to prevent the latest security patches from reaching tools on victim systems.\nAdversaries may also tamper with artifacts deployed and utilized by security tools. Security tools may make dynamic changes to system components in order to maintain visibility into specific events. For example, security products may load their own modules and/or modify those loaded by processes to facilitate data collection. Similar to Indicator Blocking, adversaries may unhook or otherwise modify these features added by tools (especially those that exist in userland or are otherwise potentially accessible to adversaries) to avoid detection. \nAdversaries may also focus on specific applications such as Sysmon. For example, the \u201cStart\u201d and \u201cEnable\u201d values in HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\EventLog-Microsoft-Windows-Sysmon-Operational may be modified to tamper with and potentially disable Sysmon logging. \nOn network devices, adversaries may attempt to skip digital signature verification checks by altering startup configuration files and effectively disabling firmware verification that typically occurs at boot.\nIn cloud environments, tools disabled by adversaries may include cloud monitoring agents that report back to services such as AWS CloudWatch or Google Cloud Monitor.\nFurthermore, although defensive tools may have anti-tampering mechanisms, adversaries may abuse tools such as legitimate rootkit removal kits to impair and/or disable these tools. For example, adversaries have used tools such as GMER to find and shut down hidden processes and antivirus software on infected systems.\nAdditionally, adversaries may exploit legitimate drivers from anti-virus software to gain access to kernel space (i.e. Exploitation for Privilege Escalation), which may lead to bypassing anti-tampering features.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Defense Evasion"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1562/001/",
+                    "external_id": "T1562.001"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--49b771d2-77e7-4422-ab16-37dda9eb55e7",
+            "created": "2024-01-11T20:11:57.62874Z",
+            "modified": "2024-01-11T20:11:57.62874Z",
+            "name": "Masquerading",
+            "description": "Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or benign to users and/or security tools. Masquerading occurs when the name or location of an object, legitimate or malicious, is manipulated or abused for the sake of evading defenses and observation. This may include manipulating file metadata, tricking users into misidentifying the file type, and giving legitimate task or service names.\nRenaming abusable system utilities to evade security monitoring is also a form of Masquerading. Masquerading may also include the use of Proxy or VPNs to disguise IP addresses, which can allow adversaries to blend in with normal network traffic and bypass conditional access policies or anti-abuse protections.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Defense Evasion"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1036/",
+                    "external_id": "T1036"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--d67a85af-14a5-49b9-bc0a-7da2ef207b04",
+            "created": "2024-01-11T20:11:57.62874Z",
+            "modified": "2024-01-11T20:11:57.62874Z",
+            "name": "Virtualization/Sandbox Evasion",
+            "description": "Adversaries may employ various means to detect and avoid virtualization and analysis environments. This may include changing behaviors based on the results of checks for the presence of artifacts indicative of a virtual machine environment (VME) or sandbox. If the adversary detects a VME, they may alter their malware to disengage from the victim or conceal the core functions of the implant. They may also search for VME artifacts before dropping secondary or additional payloads. Adversaries may use the information learned from Virtualization/Sandbox Evasion during automated discovery to shape follow-on behaviors.\nAdversaries may use several methods to accomplish Virtualization/Sandbox Evasion such as checking for security monitoring tools (e.g., Sysinternals, Wireshark, etc.) or other system artifacts associated with analysis or virtualization. Adversaries may also check for legitimate user activity to help determine if it is in an analysis environment. Additional methods include use of sleep timers or loops within malware code to avoid operating within a temporary sandbox.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Defense Evasion"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1497/",
+                    "external_id": "T1497"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--3de1109a-f04f-4607-aea2-923300dcbf46",
+            "created": "2024-01-11T20:11:57.62874Z",
+            "modified": "2024-01-11T20:11:57.62874Z",
+            "name": "Software Packing",
+            "description": "Adversaries may perform software packing or virtual machine software protection to conceal their code. Software packing is a method of compressing or encrypting an executable. Packing an executable changes the file signature in an attempt to avoid signature-based detection. Most decompression techniques decompress the executable code in memory. Virtual machine software protection translates an executable's original code into a special format that only a special virtual machine can run. A virtual machine is then called to run this code. \nUtilities used to perform software packing are called packers. Example packers are MPRESS and UPX. A more comprehensive list of known packers is available, but adversaries may create their own packing techniques that do not leave the same artifacts as well-known packers to evade defenses.  ",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Defense Evasion"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1027/002/",
+                    "external_id": "T1027.002"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--a2553847-f341-4fca-8c79-37345d0bc164",
+            "created": "2024-01-11T20:11:57.629744Z",
+            "modified": "2024-01-11T20:11:57.629744Z",
+            "name": "Obfuscated Files or Information",
+            "description": "Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit. This is common behavior that can be used across different platforms and the network to evade defenses. \nPayloads may be compressed, archived, or encrypted in order to avoid detection. These payloads may be used during Initial Access or later to mitigate detection. Sometimes a user's action may be required to open and Deobfuscate/Decode Files or Information for User Execution. The user may also be required to input a password to open a password protected compressed/encrypted file that was provided by the adversary.  Adversaries may also use compressed or archived scripts, such as JavaScript. \nPortions of files can also be encoded to hide the plain-text strings that would otherwise help defenders with discovery.  Payloads may also be split into separate, seemingly benign files that only reveal malicious functionality when reassembled. \nAdversaries may also abuse Command Obfuscation to obscure commands executed from payloads or directly via Command and Scripting Interpreter. Environment variables, aliases, characters, and other platform/language specific semantics can be used to evade signature based detections and application control mechanisms.   ",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Defense Evasion"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1027/",
+                    "external_id": "T1027"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--1c7b523a-b2f3-419d-b000-552aa2452a2f",
+            "created": "2024-01-11T20:11:57.629744Z",
+            "modified": "2024-01-11T20:11:57.629744Z",
+            "name": "Hidden Files and Directories",
+            "description": "Adversaries may set files and directories to be hidden to evade detection mechanisms. To prevent normal users from accidentally changing special files on a system, most operating systems have the concept of a \u2018hidden\u2019 file. These files don\u2019t show up when a user browses the file system with a GUI or when using normal commands on the command line. Users must explicitly ask to show the hidden files either via a series of Graphical User Interface (GUI) prompts or with command line switches (dir /a for Windows and ls \u2013a for Linux and macOS).\nOn Linux and Mac, users can mark specific files as hidden simply by putting a \u201c.\u201d as the first character in the file or folder name   . Files and folders that start with a period, \u2018.\u2019, are by default hidden from being viewed in the Finder application and standard command-line utilities like \u201cls\u201d. Users must specifically change settings to have these files viewable.\nFiles on macOS can also be marked with the UF_HIDDEN flag which prevents them from being seen in Finder.app, but still allows them to be seen in Terminal.app . On Windows, users can mark specific files as hidden by using the attrib.exe binary. Many applications create these hidden files and folders to store information so that it doesn\u2019t clutter up the user\u2019s workspace. For example, SSH utilities create a .ssh folder that\u2019s hidden and contains the user\u2019s known hosts and keys.\nAdversaries can use this to their advantage to hide files and folders anywhere on the system and evading a typical user or system analysis that does not incorporate investigation of hidden files.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Defense Evasion"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1564/001/",
+                    "external_id": "T1564.001"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--b4ee6b8b-3b41-4d52-951d-7b93a5b3b942",
+            "created": "2024-01-11T20:11:57.629744Z",
+            "modified": "2024-01-11T20:11:57.629744Z",
+            "name": "Input Capture",
+            "description": "Adversaries may use methods of capturing user input to obtain credentials or collect information. During normal system usage, users often provide credentials to various different locations, such as login pages/portals or system dialog boxes. Input capture mechanisms may be transparent to the user (e.g. Credential API Hooking) or rely on deceiving the user into providing input into what they believe to be a genuine service (e.g. Web Portal Capture).",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Credential Access"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1056/",
+                    "external_id": "T1056"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--9f46004a-5086-4486-ae49-a14b2fa1b9f4",
+            "created": "2024-01-11T20:11:57.630745Z",
+            "modified": "2024-01-11T20:11:57.630745Z",
+            "name": "Process Injection",
+            "description": "Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges. Process injection is a method of executing arbitrary code in the address space of a separate live process. Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via process injection may also evade detection from security products since the execution is masked under a legitimate process. \nThere are many different ways to inject code into a process, many of which abuse legitimate functionalities. These implementations exist for every major OS but are typically platform specific. \nMore sophisticated samples may perform multiple process injections to segment modules and further evade detection, utilizing named pipes or other inter-process communication (IPC) mechanisms as a communication channel. ",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Privilege Escalation"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1055/",
+                    "external_id": "T1055"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--020f14cd-ad77-47e3-b46e-29777b3b573c",
+            "created": "2024-01-11T20:11:57.630745Z",
+            "modified": "2024-01-11T20:11:57.630745Z",
+            "name": "Scheduled Task/Job",
+            "description": "Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code. Utilities exist within all major operating systems to schedule programs or scripts to be executed at a specified date and time. A task can also be scheduled on a remote system, provided the proper authentication is met (ex: RPC and file and printer sharing in Windows environments). Scheduling a task on a remote system typically may require being a member of an admin or otherwise privileged group on the remote system.\nAdversaries may use task scheduling to execute programs at system startup or on a scheduled basis for persistence. These mechanisms can also be abused to run a process under the context of a specified account (such as one with elevated permissions/privileges). Similar to System Binary Proxy Execution, adversaries have also abused task scheduling to potentially mask one-time execution under a trusted system process.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Privilege Escalation"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1053/",
+                    "external_id": "T1053"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--8c99538c-7214-4759-b2b1-24b9be00ebc8",
+            "created": "2024-01-11T20:11:57.630745Z",
+            "modified": "2024-01-11T20:11:57.630745Z",
+            "name": "Shared Modules",
+            "description": "Adversaries may execute malicious payloads via loading shared modules. Shared modules are executable files that are loaded into processes to provide access to reusable code, such as specific custom functions or invoking OS API functions (i.e., Native API).\nAdversaries may use this functionality as a way to execute arbitrary payloads on a victim system. For example, adversaries can modularize functionality of their malware into shared objects that perform various functions such as managing C2 network communications or execution of specific actions on objective.\nThe Linux & macOS module loader can load and execute shared objects from arbitrary local paths. This functionality resides in dlfcn.h in functions such as dlopen and dlsym. Although macOS can execute .so files, common practice uses .dylib files.\nThe Windows module loader can be instructed to load DLLs from arbitrary local paths and arbitrary Universal Naming Convention (UNC) network paths. This functionality resides in NTDLL.dll and is part of the Windows Native API which is called from functions like LoadLibrary at run time.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Execution"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1129/",
+                    "external_id": "T1129"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--9502af5a-778a-4727-881f-47f4e8dc50e7",
+            "created": "2024-01-11T20:11:57.631733Z",
+            "modified": "2024-01-11T20:11:57.631733Z",
+            "name": "Process Discovery",
+            "description": "Adversaries may attempt to get information about running processes on a system. Information obtained could be used to gain an understanding of common software/applications running on systems within the network. Adversaries may use the information from Process Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.\nIn Windows environments, adversaries could obtain details on running processes using the Tasklist utility via cmd or Get-Process via PowerShell. Information about processes can also be extracted from the output of Native API calls such as CreateToolhelp32Snapshot. In Mac and Linux, this is accomplished with the ps command. Adversaries may also opt to enumerate processes via /proc.\nOn network devices, Network Device CLI commands such as show processes can be used to display current running processes.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1057/",
+                    "external_id": "T1057"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--ff6c297f-8f76-4878-b16f-113e03331a32",
+            "created": "2024-01-11T20:11:57.631733Z",
+            "modified": "2024-01-11T20:11:57.631733Z",
+            "name": "Indicator Removal",
+            "description": "Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses. Various artifacts may be created by an adversary or something that can be attributed to an adversary\u2019s actions. Typically these artifacts are used as defensive indicators related to monitored events, such as strings from downloaded files, logs that are generated from user actions, and other data analyzed by defenders. Location, format, and type of artifact (such as command or login history) are often specific to each platform.\nRemoval of these indicators may interfere with event collection, reporting, or other processes used to detect intrusion activity. This may compromise the integrity of security solutions by causing notable events to go unreported. This activity may also impede forensic analysis and incident response, due to lack of sufficient data to determine what occurred.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Defense Evasion"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1070/",
+                    "external_id": "T1070"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--b287d73f-6c6f-48d5-a23f-46afaa4fcf3f",
+            "created": "2024-01-11T20:11:57.631733Z",
+            "modified": "2024-01-11T20:11:57.631733Z",
+            "name": "Deobfuscate/Decode Files or Information",
+            "description": "Adversaries may use Obfuscated Files or Information to hide artifacts of an intrusion from analysis. They may require separate mechanisms to decode or deobfuscate that information depending on how they intend to use it. Methods for doing that include built-in functionality of malware or by using utilities present on the system.\nOne such example is the use of certutil to decode a remote access tool portable executable file that has been hidden inside a certificate file. Another example is using the Windows copy /b command to reassemble binary fragments into a malicious payload.\nSometimes a user's action may be required to open it for deobfuscation or decryption as part of User Execution. The user may also be required to input a password to open a password protected compressed/encrypted file that was provided by the adversary. ",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Defense Evasion"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1140/",
+                    "external_id": "T1140"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--2146c123-8286-4bf1-9f51-b97eed1ed52e",
+            "created": "2024-01-11T20:11:57.632738Z",
+            "modified": "2024-01-11T20:11:57.632738Z",
+            "name": "Embedded Payloads",
+            "description": "Adversaries may embed payloads within other files to conceal malicious content from defenses. Otherwise seemingly benign files (such as scripts and executables) may be abused to carry and obfuscate malicious payloads and content. In some cases, embedded payloads may also enable adversaries to Subvert Trust Controls by not impacting execution controls such as digital signatures and notarization tickets. \nAdversaries may embed payloads in various file formats to hide payloads. This is similar to Steganography, though does not involve weaving malicious content into specific bytes and patterns related to legitimate digital media formats. \nFor example, adversaries have been observed embedding payloads within or as an overlay of an otherwise benign binary. Adversaries have also been observed nesting payloads (such as executables and run-only scripts) inside a file of the same format. \nEmbedded content may also be used as Process Injection payloads used to infect benign system processes. These embedded then injected payloads may be used as part of the modules of malware designed to provide specific features such as encrypting C2 communications in support of an orchestrator module. For example, an embedded module may be injected into default browsers, allowing adversaries to then communicate via the network.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Defense Evasion"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1027/009/",
+                    "external_id": "T1027.009"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--c7b6b742-3b9e-4d41-8ba3-2d30e84ef063",
+            "created": "2024-01-11T20:11:57.632738Z",
+            "modified": "2024-01-11T20:11:57.632738Z",
+            "name": "Hidden Window",
+            "description": "Adversaries may use hidden windows to conceal malicious activity from the plain sight of users. In some cases, windows that would typically be displayed when an application carries out an operation can be hidden. This may be utilized by system administrators to avoid disrupting user work environments when carrying out administrative tasks. \nOn Windows, there are a variety of features in scripting languages in Windows, such as PowerShell, Jscript, and Visual Basic to make windows hidden. One example of this is powershell.exe -WindowStyle Hidden. \nSimilarly, on macOS the configurations for how applications run are listed in property list (plist) files. One of the tags in these files can be apple.awt.UIElement, which allows for Java applications to prevent the application's icon from appearing in the Dock. A common use for this is when applications run in the system tray, but don't also want to show up in the Dock.\nAdversaries may abuse these functionalities to hide otherwise visible windows from users so as not to alert the user to adversary activity on the system.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "Defense Evasion"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1564/003/",
+                    "external_id": "T1564.003"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b74ec4fe-b869-4e93-b8c2-d173dca02309",
+            "created": "2024-01-11T20:11:57.633739Z",
+            "modified": "2024-01-11T20:11:57.633739Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--dbefd8bf-8a31-4f76-8bd1-51d42a242dfb",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9c8d61f7-679e-437d-9632-ea247b5dbee1",
+            "created": "2024-01-11T20:11:57.633739Z",
+            "modified": "2024-01-11T20:11:57.633739Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--fa3280cd-5759-4a9c-b5c2-8aa489123f78",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4721befb-5fdf-4c15-9c67-8b68ffbc2ab4",
+            "created": "2024-01-11T20:11:57.633739Z",
+            "modified": "2024-01-11T20:11:57.633739Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--a48c2e7c-7469-4a15-ba60-c8c1b4a78ecb",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b9360c55-ed0c-43ee-a50f-2c2538cc98ee",
+            "created": "2024-01-11T20:11:57.634719Z",
+            "modified": "2024-01-11T20:11:57.634719Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--c37570f3-f679-4037-bb5f-30a79aab3f67",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c17b239b-1c55-4f5d-b0ee-02081b75acc3",
+            "created": "2024-01-11T20:11:57.634719Z",
+            "modified": "2024-01-11T20:11:57.634719Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--451cba01-2bb1-4691-af55-f4ac151bd137",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--46ca8eab-9a5d-4a4a-b5b1-31c02e63438f",
+            "created": "2024-01-11T20:11:57.635715Z",
+            "modified": "2024-01-11T20:11:57.635715Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--c09e00cd-eda8-4249-8995-ec9d616d1614",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b0c98077-797f-4b0d-9bf2-a2a209e964d1",
+            "created": "2024-01-11T20:11:57.636707Z",
+            "modified": "2024-01-11T20:11:57.636707Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--6a9e5a4c-2725-4c10-b2ed-1b7062a4c0f1",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4a048a05-03d6-43cd-b6b2-b967a057781f",
+            "created": "2024-01-11T20:11:57.636707Z",
+            "modified": "2024-01-11T20:11:57.636707Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--cbc8d5b8-c3ef-451b-a21b-190b0e837e08",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--71887e1d-8240-4630-8316-aaadb48169a8",
+            "created": "2024-01-11T20:11:57.636707Z",
+            "modified": "2024-01-11T20:11:57.636707Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--fb74111f-63e9-4b76-b933-3a3109ed0f3a",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f81408b7-7065-49ae-ac5a-d89fda9ee6f6",
+            "created": "2024-01-11T20:11:57.63773Z",
+            "modified": "2024-01-11T20:11:57.63773Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--5453a23e-1ca9-4fa8-9e41-a0cb1e46e375",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d2904447-2607-4788-9e53-02cd4112df80",
+            "created": "2024-01-11T20:11:57.63773Z",
+            "modified": "2024-01-11T20:11:57.63773Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--3b649736-6165-4b79-919c-cce3572772eb",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2e001cf2-6c0e-4fa2-95c0-88cea9d1a70c",
+            "created": "2024-01-11T20:11:57.63773Z",
+            "modified": "2024-01-11T20:11:57.63773Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--187f0fc3-7a15-4c16-8d38-f81f38d3a794",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f8e8a842-8556-438d-ac2d-ce957b7261f4",
+            "created": "2024-01-11T20:11:57.638711Z",
+            "modified": "2024-01-11T20:11:57.638711Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--72a7a595-3d1b-4c74-af88-a1c90d6a96f4",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--851f4575-e157-4a0b-b2b6-932d429016a8",
+            "created": "2024-01-11T20:11:57.638711Z",
+            "modified": "2024-01-11T20:11:57.638711Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--7b4bac4e-37f3-4957-836c-08f81096fa02",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3200d03f-fa0b-48ff-9cb1-710ee72bb02d",
+            "created": "2024-01-11T20:11:57.638711Z",
+            "modified": "2024-01-11T20:11:57.638711Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--2b66134b-fdf5-4ba7-8470-ca154f723fef",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--14621d84-fcc6-46fa-b05f-60000bafcba1",
+            "created": "2024-01-11T20:11:57.638711Z",
+            "modified": "2024-01-11T20:11:57.638711Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--fe175cf2-bb82-4a52-9dc6-0b2667c1dbae",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b46870b5-dc95-48cb-9b57-a3a83e140c2d",
+            "created": "2024-01-11T20:11:57.638711Z",
+            "modified": "2024-01-11T20:11:57.638711Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--03b19a78-0929-44e8-930b-85bfbf8e5882",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b482f806-3cef-40ee-b736-d348c60a67b4",
+            "created": "2024-01-11T20:11:57.639711Z",
+            "modified": "2024-01-11T20:11:57.639711Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--057649e3-2c1c-4732-a687-1ee0d3e70ec4",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c4beef61-ac2a-494e-9f87-80412c5e8b8b",
+            "created": "2024-01-11T20:11:57.639711Z",
+            "modified": "2024-01-11T20:11:57.639711Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--33b90c65-c4bd-4fe9-a7bd-3634e1b4468e",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d29f8757-8986-4806-a216-f623970b3f89",
+            "created": "2024-01-11T20:11:57.639711Z",
+            "modified": "2024-01-11T20:11:57.639711Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--316c8128-08c0-40d3-baa1-790578e09e1f",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--187b757a-7875-4989-a51a-97fd0632a7c6",
+            "created": "2024-01-11T20:11:57.639711Z",
+            "modified": "2024-01-11T20:11:57.639711Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--645f12fc-94ec-4f03-9659-8e12150af815",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--69c588f9-edcc-4afc-9b25-0266aacb79bf",
+            "created": "2024-01-11T20:11:57.64071Z",
+            "modified": "2024-01-11T20:11:57.64071Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--49b771d2-77e7-4422-ab16-37dda9eb55e7",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c26ec33c-645f-4f20-a067-6b0cfb528ae7",
+            "created": "2024-01-11T20:11:57.64071Z",
+            "modified": "2024-01-11T20:11:57.64071Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--d67a85af-14a5-49b9-bc0a-7da2ef207b04",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--cbe4b93f-402d-4ef7-ba42-3fb5db8e143a",
+            "created": "2024-01-11T20:11:57.64071Z",
+            "modified": "2024-01-11T20:11:57.64071Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--3de1109a-f04f-4607-aea2-923300dcbf46",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--dcd95ec9-3305-4a44-8e5d-7a1363b78381",
+            "created": "2024-01-11T20:11:57.641707Z",
+            "modified": "2024-01-11T20:11:57.641707Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--a2553847-f341-4fca-8c79-37345d0bc164",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--07f1e063-daf5-4889-a753-a937083d5c48",
+            "created": "2024-01-11T20:11:57.641707Z",
+            "modified": "2024-01-11T20:11:57.641707Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--1c7b523a-b2f3-419d-b000-552aa2452a2f",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d53fb25a-b550-4bac-bee2-66e5b7078e6b",
+            "created": "2024-01-11T20:11:57.641707Z",
+            "modified": "2024-01-11T20:11:57.641707Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--b4ee6b8b-3b41-4d52-951d-7b93a5b3b942",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--06bc4245-b3f6-407d-9a53-ab678f97ce9b",
+            "created": "2024-01-11T20:11:57.641707Z",
+            "modified": "2024-01-11T20:11:57.641707Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--9f46004a-5086-4486-ae49-a14b2fa1b9f4",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d2ef8242-3d0a-4661-875e-7d00d1d5845b",
+            "created": "2024-01-11T20:11:57.641707Z",
+            "modified": "2024-01-11T20:11:57.641707Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--020f14cd-ad77-47e3-b46e-29777b3b573c",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--cf99c1a3-4964-4127-b230-1c88b0ec14e7",
+            "created": "2024-01-11T20:11:57.642745Z",
+            "modified": "2024-01-11T20:11:57.642745Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--8c99538c-7214-4759-b2b1-24b9be00ebc8",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--15327c2d-db79-41e7-8022-816f0a84d94d",
+            "created": "2024-01-11T20:11:57.642745Z",
+            "modified": "2024-01-11T20:11:57.642745Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--9502af5a-778a-4727-881f-47f4e8dc50e7",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9aedf6d3-0177-477f-b080-82526f5ce280",
+            "created": "2024-01-11T20:11:57.642745Z",
+            "modified": "2024-01-11T20:11:57.642745Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--ff6c297f-8f76-4878-b16f-113e03331a32",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--fce21608-5151-4fd7-9e19-24d72ee12b45",
+            "created": "2024-01-11T20:11:57.642745Z",
+            "modified": "2024-01-11T20:11:57.642745Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--b287d73f-6c6f-48d5-a23f-46afaa4fcf3f",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e69febbc-4b33-4393-a52b-a08833bb005b",
+            "created": "2024-01-11T20:11:57.642745Z",
+            "modified": "2024-01-11T20:11:57.642745Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--2146c123-8286-4bf1-9f51-b97eed1ed52e",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--1faaea61-4f6d-47dd-afcf-923b71ce1d5c",
+            "created": "2024-01-11T20:11:57.643744Z",
+            "modified": "2024-01-11T20:11:57.643744Z",
+            "relationship_type": "uses",
+            "source_ref": "attack-pattern--c7b6b742-3b9e-4d41-8ba3-2d30e84ef063",
+            "target_ref": "malware--15a7ed39-7541-4e06-8d8c-de85491894d9"
+        }
+    ]
+}

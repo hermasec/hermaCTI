@@ -18,11 +18,7 @@ class Virustotal:
         data = self.db_manager.find_documents('virustotal', query)
 
         if data:
-            result_dict = {}
-            for item in data:
-                result_dict.update(item)
-
-            AVs = self.AV_results(result_dict)
+            AVs = self.AV_results(data[0])
             return AVs
 
         else:
@@ -31,7 +27,7 @@ class Virustotal:
             if "error" in data:
                 AVs = {}
             else:
-                inserted_id = self.db_manager.insert_document('virustotal', data)
+                self.db_manager.insert_document('virustotal', data)
 
                 AVs = self.AV_results(data)
             return AVs
@@ -83,11 +79,7 @@ class Virustotal:
 
         if data:
             if 'mitre' in data[0]:
-                result_dict = {}
-                for item in data:
-                    result_dict.update(item)
-
-                return result_dict["mitre"]
+                return data[0]["mitre"]
             else:
                 ttps = self.search_ttps(hash)
 
