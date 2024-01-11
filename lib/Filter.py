@@ -7,6 +7,7 @@ from lib.FileAnalysis import FileAnalysis
 from lib.api.Virustotal import Virustotal
 from lib.api.Hybrid import Hybrid
 from lib.api.OTX import OTX
+from lib.api.STIX import STIX
 
 
 class Filter:
@@ -23,7 +24,10 @@ class Filter:
         hybrid_data = self.hybrid.get_desired_data(hash)
         virustotal_data = self.virustotal.get_desired_data(hash)
         otx_data = self.otx.get_desired_data(hash)
-        virustotal_ttps = self.virustotal.get_ttps(hash) if from_module == "stix" else self.filter_virustotal_ttps_data(
+        if self.virustotal.get_ttps(hash) == {}:
+            virustotal_ttps = self.virustotal.get_ttps(hash)
+        else:
+            virustotal_ttps = self.virustotal.get_ttps(hash) if from_module == "stix" else self.filter_virustotal_ttps_data(
             self.virustotal.get_ttps(hash))
 
         if "error" in hybrid_data or "error" in virustotal_data:
@@ -74,6 +78,9 @@ class Filter:
                 "Attacks": otx_data,
                 "TTPs": virustotal_ttps
             }
+
+            # stix = STIX()
+            # stix.all_stix_data(return_data)
 
         return return_data
 
