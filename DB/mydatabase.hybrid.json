@@ -1243,4 +1243,165 @@
       "verdict": "no verdict"
     }
   ]
+},
+{
+  "_id": {
+    "$oid": "659d22117f25da9691582ad4"
+  },
+  "sha256": "ef537f25c895bfa782526529a9b63d97aa631564d5d789c2b765448c8635fb6c",
+  "last_file_name": "ef537f25c895bfa782526529a9b63d97aa631564d5d789c2b765448c8635fb6c",
+  "other_file_name": [
+    "MariTest.txt"
+  ],
+  "threat_score": null,
+  "verdict": "no specific threat",
+  "url_analysis": false,
+  "size": 44,
+  "type": "ASCII text, with no line terminators",
+  "type_short": [
+    "text"
+  ],
+  "analysis_start_time": "2018-08-29T14:23:49+00:00",
+  "last_multi_scan": "2020-04-08T12:22:35+00:00",
+  "tags": [],
+  "architecture": null,
+  "vx_family": null,
+  "multiscan_result": 0,
+  "scanners": [
+    {
+      "name": "CrowdStrike Falcon Static Analysis (ML)",
+      "status": "no-result",
+      "error_message": null,
+      "progress": 100,
+      "total": null,
+      "positives": null,
+      "percent": null,
+      "anti_virus_results": []
+    },
+    {
+      "name": "Metadefender",
+      "status": "in-queue",
+      "error_message": null,
+      "progress": 0,
+      "total": null,
+      "positives": null,
+      "percent": null,
+      "anti_virus_results": []
+    }
+  ],
+  "scanners_v2": {
+    "crowdstrike_ml": {
+      "name": "CrowdStrike Falcon Static Analysis (ML)",
+      "status": "no-result",
+      "error_message": null,
+      "progress": 100,
+      "percent": null,
+      "anti_virus_results": []
+    },
+    "metadefender": {
+      "name": "Metadefender",
+      "status": "in-queue",
+      "error_message": null,
+      "progress": 0,
+      "total": null,
+      "positives": null,
+      "percent": null,
+      "anti_virus_results": []
+    },
+    "virustotal": null,
+    "urlscan_io": null,
+    "scam_adviser": null,
+    "clean_dns": null,
+    "bfore_ai": null
+  },
+  "submit_context": [],
+  "related_parent_hashes": [],
+  "related_children_hashes": [],
+  "reports": [
+    "5b86ac757ca3e1323f4dac13"
+  ],
+  "whitelisted": false,
+  "children_in_queue": 0,
+  "children_in_progress": 0,
+  "related_reports": []
+},
+{
+  "_id": {
+    "$oid": "65a2cea0a123f5d5e57b01b5"
+  },
+  "sha256": "1a3aa6e4fc02b6a191451602f72558eeaed9d88ad40964f6a8f6f958620cdd6b",
+  "last_file_name": "KMS VL ALL.cmd",
+  "other_file_name": [],
+  "threat_score": null,
+  "verdict": "malicious",
+  "url_analysis": false,
+  "size": 294903,
+  "type": "exported SGML document, ASCII text, with very long lines, with CRLF line terminators",
+  "type_short": [
+    "script",
+    "wsf"
+  ],
+  "analysis_start_time": null,
+  "last_multi_scan": "2023-08-27T09:19:47+00:00",
+  "tags": [],
+  "architecture": null,
+  "vx_family": "BAT/RiskWare.HackTool.WinActivator",
+  "multiscan_result": 7,
+  "scanners": [
+    {
+      "name": "CrowdStrike Falcon Static Analysis (ML)",
+      "status": "no-result",
+      "error_message": null,
+      "progress": 100,
+      "total": null,
+      "positives": null,
+      "percent": null,
+      "anti_virus_results": []
+    },
+    {
+      "name": "Metadefender",
+      "status": "in-queue",
+      "error_message": null,
+      "progress": 0,
+      "total": null,
+      "positives": null,
+      "percent": null,
+      "anti_virus_results": []
+    }
+  ],
+  "scanners_v2": {
+    "crowdstrike_ml": {
+      "name": "CrowdStrike Falcon Static Analysis (ML)",
+      "status": "no-result",
+      "error_message": null,
+      "progress": 100,
+      "percent": null,
+      "anti_virus_results": []
+    },
+    "metadefender": {
+      "name": "Metadefender",
+      "status": "in-queue",
+      "error_message": null,
+      "progress": 0,
+      "total": null,
+      "positives": null,
+      "percent": null,
+      "anti_virus_results": []
+    },
+    "virustotal": null,
+    "urlscan_io": null,
+    "scam_adviser": null,
+    "clean_dns": null,
+    "bfore_ai": null
+  },
+  "submit_context": [],
+  "related_parent_hashes": [],
+  "related_children_hashes": [],
+  "reports": [
+    "64eb04503ee493592035f33c"
+  ],
+  "whitelisted": false,
+  "children_in_queue": 0,
+  "children_in_progress": 0,
+  "related_reports": []
 }]
