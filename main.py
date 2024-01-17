@@ -3,6 +3,7 @@ import re
 from dotenv import load_dotenv
 from flask import Flask, render_template, request, jsonify
 from lib.FileAnalysis import FileAnalysis
+from lib.TaxiiCollections import TaxiiCollections
 from lib.api.Virustotal import Virustotal
 from lib.api.Hybrid import Hybrid
 from lib.api.OTX import OTX
@@ -61,7 +62,9 @@ def search_by_file():
 
     file_analysis = FileAnalysis()
     result = file_analysis.get_uploaded_fileinfo(filename)
-    return result
+
+    filter = Filter()
+    return filter.get_hash_data(result["sha256"])
 
 
 @app.route('/api/file/virustotal/', methods=["POST"])
@@ -119,6 +122,43 @@ def intezer():
         data = {"error": "No parameters"}
 
     return jsonify(data)
+
+
+@app.route('/taxii/', methods=['GET'])
+def taxii_discovery():
+    discovery_response = {
+        "title": "HermaCTI TAXII Server",
+        "description": "A simple TAXII server for demonstration purposes",
+        "contact": "taxii@hermacti.com",
+        "default": "/taxii/collections/91a7b528-80eb-42ed-a74d-c6fbd5a26116/",
+    }
+    return jsonify(discovery_response), 200, {'Content-Type': 'application/taxii+json;version=2.1'}
+
+
+@app.route('/taxii/collections/', methods=["GET"])
+def collections():
+    collections = TaxiiCollections()
+    return collections.getTaxiiCollections()
+
+
+@app.route('/taxii/collections/<collection_id>/', methods=["GET"])
+def collection_id(collection_id):
+    taxii_collections = TaxiiCollections()
+    return taxii_collections.get_collection_by_id(collection_id)
+
+
+@app.route('/taxii/collections/<collection_id>/objects/', methods=["GET"])
+def collection_objects(collection_id):
+    collections = TaxiiCollections()
+    if request.method == 'GET':
+        return collections.get_collection_objects(collection_id)
+
+
+@app.route('/taxii/collections/<collection_id>/objects/<object_id>/', methods=["GET"])
+def objects(collection_id, object_id):
+    collections = TaxiiCollections()
+    if request.method == 'GET':
+        return collections.get_object_by_id(collection_id, object_id)
 
 
 if __name__ == '__main__':

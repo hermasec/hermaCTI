@@ -93,4 +93,4 @@ class Virustotal:
 
                 return return_data
         else:
-            return {"error": "no data"}
+            return {"error": "no virustotal data available for this hash"}

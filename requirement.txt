@@ -7,3 +7,4 @@ python-magic
 stix2
 taxii2-client
 medallion
+yara-python

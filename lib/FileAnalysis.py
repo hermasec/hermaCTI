@@ -3,8 +3,8 @@ import time
 import hashlib
 from datetime import datetime
 import magic
-import humanize
 from lib.Database import Database
+from lib.Yara import Yara
 
 
 class FileAnalysis:
@@ -22,24 +22,23 @@ class FileAnalysis:
         result_dict = {}
         if self.file_exists(filePath):
 
-            query = {'sha256': {'$eq': self.get_sha256(filePath)}}
+            sha256 = self.get_sha256(filePath)
+            query = {'sha256': {'$eq': sha256}}
             data = self.db_manager.find_documents('fileinfo', query)
 
             if data:
                 result_dict = data[0]
             else:
-                data = self.gather_all_data(filePath)
-                self.db_manager.insert_document('fileinfo', data)
-                result_dict = data
+                result_dict = self.gather_all_data(filePath)
+                self.db_manager.insert_document('fileinfo', result_dict)
+
+            ys = Yara()
+            ys.yara_scanner(filePath, sha256, self.get_size(filePath))
+
         else:
             result_dict = {"error": "file_not_found"}
 
-
         return result_dict
-
-
-
-
 
     def gather_all_data(self, filePath):
 
@@ -62,9 +61,10 @@ class FileAnalysis:
     def get_size(self, filePath):
         try:
             size = os.path.getsize(filePath)
-            return humanize.naturalsize(size)
+            return size
         except OSError:
             return None
+
 
     def get_extension(self, filePath):
         try:

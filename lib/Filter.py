@@ -1,12 +1,15 @@
+import base64
 import os
 from datetime import datetime
 import humanize
 from lib.Database import Database
-from lib.FileAnalysis import FileAnalysis
+from lib.SIEM import SIEM
+from lib.TaxiiCollections import TaxiiCollections
+from lib.Yara import Yara
 from lib.api.Virustotal import Virustotal
 from lib.api.Hybrid import Hybrid
 from lib.api.OTX import OTX
-from lib.api.STIX import STIX
+import shutil
 
 
 class Filter:
@@ -16,14 +19,19 @@ class Filter:
         self.virustotal = Virustotal(os.environ.get("VIRUSTOTAL_API_TOKEN"))
         self.hybrid = Hybrid(os.environ.get("HYBRID_API_TOKEN"))
         self.otx = OTX(os.environ.get("OTX_API_TOKEN"))
-        self.file = FileAnalysis()
+        self.yara = Yara()
+        self.siem = SIEM()
+        self.taxii = TaxiiCollections()
 
     def get_hash_data(self, hash):
         fileinfo = {}
         hybrid_data = self.hybrid.get_desired_data(hash)
         virustotal_data = self.virustotal.get_desired_data(hash)
         otx_data = self.otx.get_desired_data(hash)
-        if self.virustotal.get_ttps(hash) == {}:
+
+        virustotal_ttps_for_stix = {}
+        virustotal_ttps = self.virustotal.get_ttps(hash)
+        if virustotal_ttps == {} or "error" in virustotal_ttps:
             virustotal_ttps = {}
         else:
             virustotal_ttps_for_stix = self.virustotal.get_ttps(hash)
@@ -58,18 +66,6 @@ class Filter:
             else:
                 has_IOC = False
 
-            return_data = {
-                "sha256": hash,
-                "fileinfo": fileinfo,
-                "file_status": file_status,
-                "family": file_family,
-                "has_IOC": has_IOC,
-                "has_TTP": has_TTP,
-                "AVs": AVs_data,
-                "Attacks": otx_data,
-                "TTPs": virustotal_ttps
-            }
-
             return_data_for_stix = {
                 "sha256": hash,
                 "fileinfo": fileinfo,
@@ -82,17 +78,66 @@ class Filter:
                 "TTPs": virustotal_ttps_for_stix
             }
 
-        # self.add_stix(return_data_for_stix)
+        self.taxii.add_objects_to_collection(hash, "91a7b528-80eb-42ed-a74d-c6fbd5a26116", return_data_for_stix)
 
+        return_data = {
+            "sha256": hash,
+            "fileinfo": fileinfo,
+            "file_status": file_status,
+            "family": file_family,
+            "has_IOC": has_IOC,
+            "has_TTP": has_TTP,
+            "AVs": AVs_data,
+            "Attacks": otx_data,
+            "TTPs": virustotal_ttps,
+        }
+
+        zip_base64 = self.get_base64_zip_rules(hash, return_data)
+        if zip_base64:
+            return_data["zip_rules"] = self.get_base64_zip_rules(hash, return_data)
+
+        fileinfo["size"] = humanize.naturalsize(fileinfo["size"])
         return return_data
 
+    def get_base64_zip_rules(self, hash, all_data):
+        query = {'sha256': {'$eq': hash}}
+        data = self.db_manager.find_documents('rules', query)
 
-    def add_stix(self, data):
-        stix = STIX()
-        stix_bundle = stix.all_stix_data(data)
-        stix_json = stix_bundle.serialize(pretty=True)
-        with open("output.json", "w") as json_file:
-            json_file.write(stix_json)
+        if data:
+            return data[0]["zip_rules"]
+        else:
+            yara_generated_file = self.yara.yara_generator(all_data["fileinfo"]["size"], hash)
+            sigma_rule_file = self.siem.get_sigma_rule(all_data)
+            yara_scanners_rules = ".\\rules\\scanners_yara_rules.yar"
+
+            try:
+                # Create a temporary zip file
+                temp_zip_file = 'temp_rules.zip'
+                shutil.make_archive(temp_zip_file[:-4], 'zip', ".\\rules")
+
+                # Read the zip file as binary and encode it to base64
+                with open(temp_zip_file, 'rb') as zip_file:
+                    base64_encoded_zip = base64.b64encode(zip_file.read())
+
+                # Delete the temporary zip file
+                os.remove(temp_zip_file)
+                os.remove(yara_generated_file)
+                if sigma_rule_file:
+                    os.remove(sigma_rule_file)
+                if os.path.exists(yara_scanners_rules):
+                    os.remove(yara_scanners_rules)
+
+                zip_base64 = base64_encoded_zip.decode()
+                result_dict = {
+                    "sha256": hash,
+                    "zip_rules": zip_base64
+                }
+                self.db_manager.insert_document('rules', result_dict)
+                return zip_base64
+
+            except Exception as e:
+                print(f"Error zipping directory and converting to base64: {e}")
+                return None
 
     def filter_virustotal_ttps_data(self, data):
         techniques_ids = []
@@ -144,7 +189,7 @@ class Filter:
             "scan_date": datetime.now(),
             "sha256": all_json['data']['attributes']['sha256'],
             "md5": all_json['data']['attributes']['md5'],
-            "size": humanize.naturalsize(all_json['data']['attributes']['size']),
+            "size": all_json['data']['attributes']['size'],
             "time": {
                 "compilation": compiledata,
                 "created": creationdata,

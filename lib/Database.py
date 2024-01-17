@@ -24,5 +24,34 @@ class Database:
         cursor = collection.find().sort(sort_field, pymongo.DESCENDING).limit(limit)
         return list(cursor)
 
+    def search_object_id_aggregate(self, collection_name, collection_id , object_id):
+        collection = self.db[collection_name]
+        pipeline = [
+            {
+                '$match': {
+                    'collection_id': collection_id
+                }
+            },
+            {
+                '$unwind': '$stix_object.objects'
+            },
+            {
+                '$match': {
+                    'stix_object.objects.id': object_id
+                }
+            },
+            {
+                '$project': {
+                    '_id': 0,
+                    'matchedObject': '$stix_object.objects'
+                }
+            }
+        ]
+
+        result = list(collection.aggregate(pipeline))
+
+        return result
+
+
     def __del__(self):
         self.client.close()
