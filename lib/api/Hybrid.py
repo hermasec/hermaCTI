@@ -13,76 +13,46 @@ class Hybrid:
         }
         self.db_manager = Database(database_name='mydatabase')
 
-    def perform_quick_scan(self, file_path):
-
-        url = f'{self.base_url}/quick-scan/file'
-
-        data = {
-            'scan_type': 'all',
-            'no_share_third_party': '',
-            'allow_community_access': '',
-            'comment': '',
-            'submit_name': ''
-        }
-        files = {
-            'file': (file_path, open(file_path, 'rb'))
-        }
-
-        try:
-            response = requests.post(url, headers=self.headers, data=data, files=files)
-            json_response = response.json()
-
-            if 'sha256' in json_response:
-                sha256_value = json_response['sha256']
-                print(f"\nSHA256: {sha256_value} \n\n")
-                return self.search_sha256(sha256_value)
-            else:
-                {"error": "SHA256 not found in response"}
-
-        except requests.exceptions.RequestException as e:
-            return {"error": f"Request failed: {e}"}
-
     def get_desired_data(self, hash):
 
         query = {'sha256': {'$eq': hash}}
         data = self.db_manager.find_documents('hybrid', query)
 
+        result_data = {
+            "verdict": "",
+            "vx_family": "",
+            "AVs": {
+            }
+        }
         if data:
             result_dict = data[0]
             if result_dict.get("scanners_v2")['crowdstrike_ml']:
                 crowdstrike_ml_status = result_dict.get("scanners_v2")['crowdstrike_ml']['status']
+                result_data["AVs"]["crowdstrike_ml"] = {}
+                result_data["AVs"]["crowdstrike_ml"]["status"] = crowdstrike_ml_status
+                result_data["AVs"]["crowdstrike_ml"]["result"] = None
+                result_data["AVs"]["crowdstrike_ml"]["method"] = None
             else:
                 crowdstrike_ml_status = None
             if result_dict.get("scanners_v2")['metadefender']:
                 metadefender_status = result_dict.get("scanners_v2")['metadefender']['status']
+                result_data["AVs"]["metadefender"] = {}
+                result_data["AVs"]["metadefender"]["status"] = metadefender_status
+                result_data["AVs"]["metadefender"]["result"] = None
+                result_data["AVs"]["metadefender"]["method"] = None
             else:
                 metadefender_status = None
             if result_dict.get("scanners_v2")['virustotal']:
                 virustotal_status = result_dict.get("scanners_v2")['virustotal']['status']
+                result_data["AVs"]["virustotal"] = {}
+                result_data["AVs"]["virustotal"]["status"] = virustotal_status
+                result_data["AVs"]["virustotal"]["result"] = None
+                result_data["AVs"]["virustotal"]["method"] = None
             else:
                 virustotal_status = None
 
-            data = {
-                "verdict": result_dict.get("verdict"),
-                "vx_family": result_dict.get("vx_family"),
-                "AVs": {
-                    "crowdstrike_ml": {
-                        "status": crowdstrike_ml_status,
-                        "result": None,
-                        "method": None
-                    },
-                    "metadefender": {
-                        "status": metadefender_status,
-                        "result": None,
-                        "method": None
-                    },
-                    "virustotal": {
-                        "status": virustotal_status,
-                        "result": None,
-                        "method": None
-                    }
-                }
-            }
+            result_data["verdict"] = result_dict.get("verdict")
+            result_data["vx_family"] = result_dict.get("vx_family")
 
 
         else:
@@ -95,40 +65,36 @@ class Hybrid:
 
                 if data.get("scanners_v2")['crowdstrike_ml']:
                     crowdstrike_ml_status = data.get("scanners_v2")['crowdstrike_ml']['status']
+                    result_data["AVs"]["crowdstrike_ml"] = {}
+                    result_data["AVs"]["crowdstrike_ml"]["status"] = crowdstrike_ml_status
+                    result_data["AVs"]["crowdstrike_ml"]["result"] = None
+                    result_data["AVs"]["crowdstrike_ml"]["method"] = None
+
                 else:
                     crowdstrike_ml_status = None
                 if data.get("scanners_v2")['metadefender']:
                     metadefender_status = data.get("scanners_v2")['metadefender']['status']
+                    result_data["AVs"]["metadefender"] = {}
+                    result_data["AVs"]["metadefender"]["status"] = metadefender_status
+                    result_data["AVs"]["metadefender"]["result"] = None
+                    result_data["AVs"]["metadefender"]["method"] = None
+
                 else:
                     metadefender_status = None
                 if data.get("scanners_v2")['virustotal']:
                     virustotal_status = data.get("scanners_v2")['virustotal']['status']
+                    result_data["AVs"]["virustotal"] = {}
+                    result_data["AVs"]["virustotal"]["status"] = virustotal_status
+                    result_data["AVs"]["virustotal"]["result"] = None
+                    result_data["AVs"]["virustotal"]["method"] = None
+
                 else:
                     virustotal_status = None
 
-                data = {
-                    "verdict": data.get("verdict"),
-                    "vx_family": data.get("vx_family"),
-                    "AVs": {
-                        "crowdstrike_ml": {
-                            "status": crowdstrike_ml_status,
-                            "result": None,
-                            "method": None
-                        },
-                        "metadefender": {
-                            "status": metadefender_status,
-                            "result": None,
-                            "method": None
-                        },
-                        "virustotal": {
-                            "status": virustotal_status,
-                            "result": None,
-                            "method": None
-                        }
-                    }
-                }
+                result_data["verdict"] = data.get("verdict")
+                result_data["vx_family"] = data.get("vx_family")
 
-        return data
+        return result_data
 
     def search_sha256(self, sha256_value):
 

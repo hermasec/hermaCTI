@@ -20,7 +20,9 @@ class STIX:
         elif "IPv4" in type:
             indicator_pattern = f"[ipv4-addr: value = '{value}']"
         elif "URL" in type:
-            indicator_pattern = f"[url: value = '{value}']"
+            new_value = value.replace('"', '').replace("'", '')
+            new_value = new_value.replace('\\', '/')
+            indicator_pattern = f"[url: value = '{new_value}']"
         else:
             indicator_pattern = f"[cve: value = '{value}']"
 
@@ -125,6 +127,7 @@ class STIX:
             TTPs = self.ttp2stix(json_data)
         else:
             TTPs = None
+
         relationships = self.create_relationships(json_data, IOCs, malware, TTPs)
 
         if TTPs:

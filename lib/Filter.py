@@ -1,7 +1,13 @@
 import base64
 import os
+from collections import Counter
 from datetime import datetime
 import humanize
+from flask import jsonify
+from pymongo import MongoClient
+from bson import json_util
+import json
+from lib.Charts import Charts
 from lib.Database import Database
 from lib.SIEM import SIEM
 from lib.TaxiiCollections import TaxiiCollections
@@ -37,46 +43,56 @@ class Filter:
             virustotal_ttps_for_stix = self.virustotal.get_ttps(hash)
             virustotal_ttps = self.filter_virustotal_ttps_data(self.virustotal.get_ttps(hash))
 
-        if "error" in hybrid_data or "error" in virustotal_data:
-            return {"error": "error in returning hybrid and virustotal data"}
-        else:
-            query = {'sha256': {'$eq': hash}}
-            data = self.db_manager.find_documents('fileinfo', query)
-            if data:
-                fileinfo = data[0]
-            else:
-                query = {'data.id': {'$eq': hash}}
-                vt_data = self.db_manager.find_documents('virustotal', query)
-                fileinfo = self.add_fileinfo_from_virustotal(vt_data[0])
+        if "error" in hybrid_data:
+            hybrid_data = {}
 
+        if "error" in virustotal_data:
+            virustotal_data = {}
+
+        query = {'sha256': {'$eq': hash}}
+        data = self.db_manager.find_documents('fileinfo', query)
+        if data:
+            fileinfo = data[0]
+        else:
+            query = {'data.id': {'$eq': hash}}
+            vt_data = self.db_manager.find_documents('virustotal', query)
+            if vt_data:
+                fileinfo = self.add_fileinfo_from_virustotal(vt_data[0])
+            else:
+                return jsonify({"error": "No specific information for this hash"}), 404
+
+        file_family, file_status = "", ""
+        AVs_data = []
+        if hybrid_data:
             AVs_data = hybrid_data["AVs"]
-            AVs_data.update(virustotal_data)
             file_status = "clean" if hybrid_data["verdict"] == "no specific threat" else hybrid_data["verdict"]
             file_family = hybrid_data["vx_family"]
+        if virustotal_data:
+            AVs_data.update(virustotal_data)
 
-            if virustotal_ttps:
-                has_TTP = True
-            elif otx_data:
-                has_TTP = True if otx_data[0]["TTPs"] else False
-            else:
-                has_TTP = False
+        if virustotal_ttps:
+            has_TTP = True
+        elif otx_data:
+            has_TTP = True if otx_data[0]["TTPs"] else False
+        else:
+            has_TTP = False
 
-            if otx_data:
-                has_IOC = True if otx_data[0]["IOCs"] else False
-            else:
-                has_IOC = False
+        if otx_data:
+            has_IOC = True if otx_data[0]["IOCs"] else False
+        else:
+            has_IOC = False
 
-            return_data_for_stix = {
-                "sha256": hash,
-                "fileinfo": fileinfo,
-                "file_status": file_status,
-                "family": file_family,
-                "has_IOC": has_IOC,
-                "has_TTP": has_TTP,
-                "AVs": AVs_data,
-                "Attacks": otx_data,
-                "TTPs": virustotal_ttps_for_stix
-            }
+        return_data_for_stix = {
+            "sha256": hash,
+            "fileinfo": fileinfo,
+            "file_status": file_status,
+            "family": file_family,
+            "has_IOC": has_IOC,
+            "has_TTP": has_TTP,
+            "AVs": AVs_data,
+            "Attacks": otx_data,
+            "TTPs": virustotal_ttps_for_stix
+        }
 
         self.taxii.add_objects_to_collection(hash, "91a7b528-80eb-42ed-a74d-c6fbd5a26116", return_data_for_stix)
 
@@ -215,8 +231,11 @@ class Filter:
             scan_date = fileinfo[0]["scan_date"]
 
         hybrid_data = self.db_manager.find_documents('hybrid', query)
+
         if hybrid_data:
             file_status = "clean" if hybrid_data[0]["verdict"] == "no specific threat" else hybrid_data[0]["verdict"]
+        else:
+            file_status = ""
 
         otx_data = self.db_manager.find_documents('otx', query)
 
@@ -253,3 +272,80 @@ class Filter:
             all_data = self.get_short_hash_data(sha256)
             result_list.append(all_data)
         return result_list
+
+    def get_last_attack_indicators(self, limit=10):
+        last_objects = self.db_manager.find_and_sort_documents("fileinfo", "scan_date", limit)
+        result_dict = {}
+        for item in last_objects:
+            sha256 = item["sha256"]
+            all_data = self.get_attack_chart_data(sha256)
+            if all_data is not None:
+                for data in all_data:
+                    if data:
+                        result_dict.update(data)
+        return result_dict
+
+    def get_attack_chart_data(self, hash):
+        query = {'sha256': {'$eq': hash}}
+
+        result_list = []
+        otx_data = self.db_manager.find_documents('otx', query)
+        if otx_data:
+            for pulse in otx_data[0]["pulses"]:
+                attack_name = pulse["name"]
+                indicators = pulse["indicators"]
+
+                filtered_indicators = []
+                for index, item in enumerate(indicators):
+                    if index >= 150:
+                        break
+                    filtered_indicators.append({"indicator": item["indicator"], "type": item["type"]})
+
+                dic = {
+                    "attack_name": attack_name,
+                    "IOCs": filtered_indicators
+                }
+                result_list.append(dic)
+
+            charts = Charts()
+            indicators_percentage = charts.extract_indicators_percentages(result_list)
+
+            return indicators_percentage
+
+    def most_ttps_used(self, hash):
+
+        virustotal_ttps = self.virustotal.get_ttps(hash)
+        if virustotal_ttps=={} or "error" in virustotal_ttps:
+            virustotal_ttps = []
+        else:
+            virustotal_ttps = self.filter_virustotal_ttps_data(virustotal_ttps)
+
+        return virustotal_ttps
+
+    def get_last_most_ttps(self, limit=10):
+        last_objects = self.db_manager.find_and_sort_documents("fileinfo", "scan_date", limit)
+        result_list = []
+        for item in last_objects:
+            sha256 = item["sha256"]
+            all_data = self.most_ttps_used(sha256)
+            if all_data is not None:
+                for data in all_data:
+                    if data:
+                        result_list.append(data)
+
+        element_counts = Counter(result_list)
+        most_common_ttps = element_counts.most_common(4)
+        result_dict = {name: value for name, value in most_common_ttps}
+        return result_dict
+
+    def get_every_scan_per_day(self):
+
+        result = self.db_manager.get_scans_per_day('fileinfo')
+
+        result_json = {
+                        "results": result
+        }
+
+        return result_json
+
+

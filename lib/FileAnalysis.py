@@ -33,7 +33,7 @@ class FileAnalysis:
                 self.db_manager.insert_document('fileinfo', result_dict)
 
             ys = Yara()
-            ys.yara_scanner(filePath, sha256, self.get_size(filePath))
+            ys.yara_scanner(filePath)
 
         else:
             result_dict = {"error": "file_not_found"}

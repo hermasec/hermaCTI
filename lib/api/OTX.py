@@ -27,9 +27,11 @@ class OTX:
                 attack_ids = pulse["attack_ids"]
                 indicators = pulse["indicators"]
 
-                filtered_indicators = [
-                    {"indicator": item["indicator"], "type": item["type"]} for item in indicators
-                ]
+                filtered_indicators = []
+                for index, item in enumerate(indicators):
+                    if index >= 150:
+                        break
+                    filtered_indicators.append({"indicator": item["indicator"], "type": item["type"]})
 
                 dic = {
                     "attack_name": attack_name,
@@ -55,9 +57,12 @@ class OTX:
 
                     indicators = pulse["indicators"]
 
-                    filtered_indicators = [
-                        {"indicator": item["indicator"], "type": item["type"]} for item in indicators
-                    ]
+                    filtered_indicators = []
+                    for index, item in enumerate(indicators):
+                        print(index)
+                        if index >= 200:
+                            break
+                        filtered_indicators.append({"indicator": item["indicator"], "type": item["type"]})
 
                     dic = {
                         "attack_name": attack_name,
@@ -74,7 +79,8 @@ class OTX:
         url = f'{self.base_url}/indicators/file/{hash}'
 
         try:
-            response = requests.get(url, headers=self.headers)
+            timeout_seconds = 7
+            response = requests.get(url, headers=self.headers, timeout=timeout_seconds)
             json_response = response.json()
 
             if json_response['pulse_info']['count'] > 0:
@@ -92,7 +98,9 @@ class OTX:
         result_list = []
 
         pulse_urls = [f"{self.base_url}/pulses/{pulse_id}" for pulse_id in pulse_ids]
-        for url in pulse_urls:
+        for index, url in enumerate(pulse_urls):
+            if index >= 3:
+                break
             try:
                 response = requests.get(url, headers=self.headers)
                 result_list.append(response.json())

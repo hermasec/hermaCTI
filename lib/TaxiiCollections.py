@@ -79,8 +79,10 @@ class TaxiiCollections:
                     "collection_id": collection_id,
                     "stix_object": stix_json
                 }
+                print("ss1")
 
                 self.db_manager.insert_document('stix_objects', data)
+                print("ss2")
 
                 return jsonify(data), 200, {'Content-Type': 'application/taxii+json;version=2.1'}
 

@@ -6,7 +6,7 @@
   "file_extension": "dll",
   "type": "PE32+ executable (DLL) (GUI) x86-64, for MS Windows",
   "scan_time": {
-    "$date": "2024-01-06T01:04:27.260Z"
+    "$date": "2024-01-06T04:07:50.001Z"
   },
   "sha256": "cbdcf6224aa15c70a22346594d1956c0589a9411beb75a003eaccb15db4370a5",
   "md5": "1f7d2cbfc75d6eb2c4f2b8b7a3eec1bf",
@@ -243,5 +243,24 @@
     "compilation": "Wed Aug 30 01:53:07 2023",
     "created": "Wed Aug 30 01:53:07 2023",
     "modified": "Wed Jan 17 16:42:40 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65a91be647b5ba6c0a890802"
+  },
+  "name": "quiz.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable (GUI) Intel 80386, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-18T16:09:02.496Z"
+  },
+  "sha256": "5c91e90a547e598c68f6ab7a607149e53872feac28386ffc3bea8d00fd1abed6",
+  "md5": "66213afc42b9176391f5a1abe6787b45",
+  "size": 160768,
+  "time": {
+    "compilation": "Sat Jun 20 01:52:17 1992",
+    "created": "Sat Jun 20 01:52:17 1992",
+    "modified": "Sun Jan 07 15:01:30 2024"
   }
 }]

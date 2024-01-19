@@ -67,10 +67,10 @@ class Virustotal:
             if response.status_code == 200:
                 return response.json()
             else:
-                print({"error": f"Request failed with status code: {response.status_code}"})
+                return {"error": f"Request failed with status code: {response.status_code}"}
 
         except requests.exceptions.RequestException as e:
-            print({"error": f"Request failed: {e}"})
+            return {"error": f"Request failed: {e}"}
 
     def get_ttps(self, hash):
 
@@ -83,7 +83,9 @@ class Virustotal:
             else:
                 ttps = self.search_ttps(hash)
 
-                if "error" in ttps or ttps["data"] == {}:
+                if "error" in ttps:
+                    return_data = {}
+                elif ttps["data"] == {}:
                     return_data = {}
                 else:
                     filter = {'data.id': hash}
