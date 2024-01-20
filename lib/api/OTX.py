@@ -47,6 +47,7 @@ class OTX:
 
             if "error" in data:
                 result_list = []
+                print(data)
             else:
                 self.db_manager.insert_document('otx', data)
                 result_list = []
@@ -59,8 +60,7 @@ class OTX:
 
                     filtered_indicators = []
                     for index, item in enumerate(indicators):
-                        print(index)
-                        if index >= 200:
+                        if index >= 150:
                             break
                         filtered_indicators.append({"indicator": item["indicator"], "type": item["type"]})
 
@@ -79,7 +79,7 @@ class OTX:
         url = f'{self.base_url}/indicators/file/{hash}'
 
         try:
-            timeout_seconds = 7
+            timeout_seconds = 8
             response = requests.get(url, headers=self.headers, timeout=timeout_seconds)
             json_response = response.json()
 
@@ -103,12 +103,17 @@ class OTX:
                 break
             try:
                 response = requests.get(url, headers=self.headers)
-                result_list.append(response.json())
+                response_json = response.json()
 
-                result_dict = {}
-                result_dict["pulses"] = result_list
-                result_dict["sha256"] = f"{hash}"
+                response_json['indicators'] = response_json['indicators'][:150]
+                print(response_json)
+                result_list.append(response_json)
 
             except requests.exceptions.RequestException as e:
                 return {"error": f"Request failed: {e}"}
+
+        result_dict = {}
+        result_dict["pulses"] = result_list
+        result_dict["sha256"] = f"{hash}"
+
         return result_dict

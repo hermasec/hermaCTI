@@ -33,7 +33,7 @@ class Filter:
         fileinfo = {}
         hybrid_data = self.hybrid.get_desired_data(hash)
         virustotal_data = self.virustotal.get_desired_data(hash)
-        otx_data = self.otx.get_desired_data(hash)
+
 
         virustotal_ttps_for_stix = {}
         virustotal_ttps = self.virustotal.get_ttps(hash)
@@ -42,6 +42,7 @@ class Filter:
         else:
             virustotal_ttps_for_stix = self.virustotal.get_ttps(hash)
             virustotal_ttps = self.filter_virustotal_ttps_data(self.virustotal.get_ttps(hash))
+
 
         if "error" in hybrid_data:
             hybrid_data = {}
@@ -70,47 +71,39 @@ class Filter:
         if virustotal_data:
             AVs_data.update(virustotal_data)
 
-        if virustotal_ttps:
-            has_TTP = True
-        elif otx_data:
-            has_TTP = True if otx_data[0]["TTPs"] else False
+        if file_status == "malicious":
+            otx_data = self.otx.get_desired_data(hash)
         else:
-            has_TTP = False
+            otx_data = []
 
-        if otx_data:
-            has_IOC = True if otx_data[0]["IOCs"] else False
-        else:
-            has_IOC = False
 
         return_data_for_stix = {
             "sha256": hash,
             "fileinfo": fileinfo,
             "file_status": file_status,
             "family": file_family,
-            "has_IOC": has_IOC,
-            "has_TTP": has_TTP,
             "AVs": AVs_data,
             "Attacks": otx_data,
             "TTPs": virustotal_ttps_for_stix
         }
 
-        self.taxii.add_objects_to_collection(hash, "91a7b528-80eb-42ed-a74d-c6fbd5a26116", return_data_for_stix)
+        if file_status == "malicious":
+            self.taxii.add_objects_to_collection(hash, "91a7b528-80eb-42ed-a74d-c6fbd5a26116", return_data_for_stix)
 
         return_data = {
             "sha256": hash,
             "fileinfo": fileinfo,
             "file_status": file_status,
             "family": file_family,
-            "has_IOC": has_IOC,
-            "has_TTP": has_TTP,
             "AVs": AVs_data,
             "Attacks": otx_data,
             "TTPs": virustotal_ttps,
         }
 
-        zip_base64 = self.get_base64_zip_rules(hash, return_data)
-        if zip_base64:
-            return_data["zip_rules"] = self.get_base64_zip_rules(hash, return_data)
+        if file_status == "malicious":
+            zip_base64 = self.get_base64_zip_rules(hash, return_data)
+            if zip_base64:
+                return_data["zip_rules"] = zip_base64
 
         fileinfo["size"] = humanize.naturalsize(fileinfo["size"])
         return return_data

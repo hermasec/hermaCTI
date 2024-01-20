@@ -75,21 +75,20 @@ class STIX:
 
     def malicousfile2stix(self, json_data):
 
-        if json_data["file_status"] == "malicious":
-            malware_family = json_data["family"]
-            malware_name = json_data["fileinfo"]["name"]
-            created = self.transfertime(json_data["fileinfo"]["time"]["created"]) if json_data["fileinfo"]["time"][
-                                                                                         "created"] is not None else None
-            modified = self.transfertime(json_data["fileinfo"]["time"]["modified"]) if json_data["fileinfo"]["time"][
-                                                                                           "modified"] is not None else None
+        malware_family = json_data["family"]
+        malware_name = json_data["fileinfo"]["name"]
+        created = self.transfertime(json_data["fileinfo"]["time"]["created"]) if json_data["fileinfo"]["time"][
+                                                                                     "created"] is not None else None
+        modified = self.transfertime(json_data["fileinfo"]["time"]["modified"]) if json_data["fileinfo"]["time"][
+                                                                                       "modified"] is not None else None
 
-            malware = Malware(
-                name=malware_name,
-                malware_types=[malware_family],
-                created=created,
-                modified=modified,
-                is_family="true"
-            )
+        malware = Malware(
+            name=malware_name,
+            malware_types=[malware_family],
+            created=created,
+            modified=modified,
+            is_family="true"
+        )
 
         return malware
 
