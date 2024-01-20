@@ -47,7 +47,6 @@ class OTX:
 
             if "error" in data:
                 result_list = []
-                print(data)
             else:
                 self.db_manager.insert_document('otx', data)
                 result_list = []
@@ -79,7 +78,7 @@ class OTX:
         url = f'{self.base_url}/indicators/file/{hash}'
 
         try:
-            timeout_seconds = 8
+            timeout_seconds = 20
             response = requests.get(url, headers=self.headers, timeout=timeout_seconds)
             json_response = response.json()
 
@@ -106,7 +105,6 @@ class OTX:
                 response_json = response.json()
 
                 response_json['indicators'] = response_json['indicators'][:150]
-                print(response_json)
                 result_list.append(response_json)
 
             except requests.exceptions.RequestException as e:

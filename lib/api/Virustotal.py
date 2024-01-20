@@ -16,21 +16,38 @@ class Virustotal:
 
         query = {'data.id': {'$eq': hash}}
         data = self.db_manager.find_documents('virustotal', query)
+        result_data = {
+            "status": "",
+            "family": "",
+            "AVs": {}
+        }
 
         if data:
             AVs = self.AV_results(data[0])
-            return AVs
+            result_data["AVs"] = AVs
+            if "popular_threat_classification" in data[0]["data"]["attributes"]:
+                result_data["family"] = data[0]["data"]["attributes"]["popular_threat_classification"][
+                    "suggested_threat_label"]
+            result_data["status"] = self.detect_status(data[0])
+
+
+            return result_data
 
         else:
             data = self.search_sha256(hash)
 
             if "error" in data:
-                AVs = {}
+                return {}
             else:
                 self.db_manager.insert_document('virustotal', data)
 
                 AVs = self.AV_results(data)
-            return AVs
+                result_data["AVs"] = AVs
+                if "popular_threat_classification" in data["data"]["attributes"]:
+                    result_data["family"] = data["data"]["attributes"]["popular_threat_classification"]["suggested_threat_label"]
+                result_data["status"] = self.detect_status(data)
+
+                return result_data
 
     def search_sha256(self, hash):
         url = f'{self.base_url}/files/{hash}'
@@ -58,6 +75,22 @@ class Virustotal:
             }
 
         return engines
+
+    def detect_status(self,data):
+        malicious = data["data"]["attributes"]["last_analysis_stats"]["malicious"]
+        undetected = data["data"]["attributes"]["last_analysis_stats"]["undetected"]
+        clean = data["data"]["attributes"]["last_analysis_stats"]["harmless"]
+
+        file_status = ""
+        if malicious>undetected and malicious>clean:
+            file_status = "malicious"
+        elif undetected>malicious or clean>malicious:
+            file_status = "clean"
+        else:
+            file_status = "no-result"
+        return file_status
+
+
 
     def search_ttps(self, hash):
         url = f'{self.base_url}/files/{hash}/behaviour_mitre_trees'

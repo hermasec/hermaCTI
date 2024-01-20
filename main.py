@@ -48,7 +48,6 @@ def check_header():
     except ValueError:
         return jsonify({"error": "Invalid Authorization header format"}), 401
 
-
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
     authorized = check_header()

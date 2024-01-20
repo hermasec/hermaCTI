@@ -5,9 +5,6 @@
   "name": "blGzkW8.rkj8",
   "file_extension": "dll",
   "type": "PE32+ executable (DLL) (GUI) x86-64, for MS Windows",
-  "scan_time": {
-    "$date": "2024-01-06T04:07:50.001Z"
-  },
   "sha256": "cbdcf6224aa15c70a22346594d1956c0589a9411beb75a003eaccb15db4370a5",
   "md5": "1f7d2cbfc75d6eb2c4f2b8b7a3eec1bf",
   "size": 6425088,
@@ -15,6 +12,9 @@
     "compilation": "Tue Oct 31 02:31:28 2023",
     "created": "Tue Oct 31 02:31:28 2023",
     "modified": "Thu Jan 04 14:00:15 2024"
+  },
+  "scan_date": {
+    "$date": "2024-01-06T04:07:50.001Z"
   }
 },
 {
@@ -262,5 +262,100 @@
     "compilation": "Sat Jun 20 01:52:17 1992",
     "created": "Sat Jun 20 01:52:17 1992",
     "modified": "Sun Jan 07 15:01:30 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65ab8a272c94285bd0692997"
+  },
+  "name": "3ee706f07d13cb9e617eac2b4442479634ab48f11005568c739c6dcab75052a4.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable (GUI) Intel 80386, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-20T12:23:59.402Z"
+  },
+  "sha256": "3ee706f07d13cb9e617eac2b4442479634ab48f11005568c739c6dcab75052a4",
+  "md5": "5af409fe584bed2f8b847bb9d2eca34f",
+  "size": 407504,
+  "time": {
+    "compilation": "Fri Oct 02 20:15:54 2020",
+    "created": "Fri Oct 02 20:15:54 2020",
+    "modified": "Sat Jan 20 10:42:13 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65ab9c7c1a25003ff02a3562"
+  },
+  "name": "njRB.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-20T13:42:12.364Z"
+  },
+  "sha256": "8e436dc374b71fcb5168d9bba73804267770466a94f4ac20785009c8799bc803",
+  "md5": "5214925401a3a4308de915683c2ad217",
+  "size": 871424,
+  "time": {
+    "compilation": "Thu Jan 18 05:02:31 2024",
+    "created": "Thu Jan 18 05:02:31 2024",
+    "modified": "Sat Jan 20 10:37:27 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65ab9e0084fbbbfbb7031c31"
+  },
+  "name": "mvyMacd.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+  "scan_date": {
+    "$date": "2024-01-20T13:48:40.201Z"
+  },
+  "sha256": "d621bb588911e91904b6c1016006eceff57307472986a4bd443b4f20a9c0b1ba",
+  "md5": "e713067e30975d7263b54a0f41281f0b",
+  "size": 274944,
+  "time": {
+    "compilation": "Fri Mar 06 01:35:07 2015",
+    "created": "Fri Mar 06 01:35:07 2015",
+    "modified": "Fri Jan 19 06:17:35 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65abaa284186bd95531624a8"
+  },
+  "name": "e2569690f1d65d4c95b640750f6674233f51ef4395b34233b878dd373986c362.bin",
+  "file_extension": "html",
+  "type": null,
+  "scan_date": {
+    "$date": "2024-01-20T14:40:32.499Z"
+  },
+  "sha256": "e2569690f1d65d4c95b640750f6674233f51ef4395b34233b878dd373986c362",
+  "md5": "cd1b8893a2b346263f046bb49e4cf26e",
+  "size": 33419,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Mon Jan 08 12:36:49 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65abaad70d11c2d01c368f88"
+  },
+  "name": "5a5e00e260f27ada023c5e43decd8658",
+  "file_extension": null,
+  "type": null,
+  "scan_date": {
+    "$date": "2024-01-20T14:43:27.325Z"
+  },
+  "sha256": "dcd3c8b00518a113f731de4548a66b84c11e52f8b8666e2626d95d90a7ecf241",
+  "md5": "5a5e00e260f27ada023c5e43decd8658",
+  "size": 12367,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sun Jan 14 08:48:07 2024"
   }
 }]

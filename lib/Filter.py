@@ -63,13 +63,17 @@ class Filter:
                 return jsonify({"error": "No specific information for this hash"}), 404
 
         file_family, file_status = "", ""
-        AVs_data = []
+        AVs_data = {}
         if hybrid_data:
-            AVs_data = hybrid_data["AVs"]
+            AVs_data.update(hybrid_data["AVs"])
             file_status = "clean" if hybrid_data["verdict"] == "no specific threat" else hybrid_data["verdict"]
             file_family = hybrid_data["vx_family"]
         if virustotal_data:
-            AVs_data.update(virustotal_data)
+            AVs_data.update(virustotal_data["AVs"])
+
+        if hybrid_data == {} and virustotal_data:
+            file_family = virustotal_data["family"]
+            file_status = virustotal_data["status"]
 
         if file_status == "malicious":
             otx_data = self.otx.get_desired_data(hash)
@@ -191,10 +195,16 @@ class Filter:
         else:
             extension = None
 
+        if 'magic' in all_json['data']['attributes']:
+            type = all_json['data']['attributes']['magic']
+        else:
+            type = None
+
+
         file_data = {
             "name": name,
             "file_extension": extension,
-            "type": all_json['data']['attributes']['magic'],
+            "type": type,
             "scan_date": datetime.now(),
             "sha256": all_json['data']['attributes']['sha256'],
             "md5": all_json['data']['attributes']['md5'],
@@ -227,8 +237,6 @@ class Filter:
 
         if hybrid_data:
             file_status = "clean" if hybrid_data[0]["verdict"] == "no specific threat" else hybrid_data[0]["verdict"]
-        else:
-            file_status = ""
 
         otx_data = self.db_manager.find_documents('otx', query)
 
@@ -245,6 +253,18 @@ class Filter:
         if virustotal_data:
             if 'mitre' in virustotal_data[0]:
                 has_TTP = True
+
+        if hybrid_data == [] and virustotal_data:
+            malicious = virustotal_data[0]["data"]["attributes"]["last_analysis_stats"]["malicious"]
+            undetected = virustotal_data[0]["data"]["attributes"]["last_analysis_stats"]["undetected"]
+            clean = virustotal_data[0]["data"]["attributes"]["last_analysis_stats"]["harmless"]
+            if malicious > undetected and malicious > clean:
+                file_status = "malicious"
+            elif undetected > malicious or clean > malicious:
+                file_status = "clean"
+            else:
+                file_status = "no-result"
+
 
         required_data = {
             "name": name,

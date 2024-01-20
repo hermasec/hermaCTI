@@ -1329,7 +1329,7 @@
   "_id": {
     "$oid": "65a2cea0a123f5d5e57b01b5"
   },
-  "sha256": "1a3aa6e4fc02b6a191451602f72558eeaed9d88ad40964f6a8f6f958620cdd6b",
+  "sha256": "1a3aa6e4fc02b6a191451602f72558eeaed9d88ad40964f6a8f6f958620cdd6b1",
   "last_file_name": "KMS VL ALL.cmd",
   "other_file_name": [],
   "threat_score": null,
@@ -1399,6 +1399,331 @@
   "related_children_hashes": [],
   "reports": [
     "64eb04503ee493592035f33c"
+  ],
+  "whitelisted": false,
+  "children_in_queue": 0,
+  "children_in_progress": 0,
+  "related_reports": []
+},
+{
+  "_id": {
+    "$oid": "65a8f44339b8b9a2ee5b95d5"
+  },
+  "sha256": "1a3aa6e4fc02b6a191451602f72558eeaed9d88ad40964f6a8f6f958620cdd6b",
+  "last_file_name": "KMS VL ALL.cmd",
+  "other_file_name": [],
+  "threat_score": null,
+  "verdict": "malicious",
+  "url_analysis": false,
+  "size": 294903,
+  "type": "exported SGML document, ASCII text, with very long lines, with CRLF line terminators",
+  "type_short": [
+    "script",
+    "wsf"
+  ],
+  "analysis_start_time": null,
+  "last_multi_scan": "2024-01-13T17:50:36+00:00",
+  "tags": [],
+  "architecture": null,
+  "vx_family": "HackTool.BAT.KMSAuto",
+  "multiscan_result": 8,
+  "scanners": [
+    {
+      "name": "CrowdStrike Falcon Static Analysis (ML)",
+      "status": "no-result",
+      "error_message": null,
+      "progress": 100,
+      "total": null,
+      "positives": null,
+      "percent": null,
+      "anti_virus_results": []
+    },
+    {
+      "name": "Metadefender",
+      "status": "malicious",
+      "error_message": null,
+      "progress": 100,
+      "total": 24,
+      "positives": 2,
+      "percent": 8,
+      "anti_virus_results": []
+    }
+  ],
+  "scanners_v2": {
+    "crowdstrike_ml": {
+      "name": "CrowdStrike Falcon Static Analysis (ML)",
+      "status": "no-result",
+      "error_message": null,
+      "progress": 100,
+      "percent": null,
+      "anti_virus_results": []
+    },
+    "metadefender": {
+      "name": "Metadefender",
+      "status": "malicious",
+      "error_message": null,
+      "progress": 100,
+      "total": 24,
+      "positives": 2,
+      "percent": 8,
+      "anti_virus_results": []
+    },
+    "virustotal": null,
+    "urlscan_io": null,
+    "scam_adviser": null,
+    "clean_dns": null,
+    "bfore_ai": null
+  },
+  "submit_context": [],
+  "related_parent_hashes": [],
+  "related_children_hashes": [],
+  "reports": [
+    "64eb04503ee493592035f33c"
+  ],
+  "whitelisted": false,
+  "children_in_queue": 0,
+  "children_in_progress": 0,
+  "related_reports": []
+},
+{
+  "_id": {
+    "$oid": "65a90f1805283a2ad710a8f5"
+  },
+  "sha256": "5c91e90a547e598c68f6ab7a607149e53872feac28386ffc3bea8d00fd1abed6",
+  "last_file_name": "5c91e90a547e598c68f6ab7a607149e53872feac28386ffc3bea8d00fd1abed6.bin.sample",
+  "other_file_name": [],
+  "threat_score": 99,
+  "verdict": "malicious",
+  "url_analysis": false,
+  "size": 160768,
+  "type": "PE32 executable (GUI) Intel 80386, for MS Windows",
+  "type_short": [
+    "peexe",
+    "executable"
+  ],
+  "analysis_start_time": "2020-10-16T16:41:13+00:00",
+  "last_multi_scan": "2024-01-10T05:20:46+00:00",
+  "tags": [],
+  "architecture": "WINDOWS",
+  "vx_family": "Malware",
+  "multiscan_result": 96,
+  "scanners": [
+    {
+      "name": "CrowdStrike Falcon Static Analysis (ML)",
+      "status": "malicious",
+      "error_message": null,
+      "progress": 100,
+      "total": null,
+      "positives": null,
+      "percent": 100,
+      "anti_virus_results": []
+    },
+    {
+      "name": "Metadefender",
+      "status": "malicious",
+      "error_message": null,
+      "progress": 100,
+      "total": 24,
+      "positives": 22,
+      "percent": 91,
+      "anti_virus_results": []
+    }
+  ],
+  "scanners_v2": {
+    "crowdstrike_ml": {
+      "name": "CrowdStrike Falcon Static Analysis (ML)",
+      "status": "malicious",
+      "error_message": null,
+      "progress": 100,
+      "percent": 100,
+      "anti_virus_results": []
+    },
+    "metadefender": {
+      "name": "Metadefender",
+      "status": "malicious",
+      "error_message": null,
+      "progress": 100,
+      "total": 24,
+      "positives": 22,
+      "percent": 91,
+      "anti_virus_results": []
+    },
+    "virustotal": null,
+    "urlscan_io": null,
+    "scam_adviser": null,
+    "clean_dns": null,
+    "bfore_ai": null
+  },
+  "submit_context": [],
+  "related_parent_hashes": [],
+  "related_children_hashes": [],
+  "reports": [
+    "5f89cd259e62850456097e74",
+    "5e07d0ed217d93849ff52b4d"
+  ],
+  "whitelisted": false,
+  "children_in_queue": 0,
+  "children_in_progress": 0,
+  "related_reports": []
+},
+{
+  "_id": {
+    "$oid": "65ab9c4f1a25003ff02a3559"
+  },
+  "sha256": "8e436dc374b71fcb5168d9bba73804267770466a94f4ac20785009c8799bc803",
+  "last_file_name": "bounty-92565776763758475",
+  "other_file_name": [
+    "bounty-34399681574546738",
+    "bounty-5863860135051648"
+  ],
+  "threat_score": null,
+  "verdict": "malicious",
+  "url_analysis": false,
+  "size": 871424,
+  "type": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+  "type_short": [
+    "peexe",
+    "assembly",
+    "executable"
+  ],
+  "analysis_start_time": null,
+  "last_multi_scan": "2024-01-19T16:41:00+00:00",
+  "tags": [],
+  "architecture": null,
+  "vx_family": "Trojan.Generic",
+  "multiscan_result": 77,
+  "scanners": [
+    {
+      "name": "CrowdStrike Falcon Static Analysis (ML)",
+      "status": "malicious",
+      "error_message": null,
+      "progress": 100,
+      "total": null,
+      "positives": null,
+      "percent": 100,
+      "anti_virus_results": []
+    },
+    {
+      "name": "Metadefender",
+      "status": "malicious",
+      "error_message": null,
+      "progress": 100,
+      "total": 24,
+      "positives": 13,
+      "percent": 54,
+      "anti_virus_results": []
+    }
+  ],
+  "scanners_v2": {
+    "crowdstrike_ml": {
+      "name": "CrowdStrike Falcon Static Analysis (ML)",
+      "status": "malicious",
+      "error_message": null,
+      "progress": 100,
+      "percent": 100,
+      "anti_virus_results": []
+    },
+    "metadefender": {
+      "name": "Metadefender",
+      "status": "malicious",
+      "error_message": null,
+      "progress": 100,
+      "total": 24,
+      "positives": 13,
+      "percent": 54,
+      "anti_virus_results": []
+    },
+    "virustotal": null,
+    "urlscan_io": null,
+    "scam_adviser": null,
+    "clean_dns": null,
+    "bfore_ai": null
+  },
+  "submit_context": [],
+  "related_parent_hashes": [],
+  "related_children_hashes": [],
+  "reports": [
+    "65aa4beea3cf323f33833f9b"
+  ],
+  "whitelisted": false,
+  "children_in_queue": 0,
+  "children_in_progress": 0,
+  "related_reports": []
+},
+{
+  "_id": {
+    "$oid": "65ab9dba807c154d4a46e6e9"
+  },
+  "sha256": "d621bb588911e91904b6c1016006eceff57307472986a4bd443b4f20a9c0b1ba",
+  "last_file_name": "file",
+  "other_file_name": [],
+  "threat_score": null,
+  "verdict": "malicious",
+  "url_analysis": false,
+  "size": 274944,
+  "type": "PE32 executable (GUI) Intel 80386, for MS Windows",
+  "type_short": [
+    "peexe",
+    "executable"
+  ],
+  "analysis_start_time": null,
+  "last_multi_scan": "2022-03-01T09:04:55+00:00",
+  "tags": [],
+  "architecture": null,
+  "vx_family": "Win/malicious_confidence_100%",
+  "multiscan_result": 100,
+  "scanners": [
+    {
+      "name": "CrowdStrike Falcon Static Analysis (ML)",
+      "status": "in-queue",
+      "error_message": null,
+      "progress": 0,
+      "total": null,
+      "positives": null,
+      "percent": null,
+      "anti_virus_results": []
+    },
+    {
+      "name": "Metadefender",
+      "status": "in-queue",
+      "error_message": null,
+      "progress": 0,
+      "total": null,
+      "positives": null,
+      "percent": null,
+      "anti_virus_results": []
+    }
+  ],
+  "scanners_v2": {
+    "crowdstrike_ml": {
+      "name": "CrowdStrike Falcon Static Analysis (ML)",
+      "status": "in-queue",
+      "error_message": null,
+      "progress": 0,
+      "percent": null,
+      "anti_virus_results": []
+    },
+    "metadefender": {
+      "name": "Metadefender",
+      "status": "in-queue",
+      "error_message": null,
+      "progress": 0,
+      "total": null,
+      "positives": null,
+      "percent": null,
+      "anti_virus_results": []
+    },
+    "virustotal": null,
+    "urlscan_io": null,
+    "scam_adviser": null,
+    "clean_dns": null,
+    "bfore_ai": null
+  },
+  "submit_context": [],
+  "related_parent_hashes": [],
+  "related_children_hashes": [],
+  "reports": [
+    "621de1b3418b168aed584c85"
   ],
   "whitelisted": false,
   "children_in_queue": 0,
