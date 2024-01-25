@@ -4,13 +4,10 @@ from collections import Counter
 from datetime import datetime
 import humanize
 from flask import jsonify
-from pymongo import MongoClient
-from bson import json_util
-import json
 from lib.Charts import Charts
 from lib.Database import Database
 from lib.SIEM import SIEM
-from lib.TaxiiCollections import TaxiiCollections
+from lib.TAXII import TAXII
 from lib.Yara import Yara
 from lib.api.Virustotal import Virustotal
 from lib.api.Hybrid import Hybrid
@@ -27,7 +24,7 @@ class Filter:
         self.otx = OTX(os.environ.get("OTX_API_TOKEN"))
         self.yara = Yara()
         self.siem = SIEM()
-        self.taxii = TaxiiCollections()
+        self.taxii = TAXII()
 
     def get_hash_data(self, hash):
         fileinfo = {}

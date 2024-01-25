@@ -4,7 +4,7 @@ import re
 from dotenv import load_dotenv
 from flask import Flask, render_template, request, jsonify
 from lib.FileAnalysis import FileAnalysis
-from lib.TaxiiCollections import TaxiiCollections
+from lib.TAXII import TAXII
 from lib.api.Virustotal import Virustotal
 from lib.api.Hybrid import Hybrid
 from lib.api.OTX import OTX
@@ -47,6 +47,8 @@ def check_header():
 
     except ValueError:
         return jsonify({"error": "Invalid Authorization header format"}), 401
+
+
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
@@ -223,7 +225,7 @@ def piechart():
     else:
         return authorized
 
-@app.route('/taxii/', methods=['GET'])
+@app.route('/taxii2/', methods=['GET'])
 def taxii_discovery():
     authorized = check_header()
     if "ok" in authorized:
@@ -239,46 +241,46 @@ def taxii_discovery():
         return authorized
 
 
-@app.route('/taxii/collections/', methods=["GET"])
+@app.route('/taxii2/collections/', methods=["GET"])
 def collections():
     authorized = check_header()
     if "ok" in authorized:
 
-        collections = TaxiiCollections()
+        collections = TAXII()
         return collections.getTaxiiCollections()
     else:
         return authorized
 
 
-@app.route('/taxii/collections/<collection_id>/', methods=["GET"])
+@app.route('/taxii2/collections/<collection_id>/', methods=["GET"])
 def collection_id(collection_id):
     authorized = check_header()
     if "ok" in authorized:
 
-        taxii_collections = TaxiiCollections()
+        taxii_collections = TAXII()
         return taxii_collections.get_collection_by_id(collection_id)
     else:
         return authorized
 
 
-@app.route('/taxii/collections/<collection_id>/objects/', methods=["GET"])
+@app.route('/taxii2/collections/<collection_id>/objects/', methods=["GET"])
 def collection_objects(collection_id):
     authorized = check_header()
     if "ok" in authorized:
 
-        collections = TaxiiCollections()
+        collections = TAXII()
         if request.method == 'GET':
             return collections.get_collection_objects(collection_id)
     else:
         return authorized
 
 
-@app.route('/taxii/collections/<collection_id>/objects/<object_id>/', methods=["GET"])
+@app.route('/taxii2/collections/<collection_id>/objects/<object_id>/', methods=["GET"])
 def objects(collection_id, object_id):
     authorized = check_header()
     if "ok" in authorized:
 
-        collections = TaxiiCollections()
+        collections = TAXII()
         if request.method == 'GET':
             return collections.get_object_by_id(collection_id, object_id)
     else:

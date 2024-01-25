@@ -4,7 +4,7 @@ from lib.Database import Database
 from lib.STIX import STIX
 
 
-class TaxiiCollections:
+class TAXII:
     def __init__(self):
         self.db_manager = Database(database_name='mydatabase')
 
