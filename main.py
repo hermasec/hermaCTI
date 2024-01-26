@@ -11,43 +11,35 @@ from lib.api.OTX import OTX
 from lib.api.Intezer import Intezer
 from lib.Filter import Filter
 from lib.Database import Database
+import jwt
 
 load_dotenv()
 
 app = Flask(__name__)
 db_manager = Database(database_name='mydatabase')
 
-SECRET_KEY = "super-secret-key-provided-by-hermacti-platform"
-
-
-def decode_base64(encoded_value):
-    try:
-        decoded_bytes = base64.b64decode(encoded_value)
-        decoded_str = decoded_bytes.decode('utf-8')
-        return decoded_str
-    except Exception as e:
-        print(f"Error decoding base64: {e}")
-        return None
-
 
 def check_header():
+    public_key = os.environ.get("SECRET_KEY")
     auth_header = request.headers.get('Authorization')
 
     if auth_header is None:
         return jsonify({"error": "Authorization header is missing"}), 401
 
     try:
-        _, encoded_value = auth_header.split()
-        decoded_value = decode_base64(encoded_value)
+        _, token = auth_header.split()
+        decoded_payload = jwt.decode(token, public_key, algorithms=["HS256"])
 
-        if decoded_value == SECRET_KEY:
+        if "username" in decoded_payload and decoded_payload["username"] == "herma":
             return {"ok"}
         else:
             return jsonify({"error": "Unauthorized"}), 401
-
+    except jwt.ExpiredSignatureError:
+        return jsonify({"Token has expired."})
+    except jwt.InvalidTokenError:
+        return jsonify({"Invalid token."})
     except ValueError:
         return jsonify({"error": "Invalid Authorization header format"}), 401
-
 
 
 @app.route('/', methods=['GET', 'POST'])
