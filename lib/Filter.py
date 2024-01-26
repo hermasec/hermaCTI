@@ -31,7 +31,6 @@ class Filter:
         hybrid_data = self.hybrid.get_desired_data(hash)
         virustotal_data = self.virustotal.get_desired_data(hash)
 
-
         virustotal_ttps_for_stix = {}
         virustotal_ttps = self.virustotal.get_ttps(hash)
         if virustotal_ttps == {} or "error" in virustotal_ttps:
@@ -39,7 +38,6 @@ class Filter:
         else:
             virustotal_ttps_for_stix = self.virustotal.get_ttps(hash)
             virustotal_ttps = self.filter_virustotal_ttps_data(self.virustotal.get_ttps(hash))
-
 
         if "error" in hybrid_data:
             hybrid_data = {}
@@ -76,7 +74,6 @@ class Filter:
             otx_data = self.otx.get_desired_data(hash)
         else:
             otx_data = []
-
 
         return_data_for_stix = {
             "sha256": hash,
@@ -197,7 +194,6 @@ class Filter:
         else:
             type = None
 
-
         file_data = {
             "name": name,
             "file_extension": extension,
@@ -262,7 +258,6 @@ class Filter:
             else:
                 file_status = "no-result"
 
-
         required_data = {
             "name": name,
             "sha256": sha256,
@@ -324,8 +319,18 @@ class Filter:
 
     def most_ttps_used(self, hash):
 
-        virustotal_ttps = self.virustotal.get_ttps(hash)
-        if virustotal_ttps=={} or "error" in virustotal_ttps:
+        query = {'data.id': {'$eq': hash}}
+        data = self.db_manager.find_documents('virustotal', query)
+
+        if data:
+            if 'mitre' in data[0]:
+                virustotal_ttps = data[0]["mitre"]
+            else:
+                virustotal_ttps = {}
+        else:
+            virustotal_ttps = {}
+
+        if virustotal_ttps == {} or "error" in virustotal_ttps:
             virustotal_ttps = []
         else:
             virustotal_ttps = self.filter_virustotal_ttps_data(virustotal_ttps)
@@ -353,9 +358,7 @@ class Filter:
         result = self.db_manager.get_scans_per_day('fileinfo')
 
         result_json = {
-                        "results": result
+            "results": result
         }
 
         return result_json
-
-

@@ -68,6 +68,9 @@ class Database:
                 }
             },
             {
+                '$sort': {'_id': -1}  # Sort dates in descending order
+            },
+            {
                 '$project': {
                     '_id': 0,
                     'date': '$_id',
