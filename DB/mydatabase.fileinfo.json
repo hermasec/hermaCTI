@@ -358,4 +358,840 @@
     "created": null,
     "modified": "Sun Jan 14 08:48:07 2024"
   }
+},
+{
+  "_id": {
+    "$oid": "65b4ee5f404d6739601e0d51"
+  },
+  "name": "c4286d55d655b52e9616a6d6d3a388f76a796592.bin",
+  "file_extension": "exe",
+  "type": "PE32 executable (GUI) Intel 80386, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-27T15:21:59.227Z"
+  },
+  "sha256": "08c2d3fec8cd9fcced634df7ad0f3db164ffe0cbfc263e2d8be026afca05bfcb",
+  "md5": "273273f5fd6f0fc5787216d8fb92e5b5",
+  "size": 884736,
+  "time": {
+    "compilation": "Thu Mar 24 11:46:20 2016",
+    "created": "Thu Mar 24 11:46:20 2016",
+    "modified": "Thu Nov 30 22:02:28 2023"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4eefa404d6739601e0d65"
+  },
+  "name": "lwbehzxyagqpknpmdlnd",
+  "file_extension": "sh",
+  "type": "POSIX shell script, ASCII text executable, with very long lines (400u)",
+  "scan_date": {
+    "$date": "2024-01-27T15:24:34.047Z"
+  },
+  "sha256": "3e44c807a25a56f4068b5b8186eee5002eed6f26d665a8b791c472ad154585d1",
+  "md5": "01a8cc25ede016dd10e2457a7ecba904",
+  "size": 6425,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Thu Jan 18 04:56:10 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4f1d634efb2fbeeb5720b"
+  },
+  "name": "aa",
+  "file_extension": null,
+  "type": null,
+  "scan_date": {
+    "$date": "2024-01-27T15:36:46.507Z"
+  },
+  "sha256": "e23b5cad5614b9b87f69b9642d36003102aaf39c9a297da3500ba632854b067d",
+  "md5": "79026b9ce40c559bed352919543f60fb",
+  "size": 7794,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 05:50:32 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4f21034efb2fbeeb57215"
+  },
+  "name": "symbian-phone.php",
+  "file_extension": "html",
+  "type": "HTML document, ASCII text",
+  "scan_date": {
+    "$date": "2024-01-27T15:37:44.259Z"
+  },
+  "sha256": "b35429ee9e70c262f5a96739d432f22e0d9046b53396296a1fdbd9fe2510285b",
+  "md5": "7906002466f0918b0597f0548d2847fe",
+  "size": 9584,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 05:58:19 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4f28d34efb2fbeeb57229"
+  },
+  "name": null,
+  "file_extension": "html",
+  "type": "HTML document, Unicode text, UTF-8 text, with very long lines (1126u), with CRLF, LF line terminators",
+  "scan_date": {
+    "$date": "2024-01-27T15:39:49.904Z"
+  },
+  "sha256": "c7364ea49c17cab1c3a7d6955289d5481c4111e9db8de987933db75ca85c361d",
+  "md5": "7893ecb2059bbc46e0bf958ece45e903",
+  "size": 33270,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 02:17:56 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4f3a37351d3c42d2876a2"
+  },
+  "name": "VirusShare_7880cf69506ffb0b429b0e5dd81240c2",
+  "file_extension": "js",
+  "type": "HTML document, ISO-8859 text, with very long lines (636u), with CRLF, LF line terminators",
+  "scan_date": {
+    "$date": "2024-01-27T15:44:27.025Z"
+  },
+  "sha256": "238890dc1f44bd51197f998c96e5441f22bd2cbf6053bfbbaa5b0ac61d3a8be2",
+  "md5": "7880cf69506ffb0b429b0e5dd81240c2",
+  "size": 6051,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 01:43:32 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4f4167351d3c42d2876b6"
+  },
+  "name": "sdaidapguyeblhyhbbkd",
+  "file_extension": "sh",
+  "type": "POSIX shell script, ASCII text executable, with very long lines (423u)",
+  "scan_date": {
+    "$date": "2024-01-27T15:46:22.368Z"
+  },
+  "sha256": "60bcd645450e4c846238cf0e7226dc40c84c96eba99f6b2cffcd0ab4a391c8b3",
+  "md5": "50dfc198d1bcbb10287264c172ea6049",
+  "size": 6319,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Thu Jan 18 05:26:40 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4f5c9247565d4a4ddeeee"
+  },
+  "name": "A64",
+  "file_extension": "elf",
+  "type": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, Go BuildID=lrmQfLs227knIQnK5Xs0/B1VnVw3vqYb_bMvCA0-v/uYzP95X-AnQHK3sN6tVj/IPzQQJcFz6nFQ41t-y4n, stripped",
+  "scan_date": {
+    "$date": "2024-01-27T15:53:37.481Z"
+  },
+  "sha256": "447431333b2c2a72ac213a9fa2da8c2b09383ae75c3b31a88acfa79b8d43b8d8",
+  "md5": "29b9cdf5bcf281bc7bdc8b41575e0432",
+  "size": 5398528,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Tue Jun 27 00:16:44 2023"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4f61e247565d4a4ddeefb"
+  },
+  "name": "20ab498b278b14f3786f634778a04d219c74e9fd8517b98f4aca313c9934b7f2.rar",
+  "file_extension": "rar",
+  "type": "RAR archive data, v5",
+  "scan_date": {
+    "$date": "2024-01-27T15:55:02.440Z"
+  },
+  "sha256": "20ab498b278b14f3786f634778a04d219c74e9fd8517b98f4aca313c9934b7f2",
+  "md5": "21e4a83a29d2ff9f76ec9bcf15ac4496",
+  "size": 20789108,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Fri Jan 26 13:45:45 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4f65f247565d4a4ddef05"
+  },
+  "name": "Mozi.m",
+  "file_extension": "elf",
+  "type": "ELF 32-bit LSB executable, ARM, version 1 (ARM), statically linked, no section header",
+  "scan_date": {
+    "$date": "2024-01-27T15:56:07.295Z"
+  },
+  "sha256": "e15e93db3ce3a8a22adb4b18e0e37b93f39c495e4a97008f9b1a9a42e1fac2b0",
+  "md5": "9a111588a7db15b796421bd13a949cd4",
+  "size": 95268,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Wed Jan 24 07:45:42 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4f6d4247565d4a4ddef12"
+  },
+  "name": "Електронний план евакуації.rar",
+  "file_extension": "rar",
+  "type": "RAR archive data, v5",
+  "scan_date": {
+    "$date": "2024-01-27T15:58:04.449Z"
+  },
+  "sha256": "68d5c1ce76e3461de065e61ade5428ab10eb1962aa9f2e89199823a033d5cbca",
+  "md5": "958069ef4f14cd583df15964eaaa23b8",
+  "size": 20789854,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 11:47:44 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4f732247565d4a4ddef23"
+  },
+  "name": "Електронний план евакуації.rar",
+  "file_extension": "rar",
+  "type": "RAR archive data, v5",
+  "scan_date": {
+    "$date": "2024-01-27T15:59:38.790Z"
+  },
+  "sha256": "f4015611de5e82e3f81a77b896af259d120f1ca956035378a3d9e51fba010669",
+  "md5": "3fe53d6864dab01448b5cf85f7a2e94d",
+  "size": 20790408,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 09:38:37 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4f767247565d4a4ddef2d"
+  },
+  "name": "Електронний план евакуації.exe",
+  "file_extension": "exe",
+  "type": "PE32+ executable (GUI) x86-64, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-27T16:00:31.110Z"
+  },
+  "sha256": "5158482849c818c270f302c1dfa06d770ed2b5056cf393d60fd56817636866da",
+  "md5": "9b40a1519801020305e31e553a3e82ab",
+  "size": 21082556,
+  "time": {
+    "compilation": "Wed Dec 13 17:33:01 2023",
+    "created": "Wed Dec 13 17:33:01 2023",
+    "modified": "Fri Jan 26 17:55:52 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4f8098758a13aafaf2860"
+  },
+  "name": "rutserv.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable (GUI) Intel 80386, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-27T16:03:13.921Z"
+  },
+  "sha256": "760e2fd3e57186b597d40b996811768e6c4a28ca54685e029104fcf82f68238d",
+  "md5": "652c2a693b333504a3879460d0af7224",
+  "size": 21148984,
+  "time": {
+    "compilation": "Wed Oct 25 16:21:04 2023",
+    "created": "Wed Oct 25 16:21:04 2023",
+    "modified": "Sat Jan 27 08:33:10 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4f9858758a13aafaf286e"
+  },
+  "name": null,
+  "file_extension": "exe",
+  "type": "PE32+ executable (native) x86-64, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-27T16:09:33.733Z"
+  },
+  "sha256": "192ef0dee8df73eec9ee617abe4b0104799f9543a22a41e28d4d44c3ad713284",
+  "md5": "10e5281f7a8b604061b49cfee6f25506",
+  "size": 40016,
+  "time": {
+    "compilation": "Fri May 13 05:07:43 2016",
+    "created": "Fri May 13 05:07:43 2016",
+    "modified": "Tue Jan 23 03:38:37 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4fa4f48448ff030e48680"
+  },
+  "name": "cookie_exporter.exe",
+  "file_extension": "exe",
+  "type": "PE32+ executable (GUI) x86-64, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-27T16:12:55.071Z"
+  },
+  "sha256": "da252b823e15e067ae154173f481639934ecbd086369e851cf203170d65836e8",
+  "md5": "b64c6dec57859355a7c032aa02d64d28",
+  "size": 120264,
+  "time": {
+    "compilation": "Thu Dec 15 12:11:53 2022",
+    "created": "Thu Dec 15 12:11:53 2022",
+    "modified": "Thu Jan 25 15:54:23 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4fa7548448ff030e4868a"
+  },
+  "name": "rc.exe",
+  "file_extension": "exe",
+  "type": "PE32+ executable (console) x86-64, for MS Windows",
+  "scan_date": {
+    "$date": "2024-01-27T16:13:33.716Z"
+  },
+  "sha256": "c9c063a934f85d3a72709f2ca824dc6b7155268ad4f73da3493908cb4d1a3138",
+  "md5": "9b14612f07947181c390a474328da12e",
+  "size": 66880,
+  "time": {
+    "compilation": "Tue Jul 14 03:44:08 2009",
+    "created": "Tue Jul 14 03:44:08 2009",
+    "modified": "Wed Jan 24 23:01:30 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4faea48448ff030e4869b"
+  },
+  "name": null,
+  "file_extension": "html",
+  "type": "HTML document, Unicode text, UTF-8 text, with very long lines (5876u)",
+  "scan_date": {
+    "$date": "2024-01-27T16:15:30.694Z"
+  },
+  "sha256": "d59460912d910d828d288cd433c07acf6c4a52997355267da7b58862a48d68b5",
+  "md5": "7a2e0de1eea31240aa589cf2cf69a657",
+  "size": 110724,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 15:35:56 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4fb0548448ff030e486a4"
+  },
+  "name": "1118610",
+  "file_extension": "html",
+  "type": "HTML document text",
+  "scan_date": {
+    "$date": "2024-01-27T16:15:57.231Z"
+  },
+  "sha256": "83b0070888950b4c884ca38a52896ddbef2c0c7b5bf3b00f3a1183d5c41f401e",
+  "md5": "7a07e29dd5901125f7c3416f05a4a1fc",
+  "size": 7446,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 14:29:30 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4fb2b48448ff030e486b1"
+  },
+  "name": null,
+  "file_extension": "html",
+  "type": "HTML document, Unicode text, UTF-8 text, with very long lines (6201u), with CRLF, LF line terminators",
+  "scan_date": {
+    "$date": "2024-01-27T16:16:35.830Z"
+  },
+  "sha256": "557079ea8aa44adba6191b9037911c79296b2606ebe2c75a95673e6112f0cfc3",
+  "md5": "7970594817d15c0dd84214468f826380",
+  "size": 32730,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 09:28:43 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4fc3cff7f10aec9ee26f6"
+  },
+  "name": null,
+  "file_extension": "html",
+  "type": "HTML document, ASCII text, with very long lines (47641u), with CRLF, LF line terminators",
+  "scan_date": {
+    "$date": "2024-01-27T16:21:08.951Z"
+  },
+  "sha256": "7d48e8b2ea00c6b698acd4daf2ca1ac407bf295525f303a29f1518a4da27a6cc",
+  "md5": "794b70a18136a623f75a7b9f8d05a827",
+  "size": 165112,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 08:15:32 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4fc66ff7f10aec9ee2702"
+  },
+  "name": "7870ef8615d346fa55ace1d827d35da1",
+  "file_extension": "html",
+  "type": "ASCII HTML document text, with very long lines, with CRLF, LF line terminators",
+  "scan_date": {
+    "$date": "2024-01-27T16:21:50.570Z"
+  },
+  "sha256": "e3bc6dc6b71eab98b6f82d6a4c772e98bd44bdd4e08eea9fcd18dcc446cdc497",
+  "md5": "7870ef8615d346fa55ace1d827d35da1",
+  "size": 23512,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 01:07:09 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4fc7cff7f10aec9ee270c"
+  },
+  "name": "VirusShare_7863649b1e7263107c7ed7bd4182dce2",
+  "file_extension": "js",
+  "type": "HTML document, ISO-8859 text, with very long lines (547u), with CRLF, LF line terminators",
+  "scan_date": {
+    "$date": "2024-01-27T16:22:12.029Z"
+  },
+  "sha256": "911c641a591bf6bc3879266fb766ee3a5368e26cfaaac4bf45ee1dbe61257fdc",
+  "md5": "7863649b1e7263107c7ed7bd4182dce2",
+  "size": 5962,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 00:46:37 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4fcd0ff7f10aec9ee2719"
+  },
+  "name": null,
+  "file_extension": "html",
+  "type": "HTML document, Unicode text, UTF-8 text, with very long lines (4519u)",
+  "scan_date": {
+    "$date": "2024-01-27T16:23:36.217Z"
+  },
+  "sha256": "de4b31756b6a9dbabe8dc60f86188bf6d477fe18827119ceccc4efcaad97bc97",
+  "md5": "795c42ca5b8cf5e119c9893bd0a7cdab",
+  "size": 275219,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 08:50:14 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4fd9b25047c7018f82ab4"
+  },
+  "name": "digital",
+  "file_extension": "html",
+  "type": "HTML document, ASCII text, with very long lines (9831u), with CRLF, LF line terminators",
+  "scan_date": {
+    "$date": "2024-01-27T16:26:59.578Z"
+  },
+  "sha256": "9b754d5703ee24903318f082c0e8955e64fd1ddb9b2a2bd00f2b45c55d7385ba",
+  "md5": "7a4b2e9620858390fda66f3ccd73f69f",
+  "size": 69403,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Thu Aug 03 15:09:20 2023"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4fdd525047c7018f82ac8"
+  },
+  "name": null,
+  "file_extension": "html",
+  "type": "HTML document, Unicode text, UTF-8 text, with very long lines (5603u)",
+  "scan_date": {
+    "$date": "2024-01-27T16:27:57.540Z"
+  },
+  "sha256": "19f4d709d2d2be761fce2f8324d22440b09ec8bf3ad65787e3dea138b18fd6fc",
+  "md5": "79564be739fbf8610e06415268888a9a",
+  "size": 40930,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 08:39:35 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4fdf025047c7018f82ad5"
+  },
+  "name": null,
+  "file_extension": "html",
+  "type": "HTML document, Unicode text, UTF-8 text, with very long lines (797u), with CRLF, LF line terminators",
+  "scan_date": {
+    "$date": "2024-01-27T16:28:24.293Z"
+  },
+  "sha256": "afdd0e4dde2a95cab326532cba33923c0c581a34800798b8396852d29fcd492f",
+  "md5": "78fa54421bc2fdc2f041c0b74756f492",
+  "size": 37516,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 05:31:56 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b4fe0b25047c7018f82ae2"
+  },
+  "name": null,
+  "file_extension": "html",
+  "type": "HTML document, Unicode text, UTF-8 text, with very long lines (8460u)",
+  "scan_date": {
+    "$date": "2024-01-27T16:28:51.884Z"
+  },
+  "sha256": "321ccd58cd40f4de982212f598e86530e104de38f3091c943ec0f75c3340e984",
+  "md5": "79303889a772182ca2069f6097f2ca30",
+  "size": 58269,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 07:23:24 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b5016735757fba8f94de18"
+  },
+  "name": "The Long Dark.exe",
+  "file_extension": null,
+  "type": "empty",
+  "scan_date": {
+    "$date": "2024-01-27T16:43:11.639Z"
+  },
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "md5": "d41d8cd98f00b204e9800998ecf8427e",
+  "size": 0,
+  "time": {
+    "compilation": null,
+    "created": null,
+    "modified": "Sat Jan 27 16:37:43 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b501cd35757fba8f94de21"
+  },
+  "name": "WindowsApp1.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit Mono/.Net assembly",
+  "scan_date": {
+    "$date": "2024-01-27T16:44:53.568Z"
+  },
+  "sha256": "d78980d8f52495b9f8fe619b130b893372052fb63a6e9efe9665beec0321b023",
+  "md5": "8870c9b41664633dad5c0743f9dff0d3",
+  "size": 78848,
+  "time": {
+    "compilation": "Sun Apr 14 19:15:53 2047",
+    "created": "Sun Apr 14 19:15:53 2047",
+    "modified": "Thu Feb 18 14:15:37 2021"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b5026776c8536d68b498b9"
+  },
+  "name": "1016a48908fb15bf6228eadf67560f5f406f30c5f752e6d76c260822cbf94783",
+  "file_extension": "exe",
+  "type": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+  "scan_date": {
+    "$date": "2024-01-27T16:47:27.061Z"
+  },
+  "sha256": "1016a48908fb15bf6228eadf67560f5f406f30c5f752e6d76c260822cbf94783",
+  "md5": "a57cb42761bd223839d5051b47510f23",
+  "size": 72704,
+  "time": {
+    "compilation": "Sat Jan 13 13:38:37 2018",
+    "created": "Sat Jan 13 13:38:37 2018",
+    "modified": "Sun Apr 02 12:52:58 2023"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b50305cf63a4a15573af77"
+  },
+  "name": "egui.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+  "scan_date": {
+    "$date": "2024-01-27T16:50:05.636Z"
+  },
+  "sha256": "218ed0de3279c5f215fd1ff221e6cf5a4ab6558c1d913769ccd4759f3338f539",
+  "md5": "1d050d285bc9748b91e79011a2f1b0e7",
+  "size": 1250432,
+  "time": {
+    "compilation": "Sat Jun 20 01:52:17 1992",
+    "created": "Sat Jun 20 01:52:17 1992",
+    "modified": "Tue Feb 02 04:46:58 2016"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b503c484fadeb949ecf6fb"
+  },
+  "name": "1.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+  "scan_date": {
+    "$date": "2024-01-27T16:53:16.788Z"
+  },
+  "sha256": "000033234c05472f5bc4a198c90944c052e704f35081358bfe0d631a76d5a4e5",
+  "md5": "eaa742310f9713a66bf20adae8da6eee",
+  "size": 5120,
+  "time": {
+    "compilation": "Thu Jul 24 04:20:05 2014",
+    "created": "Thu Jul 24 04:20:05 2014",
+    "modified": "Fri Dec 02 00:32:31 2022"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b5045f5251e284b36db0a7"
+  },
+  "name": "09-FH-051.pdf",
+  "file_extension": "pdf",
+  "type": "PDF document, version 1.5, 18 pages",
+  "scan_date": {
+    "$date": "2024-01-27T16:55:51.657Z"
+  },
+  "sha256": "0061b8bce47d111a27a95e2c6f3dc40a9afbeb4fb2b155eb7a8db33cd192bbcb",
+  "md5": "ae4357c666e75f82efc3d9e29e2659e6",
+  "size": 228437,
+  "time": {
+    "compilation": null,
+    "created": "Fri Dec 11 04:25:14 2009",
+    "modified": "Mon Oct 23 08:55:56 2023"
+  }
+},
+{
+  "_id": {
+    "$oid": "65bac6000e994d74c761c851"
+  },
+  "name": "Trojan.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable (GUI) Intel 80386, for MS Windows",
+  "scan_date": {
+    "$date": "2024-02-01T01:43:20.846Z"
+  },
+  "sha256": "178ba564b39bd07577e974a9b677dfd86ffa1f1d0299dfd958eb883c5ef6c3e1",
+  "md5": "6a8401448a5bd2b540850f811b20a66d",
+  "size": 212992,
+  "time": {
+    "compilation": "Fri Apr 24 05:34:11 2020",
+    "created": "Fri Apr 24 05:34:11 2020",
+    "modified": "Tue Jan 16 15:59:47 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65bac68d0e994d74c761c865"
+  },
+  "name": "c7362845283503e1538fd1c4ba224becc55c213613c30684fa790cd6f99d2094.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+  "scan_date": {
+    "$date": "2024-02-01T01:45:41.110Z"
+  },
+  "sha256": "c7362845283503e1538fd1c4ba224becc55c213613c30684fa790cd6f99d2094",
+  "md5": "8e94412b2dffeae1c742add73009cf29",
+  "size": 634368,
+  "time": {
+    "compilation": "Tue Jan 30 05:16:05 2024",
+    "created": "Tue Jan 30 05:16:05 2024",
+    "modified": "Thu Feb 01 01:18:24 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65bac6bb0e994d74c761c872"
+  },
+  "name": "39266f36d22aee10dbbeeba147e5fbe1448933c2a256b6097f7fec380e5893fb.exe",
+  "file_extension": "exe",
+  "type": "PE32+ executable (GUI) x86-64 Mono/.Net assembly, for MS Windows",
+  "scan_date": {
+    "$date": "2024-02-01T01:46:27.712Z"
+  },
+  "sha256": "39266f36d22aee10dbbeeba147e5fbe1448933c2a256b6097f7fec380e5893fb",
+  "md5": "1d60063801a0ee44d90392ac62d645c9",
+  "size": 884224,
+  "time": {
+    "compilation": "Tue Jan 30 07:00:27 2024",
+    "created": "Tue Jan 30 07:00:27 2024",
+    "modified": "Thu Feb 01 01:17:37 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65bac7690e994d74c761c89b"
+  },
+  "name": "brave.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable (GUI) Intel 80386, for MS Windows",
+  "scan_date": {
+    "$date": "2024-02-01T01:49:21.350Z"
+  },
+  "sha256": "2f7f23610e8e0633ef0b03d602a02734bdcadab3fdc8c15d0f6d93a0a454fa6f",
+  "md5": "cab8183a94bb10ab3d1bffefa7db38e2",
+  "size": 2298880,
+  "time": {
+    "compilation": "Wed Jan 24 10:48:15 2024",
+    "created": "Wed Jan 24 10:48:15 2024",
+    "modified": "Thu Feb 01 01:26:32 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65bac7b00e994d74c761c8a8"
+  },
+  "name": "brave.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable (GUI) Intel 80386, for MS Windows",
+  "scan_date": {
+    "$date": "2024-02-01T01:50:32.570Z"
+  },
+  "sha256": "5cf41546232059b45ae02f5aacccf38e7efd99e122414dbeceea2a85b16a38c1",
+  "md5": "b836fbb7d19fbebfdca677bf883d7370",
+  "size": 2365440,
+  "time": {
+    "compilation": "Wed Jan 24 10:48:15 2024",
+    "created": "Wed Jan 24 10:48:15 2024",
+    "modified": "Thu Feb 01 00:53:50 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65bac8710e994d74c761c8f4"
+  },
+  "name": "zlib.net.dll",
+  "file_extension": "dll",
+  "type": "PE32 executable (DLL) (console) Intel 80386 Mono/.Net assembly, for MS Windows",
+  "scan_date": {
+    "$date": "2024-02-01T01:53:45.487Z"
+  },
+  "sha256": "4167b599f36af0781b81563bd2179a6d35daa3145f0b6f99ac6d9ee1894b516a",
+  "md5": "5c677eba3a7a05c0bc22288198c19383",
+  "size": 69632,
+  "time": {
+    "compilation": "Mon Mar 05 11:03:03 2007",
+    "created": "Mon Mar 05 11:03:03 2007",
+    "modified": "Thu Feb 01 00:44:08 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65bac98c0e994d74c761c90c"
+  },
+  "name": "netscp.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit Mono/.Net assembly",
+  "scan_date": {
+    "$date": "2024-02-01T01:58:28.249Z"
+  },
+  "sha256": "c99fa90038cec60d9aa21a49e537ad9ea55672ed78cf5b429cb4c75ebc5ccd69",
+  "md5": "9376e5b754ccd94f7c66b811d81e240e",
+  "size": 68608,
+  "time": {
+    "compilation": "Mon Mar 11 21:37:54 2013",
+    "created": "Mon Mar 11 21:37:54 2013",
+    "modified": "Tue Nov 07 17:03:20 2023"
+  }
+},
+{
+  "_id": {
+    "$oid": "65baca6b1ae6cefdf2180d74"
+  },
+  "name": "Setup.exe",
+  "file_extension": "exe",
+  "type": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit Mono/.Net assembly",
+  "scan_date": {
+    "$date": "2024-02-01T02:02:11.303Z"
+  },
+  "sha256": "4f131095ba56f6d3621a007985ac758d780b0c837f554f6e44d535ed55d33af1",
+  "md5": "6ef950941d114c09af359402620d7cba",
+  "size": 17785344,
+  "time": {
+    "compilation": "Tue Aug 19 02:25:07 2014",
+    "created": "Tue Aug 19 02:25:07 2014",
+    "modified": "Tue Nov 07 17:02:24 2023"
+  }
+},
+{
+  "_id": {
+    "$oid": "65bacb221ae6cefdf2180dc1"
+  },
+  "name": "Wextract",
+  "file_extension": "exe",
+  "type": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit",
+  "scan_date": {
+    "$date": "2024-02-01T02:05:14.027Z"
+  },
+  "sha256": "136e709cc83cbda0cd8ca6e46fe9e57202bd2699ca063f9d1a51602394c06ef3",
+  "md5": "e2a4b96cce9de4fb126cfd5f5c73c3ed",
+  "size": 122592,
+  "time": {
+    "compilation": "Sun Apr 13 22:02:45 2008",
+    "created": "Sun Apr 13 22:02:45 2008",
+    "modified": "Thu Jan 18 04:31:44 2024"
+  }
+},
+{
+  "_id": {
+    "$oid": "65bd33ead6128887ccdfb853"
+  },
+  "name": "cryptbase.dll",
+  "file_extension": "dll",
+  "type": "PE32+ executable (DLL) (GUI) x86-64, for MS Windows",
+  "scan_date": {
+    "$date": "2024-02-02T21:56:50.566Z"
+  },
+  "sha256": "4962a2f6cba601af509e3df0215b2eb581754cdf3410786a632b737873a399e2",
+  "md5": "5be374a55e9452b98bf1375cc5507e96",
+  "size": 3320320,
+  "time": {
+    "compilation": "Fri Feb  2 21:56:50 2024",
+    "created": "Fri Feb  2 21:56:50 2024",
+    "modified": "Fri Feb  2 21:56:50 2024"
+  }
 }]

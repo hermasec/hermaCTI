@@ -44,6 +44,7 @@ class OTX:
 
         else:
             data = self.search_sha256(hash)
+            print(data)
 
             if "error" in data:
                 result_list = []
@@ -78,7 +79,7 @@ class OTX:
         url = f'{self.base_url}/indicators/file/{hash}'
 
         try:
-            timeout_seconds = 20
+            timeout_seconds = 10
             response = requests.get(url, headers=self.headers, timeout=timeout_seconds)
             json_response = response.json()
 

@@ -106,16 +106,21 @@ class Hybrid:
 
             if response.status_code == 200:
                 final_response = response.json()
-                null_count = 0
-                for scanner in final_response['scanners']:
-                    percent_value = scanner.get('percent')
-                    if percent_value is None:
-                        null_count += 1
-
-                if null_count > 2:
-                    self.search_sha256(sha256_value)
+                if "message" in final_response:
+                    message = final_response["message"]
+                    return {"error": f"{message}"}
                 else:
-                    return final_response
+                    null_count = 0
+                    for scanner in final_response['scanners']:
+                        percent_value = scanner.get('percent')
+                        if percent_value is None:
+                            null_count += 1
+
+                    if null_count > 2:
+                        self.search_sha256(sha256_value)
+                    else:
+                        return final_response
+
             else:
                 return {"error": f"Request failed with status code: {response.status_code}"}
 

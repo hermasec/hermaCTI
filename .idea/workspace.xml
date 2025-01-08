@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b3014f2b-9e71-4388-bb7d-b7093112a19e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rules/scanners_yara_rules.yar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/cryptbase.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hermaCTI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hermaCTI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/mydatabase.fileinfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/DB/mydatabase.fileinfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/mydatabase.hybrid.json" beforeDir="false" afterPath="$PROJECT_DIR$/DB/mydatabase.hybrid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/mydatabase.otx.json" beforeDir="false" afterPath="$PROJECT_DIR$/DB/mydatabase.otx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/mydatabase.rules.json" beforeDir="false" afterPath="$PROJECT_DIR$/DB/mydatabase.rules.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/mydatabase.stix_objects.json" beforeDir="false" afterPath="$PROJECT_DIR$/DB/mydatabase.stix_objects.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/mydatabase.virustotal.json" beforeDir="false" afterPath="$PROJECT_DIR$/DB/mydatabase.virustotal.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Database.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Filter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/STIX.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/STIX.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/TAXII.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/TAXII.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/api/Hybrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api/Hybrid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/api/OTX.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api/OTX.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2rLHpyVL4Vk7vIlmTDp4A5Iudte" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="hermaCTI" type="PythonConfigurationType" factoryName="Python">
+      <module name="hermaCTI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PY-242.21829.153" />
+        <option value="bundled-python-sdk-464836ebc622-b74155a9e76b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.21829.153" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b3014f2b-9e71-4388-bb7d-b7093112a19e" name="Changes" comment="" />
+      <created>1736331622227</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736331622227</updated>
+      <workItem from="1736331636238" duration="1023000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

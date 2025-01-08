@@ -218,7 +218,7 @@ def piechart():
     else:
         return authorized
 
-@app.route('/taxii2/', methods=['GET'])
+@app.route('/taxii2', methods=['GET'])
 def taxii_discovery():
     authorized = check_header()
     if "ok" in authorized:
@@ -234,7 +234,7 @@ def taxii_discovery():
         return authorized
 
 
-@app.route('/taxii2/collections/', methods=["GET"])
+@app.route('/taxii2/collections', methods=["GET"])
 def collections():
     authorized = check_header()
     if "ok" in authorized:
@@ -245,7 +245,7 @@ def collections():
         return authorized
 
 
-@app.route('/taxii2/collections/<collection_id>/', methods=["GET"])
+@app.route('/taxii2/collections/<collection_id>', methods=["GET"])
 def collection_id(collection_id):
     authorized = check_header()
     if "ok" in authorized:
@@ -256,7 +256,7 @@ def collection_id(collection_id):
         return authorized
 
 
-@app.route('/taxii2/collections/<collection_id>/objects/', methods=["GET"])
+@app.route('/taxii2/collections/<collection_id>/objects', methods=["GET", "POST"])
 def collection_objects(collection_id):
     authorized = check_header()
     if "ok" in authorized:
@@ -264,18 +264,23 @@ def collection_objects(collection_id):
         collections = TAXII()
         if request.method == 'GET':
             return collections.get_collection_objects(collection_id)
+        if request.method == 'POST':
+            type = request.json['type']
+            id = request.json['id']
+
+            return collections.search_objects(collection_id, search_type=type , search_id=id)
     else:
         return authorized
 
 
-@app.route('/taxii2/collections/<collection_id>/objects/<object_id>/', methods=["GET"])
+@app.route('/taxii2/collections/<collection_id>/objects/<object_id>', methods=["GET"])
 def objects(collection_id, object_id):
     authorized = check_header()
     if "ok" in authorized:
 
         collections = TAXII()
         if request.method == 'GET':
-            return collections.get_object_by_id(collection_id, object_id)
+            return collections.search_objects(collection_id, search_id = object_id)
     else:
         return authorized
 

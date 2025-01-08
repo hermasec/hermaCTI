@@ -53,6 +53,8 @@ class Database:
 
         return result
 
+
+
     def get_scans_per_day(self, collection_name):
         collection = self.db[collection_name]
         pipeline = [

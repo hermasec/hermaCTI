@@ -66,12 +66,14 @@ class Filter:
         if virustotal_data:
             AVs_data.update(virustotal_data["AVs"])
 
-        if hybrid_data == {} and virustotal_data:
+        if hybrid_data == {} or file_status == "unknown" or file_status == "clean" and virustotal_data:
             file_family = virustotal_data["family"]
             file_status = virustotal_data["status"]
 
-        if file_status == "malicious":
+        if file_status == "malicious" or file_status == "suspicious":
             otx_data = self.otx.get_desired_data(hash)
+            if otx_data == []:
+                otx_data = self.otx.get_desired_data(hash)
         else:
             otx_data = []
 
@@ -98,7 +100,7 @@ class Filter:
             "TTPs": virustotal_ttps,
         }
 
-        if file_status == "malicious":
+        if file_status == "malicious" or file_status == "suspicious":
             zip_base64 = self.get_base64_zip_rules(hash, return_data)
             if zip_base64:
                 return_data["zip_rules"] = zip_base64
@@ -247,7 +249,7 @@ class Filter:
             if 'mitre' in virustotal_data[0]:
                 has_TTP = True
 
-        if hybrid_data == [] and virustotal_data:
+        if hybrid_data == [] or hybrid_data[0]["verdict"] == "unknown" and virustotal_data:
             malicious = virustotal_data[0]["data"]["attributes"]["last_analysis_stats"]["malicious"]
             undetected = virustotal_data[0]["data"]["attributes"]["last_analysis_stats"]["undetected"]
             clean = virustotal_data[0]["data"]["attributes"]["last_analysis_stats"]["harmless"]
@@ -278,7 +280,7 @@ class Filter:
             result_list.append(all_data)
         return result_list
 
-    def get_last_attack_indicators(self, limit=10):
+    def get_last_attack_indicators(self, limit=40):
         last_objects = self.db_manager.find_and_sort_documents("fileinfo", "scan_date", limit)
         result_dict = {}
         for item in last_objects:
@@ -288,7 +290,8 @@ class Filter:
                 for data in all_data:
                     if data:
                         result_dict.update(data)
-        return result_dict
+        sliced_dict = dict(list(result_dict.items())[:10])
+        return sliced_dict
 
     def get_attack_chart_data(self, hash):
         query = {'sha256': {'$eq': hash}}
@@ -316,6 +319,8 @@ class Filter:
             indicators_percentage = charts.extract_indicators_percentages(result_list)
 
             return indicators_percentage
+        else:
+            return None
 
     def most_ttps_used(self, hash):
 
@@ -350,7 +355,7 @@ class Filter:
 
         element_counts = Counter(result_list)
         most_common_ttps = element_counts.most_common(4)
-        result_dict = {name: value for name, value in most_common_ttps}
+        result_dict = {name: value*10 for name, value in most_common_ttps}
         return result_dict
 
     def get_every_scan_per_day(self):

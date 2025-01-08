@@ -76,7 +76,8 @@ class STIX:
     def malicousfile2stix(self, json_data):
 
         malware_family = json_data["family"]
-        malware_name = json_data["fileinfo"]["name"]
+
+        malware_name = json_data["fileinfo"]["name"] if json_data["fileinfo"]["name"] is not None else ""
         created = self.transfertime(json_data["fileinfo"]["time"]["created"]) if json_data["fileinfo"]["time"][
                                                                                      "created"] is not None else None
         modified = self.transfertime(json_data["fileinfo"]["time"]["modified"]) if json_data["fileinfo"]["time"][
